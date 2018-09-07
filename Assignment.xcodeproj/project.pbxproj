@@ -20,6 +20,7 @@
 		BF661E9F212BAFE700D7B6BF /* SetTimeAlarmVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF661E9E212BAFE700D7B6BF /* SetTimeAlarmVC.swift */; };
 		BF661EA1212BB00800D7B6BF /* SetMethodAlarmVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF661EA0212BB00800D7B6BF /* SetMethodAlarmVC.swift */; };
 		BF661EA3212BB9CD00D7B6BF /* MathVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF661EA2212BB9CD00D7B6BF /* MathVC.swift */; };
+		E2485DB52142019F00EAE371 /* AlarmPIC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2485DB42142019F00EAE371 /* AlarmPIC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		BF661E9E212BAFE700D7B6BF /* SetTimeAlarmVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTimeAlarmVC.swift; sourceTree = "<group>"; };
 		BF661EA0212BB00800D7B6BF /* SetMethodAlarmVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetMethodAlarmVC.swift; sourceTree = "<group>"; };
 		BF661EA2212BB9CD00D7B6BF /* MathVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathVC.swift; sourceTree = "<group>"; };
+		E2485DB42142019F00EAE371 /* AlarmPIC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmPIC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 				BF661E9E212BAFE700D7B6BF /* SetTimeAlarmVC.swift */,
 				BF661EA0212BB00800D7B6BF /* SetMethodAlarmVC.swift */,
 				BF661EA2212BB9CD00D7B6BF /* MathVC.swift */,
+				E2485DB42142019F00EAE371 /* AlarmPIC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF661E97212BAB2F00D7B6BF /* AlarmVC.swift in Sources */,
+				E2485DB52142019F00EAE371 /* AlarmPIC.swift in Sources */,
 				BF661E9B212BAB7100D7B6BF /* SettingVC.swift in Sources */,
 				BF661E99212BAB5500D7B6BF /* ReminderVC.swift in Sources */,
 				BF661EA1212BB00800D7B6BF /* SetMethodAlarmVC.swift in Sources */,

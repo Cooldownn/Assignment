@@ -599,6 +599,45 @@
             </objects>
             <point key="canvasLocation" x="-826.08695652173924" y="491.57608695652175"/>
         </scene>
+        <!--AlarmPIC-->
+        <scene sceneID="IGJ-fZ-WCA">
+            <objects>
+                <viewController title="AlarmPIC" id="Goc-1s-WPc" customClass="AlarmPIC" customModule="Assignment1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ekk-lq-398">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RzR-CA-b6s">
+                                <rect key="frame" x="0.0" y="30" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Title" id="TZ4-mj-ke9">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="IRL-gt-Cpc"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Item" id="WSK-0W-t9w">
+                                            <connections>
+                                                <action selector="takePhoto:" destination="Goc-1s-WPc" id="wgl-yc-ZJi"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Su5-94-8KG">
+                                <rect key="frame" x="228" y="221" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="kNP-xO-dg9"/>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="IRL-gt-Cpc" id="nUH-YJ-cYK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EZs-kw-17s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5246" y="439"/>
+        </scene>
     </scenes>
     <resources>
         <image name="CameraIcon" width="1200" height="630"/>
