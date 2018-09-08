@@ -12,7 +12,7 @@ class SettingVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
     
     @IBOutlet weak var imageView: UIImageView!
     
-    var alarmVC: AlarmVC!
+ //   var alarmVC: AlarmVC!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,7 +45,7 @@ class SettingVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
         imageView.image = image
         picker.dismiss(animated: true, completion: nil)
         
-        alarmVC.chooseImg.image = image
+      //  alarmVC.chooseImg.image = image
         
         self.dismiss(animated: true, completion: nil)
     }

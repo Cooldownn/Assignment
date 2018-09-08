@@ -13,13 +13,14 @@
 		BF661E6B212BA61200D7B6BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF661E69212BA61200D7B6BF /* LaunchScreen.storyboard */; };
 		BF661E76212BA61300D7B6BF /* AssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF661E75212BA61300D7B6BF /* AssignmentTests.swift */; };
 		BF661E81212BA61300D7B6BF /* AssignmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF661E80212BA61300D7B6BF /* AssignmentUITests.swift */; };
-		BF661E97212BAB2F00D7B6BF /* AlarmVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF661E96212BAB2F00D7B6BF /* AlarmVC.swift */; };
 		BF661E99212BAB5500D7B6BF /* ReminderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF661E98212BAB5500D7B6BF /* ReminderVC.swift */; };
 		BF661E9B212BAB7100D7B6BF /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF661E9A212BAB7100D7B6BF /* SettingVC.swift */; };
 		BF661E9D212BADD700D7B6BF /* NoteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF661E9C212BADD700D7B6BF /* NoteVC.swift */; };
 		BF661E9F212BAFE700D7B6BF /* SetTimeAlarmVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF661E9E212BAFE700D7B6BF /* SetTimeAlarmVC.swift */; };
 		BF661EA1212BB00800D7B6BF /* SetMethodAlarmVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF661EA0212BB00800D7B6BF /* SetMethodAlarmVC.swift */; };
 		BF661EA3212BB9CD00D7B6BF /* MathVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF661EA2212BB9CD00D7B6BF /* MathVC.swift */; };
+		BFAF0706214424FE00D42EA8 /* AlarmVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAF0705214424FE00D42EA8 /* AlarmVC.swift */; };
+		BFAF07092144256700D42EA8 /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAF07082144256700D42EA8 /* Alarm.swift */; };
 		E2485DB52142019F00EAE371 /* AlarmPIC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2485DB42142019F00EAE371 /* AlarmPIC.swift */; };
 /* End PBXBuildFile section */
 
@@ -53,13 +54,14 @@
 		BF661E7C212BA61300D7B6BF /* AssignmentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AssignmentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF661E80212BA61300D7B6BF /* AssignmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentUITests.swift; sourceTree = "<group>"; };
 		BF661E82212BA61300D7B6BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BF661E96212BAB2F00D7B6BF /* AlarmVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmVC.swift; sourceTree = "<group>"; };
 		BF661E98212BAB5500D7B6BF /* ReminderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderVC.swift; sourceTree = "<group>"; };
 		BF661E9A212BAB7100D7B6BF /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
 		BF661E9C212BADD700D7B6BF /* NoteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteVC.swift; sourceTree = "<group>"; };
 		BF661E9E212BAFE700D7B6BF /* SetTimeAlarmVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTimeAlarmVC.swift; sourceTree = "<group>"; };
 		BF661EA0212BB00800D7B6BF /* SetMethodAlarmVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetMethodAlarmVC.swift; sourceTree = "<group>"; };
 		BF661EA2212BB9CD00D7B6BF /* MathVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathVC.swift; sourceTree = "<group>"; };
+		BFAF0705214424FE00D42EA8 /* AlarmVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmVC.swift; sourceTree = "<group>"; };
+		BFAF07082144256700D42EA8 /* Alarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
 		E2485DB42142019F00EAE371 /* AlarmPIC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmPIC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,6 +90,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BF19253921420299003FBA55 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BF661E64212BA61200D7B6BF /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		BF661E54212BA61200D7B6BF = {
 			isa = PBXGroup;
 			children = (
@@ -111,9 +121,10 @@
 		BF661E5F212BA61200D7B6BF /* Assignment */ = {
 			isa = PBXGroup;
 			children = (
+				BFAF07072144254F00D42EA8 /* Persistent Data */,
+				BF19253921420299003FBA55 /* View */,
 				BF661E95212BAB1100D7B6BF /* Controller */,
 				BF661E60212BA61200D7B6BF /* AppDelegate.swift */,
-				BF661E64212BA61200D7B6BF /* Main.storyboard */,
 				BF661E67212BA61200D7B6BF /* Assets.xcassets */,
 				BF661E69212BA61200D7B6BF /* LaunchScreen.storyboard */,
 				BF661E6C212BA61200D7B6BF /* Info.plist */,
@@ -142,7 +153,6 @@
 		BF661E95212BAB1100D7B6BF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				BF661E96212BAB2F00D7B6BF /* AlarmVC.swift */,
 				BF661E98212BAB5500D7B6BF /* ReminderVC.swift */,
 				BF661E9A212BAB7100D7B6BF /* SettingVC.swift */,
 				BF661E9C212BADD700D7B6BF /* NoteVC.swift */,
@@ -150,8 +160,17 @@
 				BF661EA0212BB00800D7B6BF /* SetMethodAlarmVC.swift */,
 				BF661EA2212BB9CD00D7B6BF /* MathVC.swift */,
 				E2485DB42142019F00EAE371 /* AlarmPIC.swift */,
+				BFAF0705214424FE00D42EA8 /* AlarmVC.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		BFAF07072144254F00D42EA8 /* Persistent Data */ = {
+			isa = PBXGroup;
+			children = (
+				BFAF07082144256700D42EA8 /* Alarm.swift */,
+			);
+			path = "Persistent Data";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,13 +304,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF661E97212BAB2F00D7B6BF /* AlarmVC.swift in Sources */,
 				E2485DB52142019F00EAE371 /* AlarmPIC.swift in Sources */,
+				BFAF0706214424FE00D42EA8 /* AlarmVC.swift in Sources */,
 				BF661E9B212BAB7100D7B6BF /* SettingVC.swift in Sources */,
 				BF661E99212BAB5500D7B6BF /* ReminderVC.swift in Sources */,
 				BF661EA1212BB00800D7B6BF /* SetMethodAlarmVC.swift in Sources */,
 				BF661E9D212BADD700D7B6BF /* NoteVC.swift in Sources */,
 				BF661E61212BA61200D7B6BF /* AppDelegate.swift in Sources */,
+				BFAF07092144256700D42EA8 /* Alarm.swift in Sources */,
 				BF661E9F212BAFE700D7B6BF /* SetTimeAlarmVC.swift in Sources */,
 				BF661EA3212BB9CD00D7B6BF /* MathVC.swift in Sources */,
 			);
