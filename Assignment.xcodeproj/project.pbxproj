@@ -22,6 +22,8 @@
 		BFAF0706214424FE00D42EA8 /* AlarmVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAF0705214424FE00D42EA8 /* AlarmVC.swift */; };
 		BFAF07092144256700D42EA8 /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAF07082144256700D42EA8 /* Alarm.swift */; };
 		E2485DB52142019F00EAE371 /* AlarmPIC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2485DB42142019F00EAE371 /* AlarmPIC.swift */; };
+		E248B1A82144D9F800CE00B3 /* imageUICollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E248B1A72144D9F800CE00B3 /* imageUICollectionViewCell.swift */; };
+		E248B1B0214515EC00CE00B3 /* NewPicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = E248B1AF214515EC00CE00B3 /* NewPicture.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		BFAF0705214424FE00D42EA8 /* AlarmVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmVC.swift; sourceTree = "<group>"; };
 		BFAF07082144256700D42EA8 /* Alarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
 		E2485DB42142019F00EAE371 /* AlarmPIC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmPIC.swift; sourceTree = "<group>"; };
+		E248B1A72144D9F800CE00B3 /* imageUICollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageUICollectionViewCell.swift; sourceTree = "<group>"; };
+		E248B1AF214515EC00CE00B3 /* NewPicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPicture.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +157,7 @@
 		BF661E95212BAB1100D7B6BF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				E248B1A72144D9F800CE00B3 /* imageUICollectionViewCell.swift */,
 				BF661E98212BAB5500D7B6BF /* ReminderVC.swift */,
 				BF661E9A212BAB7100D7B6BF /* SettingVC.swift */,
 				BF661E9C212BADD700D7B6BF /* NoteVC.swift */,
@@ -161,6 +166,7 @@
 				BF661EA2212BB9CD00D7B6BF /* MathVC.swift */,
 				E2485DB42142019F00EAE371 /* AlarmPIC.swift */,
 				BFAF0705214424FE00D42EA8 /* AlarmVC.swift */,
+				E248B1AF214515EC00CE00B3 /* NewPicture.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -305,6 +311,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2485DB52142019F00EAE371 /* AlarmPIC.swift in Sources */,
+				E248B1B0214515EC00CE00B3 /* NewPicture.swift in Sources */,
 				BFAF0706214424FE00D42EA8 /* AlarmVC.swift in Sources */,
 				BF661E9B212BAB7100D7B6BF /* SettingVC.swift in Sources */,
 				BF661E99212BAB5500D7B6BF /* ReminderVC.swift in Sources */,
@@ -314,6 +321,7 @@
 				BFAF07092144256700D42EA8 /* Alarm.swift in Sources */,
 				BF661E9F212BAFE700D7B6BF /* SetTimeAlarmVC.swift in Sources */,
 				BF661EA3212BB9CD00D7B6BF /* MathVC.swift in Sources */,
+				E248B1A82144D9F800CE00B3 /* imageUICollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,15 +494,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P53TMVH27X;
+				DEVELOPMENT_TEAM = KSRCT634U8;
 				INFOPLIST_FILE = Assignment/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Cooldown.Assignment;
+				PRODUCT_BUNDLE_IDENTIFIER = nighD.Assignment;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -504,15 +514,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P53TMVH27X;
+				DEVELOPMENT_TEAM = KSRCT634U8;
 				INFOPLIST_FILE = Assignment/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Cooldown.Assignment;
+				PRODUCT_BUNDLE_IDENTIFIER = nighD.Assignment;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
