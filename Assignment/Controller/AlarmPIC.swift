@@ -143,7 +143,7 @@ class AlarmPIC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
         if segue.destination is NewPicture
         {
             let vc = segue.destination as? NewPicture
-            vc?.imageView0 = chooseImage
+         //   vc?.imageView0 = chooseImage
 //            vc?.usename = "Set"
             
         }

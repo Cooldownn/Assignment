@@ -21,6 +21,10 @@
 		BF661EA3212BB9CD00D7B6BF /* MathVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF661EA2212BB9CD00D7B6BF /* MathVC.swift */; };
 		BFAF0706214424FE00D42EA8 /* AlarmVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAF0705214424FE00D42EA8 /* AlarmVC.swift */; };
 		BFAF07092144256700D42EA8 /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAF07082144256700D42EA8 /* Alarm.swift */; };
+		BFAF072121467AA600D42EA8 /* DayServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAF072021467AA600D42EA8 /* DayServices.swift */; };
+		BFAF072521467AC500D42EA8 /* Weekdays.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAF072421467AC500D42EA8 /* Weekdays.swift */; };
+		BFAF072721467AF000D42EA8 /* WeekdaysVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAF072621467AF000D42EA8 /* WeekdaysVC.swift */; };
+		BFAF072921467C6E00D42EA8 /* WeekdaysCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAF072821467C6E00D42EA8 /* WeekdaysCell.swift */; };
 		E2485DB52142019F00EAE371 /* AlarmPIC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2485DB42142019F00EAE371 /* AlarmPIC.swift */; };
 		E248B1A82144D9F800CE00B3 /* imageUICollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E248B1A72144D9F800CE00B3 /* imageUICollectionViewCell.swift */; };
 		E248B1B0214515EC00CE00B3 /* NewPicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = E248B1AF214515EC00CE00B3 /* NewPicture.swift */; };
@@ -64,6 +68,10 @@
 		BF661EA2212BB9CD00D7B6BF /* MathVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathVC.swift; sourceTree = "<group>"; };
 		BFAF0705214424FE00D42EA8 /* AlarmVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmVC.swift; sourceTree = "<group>"; };
 		BFAF07082144256700D42EA8 /* Alarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
+		BFAF072021467AA600D42EA8 /* DayServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayServices.swift; sourceTree = "<group>"; };
+		BFAF072421467AC500D42EA8 /* Weekdays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weekdays.swift; sourceTree = "<group>"; };
+		BFAF072621467AF000D42EA8 /* WeekdaysVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekdaysVC.swift; sourceTree = "<group>"; };
+		BFAF072821467C6E00D42EA8 /* WeekdaysCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekdaysCell.swift; sourceTree = "<group>"; };
 		E2485DB42142019F00EAE371 /* AlarmPIC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmPIC.swift; sourceTree = "<group>"; };
 		E248B1A72144D9F800CE00B3 /* imageUICollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageUICollectionViewCell.swift; sourceTree = "<group>"; };
 		E248B1AF214515EC00CE00B3 /* NewPicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPicture.swift; sourceTree = "<group>"; };
@@ -97,7 +105,7 @@
 		BF19253921420299003FBA55 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				BF661E64212BA61200D7B6BF /* Main.storyboard */,
+				BFAF072821467C6E00D42EA8 /* WeekdaysCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -125,11 +133,14 @@
 		BF661E5F212BA61200D7B6BF /* Assignment */ = {
 			isa = PBXGroup;
 			children = (
+				BFAF072221467AAE00D42EA8 /* Model */,
+				BFAF071F21467A9400D42EA8 /* Services */,
 				BFAF07072144254F00D42EA8 /* Persistent Data */,
 				BF19253921420299003FBA55 /* View */,
 				BF661E95212BAB1100D7B6BF /* Controller */,
 				BF661E60212BA61200D7B6BF /* AppDelegate.swift */,
 				BF661E67212BA61200D7B6BF /* Assets.xcassets */,
+				BF661E64212BA61200D7B6BF /* Main.storyboard */,
 				BF661E69212BA61200D7B6BF /* LaunchScreen.storyboard */,
 				BF661E6C212BA61200D7B6BF /* Info.plist */,
 			);
@@ -167,6 +178,7 @@
 				E2485DB42142019F00EAE371 /* AlarmPIC.swift */,
 				BFAF0705214424FE00D42EA8 /* AlarmVC.swift */,
 				E248B1AF214515EC00CE00B3 /* NewPicture.swift */,
+				BFAF072621467AF000D42EA8 /* WeekdaysVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -177,6 +189,22 @@
 				BFAF07082144256700D42EA8 /* Alarm.swift */,
 			);
 			path = "Persistent Data";
+			sourceTree = "<group>";
+		};
+		BFAF071F21467A9400D42EA8 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				BFAF072021467AA600D42EA8 /* DayServices.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		BFAF072221467AAE00D42EA8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BFAF072421467AC500D42EA8 /* Weekdays.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -316,9 +344,13 @@
 				BF661E9B212BAB7100D7B6BF /* SettingVC.swift in Sources */,
 				BF661E99212BAB5500D7B6BF /* ReminderVC.swift in Sources */,
 				BF661EA1212BB00800D7B6BF /* SetMethodAlarmVC.swift in Sources */,
+				BFAF072721467AF000D42EA8 /* WeekdaysVC.swift in Sources */,
+				BFAF072521467AC500D42EA8 /* Weekdays.swift in Sources */,
 				BF661E9D212BADD700D7B6BF /* NoteVC.swift in Sources */,
 				BF661E61212BA61200D7B6BF /* AppDelegate.swift in Sources */,
+				BFAF072921467C6E00D42EA8 /* WeekdaysCell.swift in Sources */,
 				BFAF07092144256700D42EA8 /* Alarm.swift in Sources */,
+				BFAF072121467AA600D42EA8 /* DayServices.swift in Sources */,
 				BF661E9F212BAFE700D7B6BF /* SetTimeAlarmVC.swift in Sources */,
 				BF661EA3212BB9CD00D7B6BF /* MathVC.swift in Sources */,
 				E248B1A82144D9F800CE00B3 /* imageUICollectionViewCell.swift in Sources */,

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MJO-BW-LZQ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Qhc-xw-ARE">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -212,15 +212,24 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M3P-1x-lxa">
+                                <rect key="frame" x="20" y="390" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="repeatTapped:" destination="kDs-D0-xgb" eventType="touchUpInside" id="lb5-rj-c3R"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="M3P-1x-lxa" firstAttribute="leading" secondItem="FFN-FL-4om" secondAttribute="leading" constant="20" id="9my-Fq-glR"/>
                             <constraint firstItem="f1C-nc-Tub" firstAttribute="leading" secondItem="FFN-FL-4om" secondAttribute="leading" id="HVh-gI-jkt"/>
                             <constraint firstItem="f1C-nc-Tub" firstAttribute="top" secondItem="FFN-FL-4om" secondAttribute="top" id="LmI-lY-lep"/>
                             <constraint firstItem="afC-cC-1Fc" firstAttribute="leading" secondItem="FFN-FL-4om" secondAttribute="leading" id="RkS-Wc-RBg"/>
                             <constraint firstItem="f1C-nc-Tub" firstAttribute="trailing" secondItem="FFN-FL-4om" secondAttribute="trailing" id="Sal-Lq-sJ9"/>
                             <constraint firstItem="FFN-FL-4om" firstAttribute="trailing" secondItem="afC-cC-1Fc" secondAttribute="trailing" id="Y3m-Eh-9UE"/>
                             <constraint firstItem="afC-cC-1Fc" firstAttribute="top" secondItem="f1C-nc-Tub" secondAttribute="bottom" constant="70" id="dwy-5m-Pyx"/>
+                            <constraint firstItem="M3P-1x-lxa" firstAttribute="top" secondItem="afC-cC-1Fc" secondAttribute="bottom" constant="10" id="hfa-4d-bmi"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="FFN-FL-4om"/>
                     </view>
@@ -240,12 +249,69 @@
                         <outlet property="alarmLbl" destination="afC-cC-1Fc" id="Sfx-MB-OjS"/>
                         <outlet property="saveButton" destination="BxL-wm-W6B" id="kRd-zA-ddp"/>
                         <outlet property="timePicker" destination="f1C-nc-Tub" id="gFH-SN-2sG"/>
+                        <segue destination="znF-K4-cIC" kind="show" identifier="repeatSegue" id="n4M-8Z-GBP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SPT-tM-GrA" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Pfr-yh-aCc" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3406" y="-369"/>
+            <point key="canvasLocation" x="3405.7971014492755" y="-369.29347826086962"/>
+        </scene>
+        <!--Repeat-->
+        <scene sceneID="fxJ-u4-9rd">
+            <objects>
+                <viewController title="Repeat" id="znF-K4-cIC" customClass="WeekdaysVC" customModule="Assignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="j7J-Ie-5vQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FBK-Ai-e7U">
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="WeekdaysCell" id="q4D-qN-i38" customClass="WeekdaysCell" customModule="Assignment" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="q4D-qN-i38" id="S8G-g8-yvt">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Every Sunday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tba-5D-vE4">
+                                                    <rect key="frame" x="20" y="10.000000000000002" width="130" height="23.666666666666671"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="tba-5D-vE4" secondAttribute="bottom" constant="10" id="WFU-YP-ZSe"/>
+                                                <constraint firstItem="tba-5D-vE4" firstAttribute="leading" secondItem="S8G-g8-yvt" secondAttribute="leading" constant="20" id="lGT-hr-utV"/>
+                                                <constraint firstItem="tba-5D-vE4" firstAttribute="top" secondItem="S8G-g8-yvt" secondAttribute="top" constant="10" id="lad-FW-JuL"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="weeksday" destination="tba-5D-vE4" id="Inc-G3-1c1"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="FBK-Ai-e7U" firstAttribute="bottom" secondItem="9Uy-kz-UYA" secondAttribute="bottom" id="J4V-ye-2Bq"/>
+                            <constraint firstItem="FBK-Ai-e7U" firstAttribute="leading" secondItem="9Uy-kz-UYA" secondAttribute="leading" id="PQs-nj-dsB"/>
+                            <constraint firstItem="FBK-Ai-e7U" firstAttribute="trailing" secondItem="9Uy-kz-UYA" secondAttribute="trailing" id="kH4-PF-8n3"/>
+                            <constraint firstItem="FBK-Ai-e7U" firstAttribute="top" secondItem="9Uy-kz-UYA" secondAttribute="top" id="rle-mS-sN8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9Uy-kz-UYA"/>
+                    </view>
+                    <connections>
+                        <outlet property="weeksdayTable" destination="FBK-Ai-e7U" id="gUk-bD-gLx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="epV-Rt-sfB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4305.7971014492759" y="-730.43478260869574"/>
         </scene>
         <!--AlarmVC-->
         <scene sceneID="L5u-K2-7e7">
