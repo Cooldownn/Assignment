@@ -8,14 +8,15 @@
 
 import UIKit
 
-import UIKit
+import AVFoundation
 
-class SetTimeAlarmVC: UIViewController, UITextFieldDelegate {
+class SetTimeAlarmVC: UIViewController, UITextFieldDelegate, AVAudioPlayerDelegate {
     
     var alarm: Alarm?
     @IBOutlet weak var saveButton: UIBarButtonItem!
     @IBOutlet weak var timePicker: UIDatePicker!
     @IBOutlet weak var alarmLbl: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -69,7 +70,6 @@ class SetTimeAlarmVC: UIViewController, UITextFieldDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if saveButton === sender as! UIBarButtonItem {
             let alarmName = alarmLbl.text
             var time = timePicker.date
             let timeInterval = floor(time.timeIntervalSinceReferenceDate/60) * 60
@@ -82,13 +82,17 @@ class SetTimeAlarmVC: UIViewController, UITextFieldDelegate {
             notification.alertBody = "Ding Dong"
             notification.fireDate = time
             notification.soundName = UILocalNotificationDefaultSoundName
+            //player.play()
             
             UIApplication.shared.scheduledLocalNotifications?.append(notification)
             
             alarm = Alarm(time: time as NSDate, name: alarmName!, notification: notification)
             
-        }
-        
+    }
+    
+    
+    @IBAction func repeatTapped(_ sender: Any) {
+        performSegue(withIdentifier: "repeatSegue", sender: self)
     }
     
 }

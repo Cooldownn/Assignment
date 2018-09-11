@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import AVFoundation
 
-class AlarmVC: UITableViewController {
+class AlarmVC: UITableViewController, AVAudioPlayerDelegate {
     
     // Properties
     var alarms = [Alarm]()
@@ -70,6 +71,7 @@ class AlarmVC: UITableViewController {
         cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 50)
         cell.textLabel?.text = dateFormatter.string(from: alarm.time as Date)
         cell.detailTextLabel?.text = alarm.name
+        player.play()
         
         // Create switch
         let sw = UISwitch(frame: CGRect())
