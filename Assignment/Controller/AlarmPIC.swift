@@ -11,12 +11,17 @@ import UIKit
 class AlarmPIC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate,UICollectionViewDataSource,UICollectionViewDelegate {
     //  @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var changeView: UIBarButtonItem!
+   
     var alarmPIC: AlarmPIC!
     let reuseIdentifier = "cell" // also enter this string as the cell identifier in the storyboard
 //    var collectionView : UICollectionView!
     var images = [UIImage]()
     var chooseImage = UIImage()
+    var imageView = UIImageView()
+    var newImageView = UIImageView()
     var image00 = UIImage(named:"remider_icon")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // view.addSubview(collectionView!)
@@ -59,14 +64,36 @@ class AlarmPIC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier:reuseIdentifier, for: indexPath)
             as! imageUICollectionViewCell
         cell.image1.image = self.images[indexPath.item]
-        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(imageTapped(_:)))
+        let leftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe(_:)))
+        let rightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe(_:)))
+        cell.image1.isUserInteractionEnabled = true
+        cell.image1.addGestureRecognizer(tap)
+        cell.image1.addGestureRecognizer(leftSwipe)
+        cell.image1.addGestureRecognizer(rightSwipe)
         
         return cell
     }
-    @IBAction func imageTapped(_ sender: UITapGestureRecognizer) {
-        let imageView = sender.view as! UIImageView
-        //let label = UILabel("button")
-        let newImageView = UIImageView(image: imageView.image)
+    @objc func handleSwipe(_ sender: UISwipeGestureRecognizer){
+//        if sender.state == .ended {
+//            switch sender.direction {
+//            case .right:
+//                imageTapped(_:)
+//            case .left:
+//
+//            default:
+//                break
+//            }
+//        }
+    }
+    
+    @objc func imageTapped(_ sender: UITapGestureRecognizer) {
+        imageView = sender.view as! UIImageView
+        popupimage(imageView)
+        
+    }
+    func popupimage(_ sender: UIImageView){
+        newImageView = UIImageView(image: imageView.image)
         newImageView.frame = UIScreen.main.bounds
         newImageView.backgroundColor = .black
         newImageView.contentMode = .scaleAspectFit
@@ -77,11 +104,8 @@ class AlarmPIC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
         self.navigationController?.isNavigationBarHidden = true
         self.tabBarController?.tabBar.isHidden = true
     }
-    
     @objc func dismissFullscreenImage(_ sender: UITapGestureRecognizer) {
-//        self.navigationController?.isNavigationBarHidden = false
-//        self.tabBarController?.tabBar.isHidden = false
-//        sender.view?.removeFromSuperview()
+
         let alert = UIAlertController(title: "Choose Image", message: "Use this image as default", preferredStyle: .actionSheet)
         alert.addAction(UIAlertAction(title: "Yes",style: .default, handler: { (action: UIAlertAction) in
             let chooseImageView = sender.view as! UIImageView
@@ -112,6 +136,17 @@ class AlarmPIC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
 
     @IBAction func cancelBtn(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        // Determine what the segue destination is
+        if segue.destination is NewPicture
+        {
+            let vc = segue.destination as? NewPicture
+         //   vc?.imageView0 = chooseImage
+//            vc?.usename = "Set"
+            
+        }
     }
     
     

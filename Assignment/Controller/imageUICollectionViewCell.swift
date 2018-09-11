@@ -11,6 +11,7 @@ import UIKit
 class imageUICollectionViewCell: UICollectionViewCell {
     
     
-    @IBOutlet weak var tap : UITapGestureRecognizer!
+  
+   
     @IBOutlet weak var image1: UIImageView!
 }
