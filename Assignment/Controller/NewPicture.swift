@@ -101,10 +101,12 @@ class NewPicture: UIViewController,UIImagePickerControllerDelegate, UINavigation
             // 1 image is smaller
             smallImageViewPlaceholder = imageView1
             largeImageViewPlaceholder = imageView
+            self.mess.text = " Not equal"
         } else {
             //  image is smaller
             smallImageViewPlaceholder = imageView
             largeImageViewPlaceholder = imageView1
+            self.mess.text = " Not equal"
         }
         return true
     }
@@ -114,6 +116,7 @@ class NewPicture: UIViewController,UIImagePickerControllerDelegate, UINavigation
         // We must use the size of the image, not the size of the ImageView control.
         
         // determine scale of largest image
+        
         let widthScale = largeImageView.bounds.size.width / largeImageView.image!.size.width
         let heightScale = largeImageView.bounds.size.height / largeImageView.image!.size.height
         
@@ -202,13 +205,13 @@ class NewPicture: UIViewController,UIImagePickerControllerDelegate, UINavigation
         // how many passes do we want to make?
         for i in 1...4 {
             // resize the NSImage
-            var newImageL = resize(sourceImage: largeImage, scaleFactor: scaleFactor)
-            var newImageS = resize(sourceImage: smallImage, scaleFactor: scaleFactor)
+            let newImageL = resize(sourceImage: largeImage, scaleFactor: scaleFactor)
+            let newImageS = resize(sourceImage: smallImage, scaleFactor: scaleFactor)
             // make CIImage from resized NSImage
             let resizedSmallImage = CIImage(image: newImageS)
             let resizedLargeImage = CIImage(image: newImageL)
             
-            let result = self.compareImages(resizedSmallImage, largeImage: resizedLargeImage, startingX: initialX, startingY: initialY)
+            let result = self.compareImages(smallImage: resizedSmallImage!, largeImage: resizedLargeImage!, startingX: initialX, startingY: initialY)
             
             print("Pass \(i) - low value of \(result.0) at x:\(result.1) y:\(result.2) ")
             
@@ -262,9 +265,40 @@ class NewPicture: UIViewController,UIImagePickerControllerDelegate, UINavigation
         smallImage.draw(in: CGRect(origin: CGPoint(x: 0, y: 0), size: newSize))
     
         //reset original image
-        sourceImage = tempsource
+       // sourceImage = tempsource
         
         return smallImage
+    }
+    func calcSearchRectanglePosition(fullWidth:Float, fullHeight: Float, xPos: Float, yPos: Float) -> (Int, Int, Int, Int) {
+        
+        // how far along within the boundaries of the image are we?
+        let percentX  = xPos / fullWidth
+        let percentY  = yPos / fullHeight
+        
+        // determine scale of displayed image
+        let widthScale = largeImageViewPlaceholder.bounds.size.width / largeImageViewPlaceholder.image!.size.width
+        let heightScale = largeImageViewPlaceholder.bounds.size.height / largeImageViewPlaceholder.image!.size.height
+        
+        // we want the smallest one, as we are scaling in proportion
+        let minimumScale = widthScale < heightScale ? widthScale : heightScale
+        
+        var scaledHeight = largeImageViewPlaceholder.image!.size.height * minimumScale
+        var scaledWidth = largeImageViewPlaceholder.image!.size.width * minimumScale
+        
+        var newX = Float(scaledWidth) * percentX
+        var newY = Float(scaledHeight) * percentY
+        
+        // get extra pixels for padding between the image and the image view control
+        var extraY = (largeImageViewPlaceholder.bounds.size.height - scaledHeight) / 2.0
+        var extraX = (largeImageViewPlaceholder.bounds.size.width - scaledWidth) / 2.0
+        
+        newX = newX + Float(extraX)
+        newY = newY + Float(extraY)
+        
+        var boxWidth = Int(round(smallImageViewPlaceholder.image!.size.width * minimumScale))
+        var boxHeight = Int(round(smallImageViewPlaceholder.image!.size.height * minimumScale))
+        
+        return(Int(round(newX)),Int(round(newY)),boxWidth,boxHeight)
     }
     func compareImages (smallImage : CIImage, largeImage : CIImage, startingX : Int, startingY: Int) -> (Int, Int, Int) {
         
@@ -283,7 +317,7 @@ class NewPicture: UIViewController,UIImagePickerControllerDelegate, UINavigation
         transformFilter?.setValue(smallImage, forKey: kCIInputImageKey)
         // initial position?
         let affineTransform = CGAffineTransform()
-        affineTransform.(CGFloat(startingX),yBy:CGFloat(startingY))
+        affineTransform.translatedBy(x: CGFloat(startingX), y: CGFloat(startingY))
         transformFilter?.setValue(affineTransform, forKey: kCIInputTransformKey)
         
         // FILTER 2. To blend the two images
@@ -294,28 +328,31 @@ class NewPicture: UIViewController,UIImagePickerControllerDelegate, UINavigation
         
         // FILTER 3. To get the average pixel color of the blended image
         let averageFilter = CIFilter(name: "CIAreaAverage")
-        averageFilter.setDefaults()
-        averageFilter.setValue(differenceFilter.outputImage, forKey: kCIInputImageKey)
+        averageFilter?.setDefaults()
+        averageFilter?.setValue(differenceFilter?.outputImage, forKey: kCIInputImageKey)
         // The blended image will always be the size of the large image, so
         // define a rectangle to just compare the combined section
         // NOTE: I find it's useful to come back in at least one pixel from the edges
         // as sometimes you get a white line at the edge the combined result
-        let compareRect = CGRectMake(CGFloat(startingX),CGFloat(startingY), smallImageWidth-1,smallImageHeight-1)
-        let extents = CIVector(CGRect: compareRect)
-        averageFilter.setValue(extents, forKey: kCIInputExtentKey)
+        
+        let compareRect = CGRect(x: CGFloat(startingX),y: CGFloat(startingY),width: smallImageWidth-1,height: smallImageHeight-1)
+        let extents = CIVector(cgRect: compareRect)
+        
+        averageFilter?.setValue(extents, forKey: kCIInputExtentKey)
         
         // that's the filter chain!
         
         // Create the CIContext to draw into
         let space  = CGColorSpaceCreateDeviceRGB()
-        let bminfo = CGBitmapInfo(CGImageAlphaInfo.PremultipliedLast.rawValue)
-        var pixelBuffer = Array<CUnsignedChar>(count: 16, repeatedValue: 255)
-        let cgCont = CGBitmapContextCreate(&pixelBuffer, 1, 1, 8, 16, space, bminfo)
+        let bminfo = CGBitmapInfo(rawValue: CGImageAlphaInfo.premultipliedLast.rawValue)
+        var pixelBuffer = Array<CUnsignedChar>(repeating: 255, count: 16)
+        let cgCont = CGContext(data: &pixelBuffer, width: 1, height: 1, bitsPerComponent: 8, bytesPerRow: 16, space: space, bitmapInfo: bminfo.rawValue)
         let contextOptions : [NSObject:AnyObject] = [
-            kCIContextWorkingColorSpace : space,
-            kCIContextUseSoftwareRenderer : true,
+            kCIContextWorkingColorSpace as NSObject : space,
+            kCIContextUseSoftwareRenderer as NSObject : true as AnyObject,
             ]
-        let myContext = CIContext(CGContext: cgCont, options: contextOptions)
+        let myContext = CIContext(cgContext: cgCont!, options: contextOptions as? [String : Any])
+        //let myContext = CIContext(cgContext: <#T##CGContext#>, options: <#T##[String : Any]?#>)
         
         // how far along the x and y axis of the large image do we need to look?
         var maximumX : Int = Int(largeImageWidth) - Int(smallImageWidth)
@@ -341,16 +378,17 @@ class NewPicture: UIViewController,UIImagePickerControllerDelegate, UINavigation
             for xPosition in startingX..<maximumX {
                 
                 // reset the blend input to make sure we're always using the output of the most recent transform
-                differenceFilter.setValue(transformFilter.outputImage, forKey: kCIInputImageKey)
+                differenceFilter?.setValue(transformFilter?.outputImage, forKey: kCIInputImageKey)
                 
                 // restrict the area of the blended image we're looking at
-                let compareRect = CGRectMake(CGFloat(xPosition),CGFloat(yPosition), smallImageWidth-1,smallImageHeight-1)
-                let extents = CIVector(CGRect: compareRect)
-                averageFilter.setValue(extents, forKey: kCIInputExtentKey)
-                averageFilter.setValue(differenceFilter.outputImage, forKey: kCIInputImageKey)
+                let compareRect = CGRect(x: CGFloat(xPosition),y: CGFloat(yPosition), width: smallImageWidth-1, height: smallImageHeight-1)
+                //let extents = init(cgRect: compareRect)
+                let extents = CIVector(cgRect: compareRect)
+                averageFilter?.setValue(extents, forKey: kCIInputExtentKey)
+                averageFilter?.setValue(differenceFilter?.outputImage, forKey: kCIInputImageKey)
                 
                 // render that final single pixel result
-                myContext.drawImage(averageFilter.outputImage, inRect: CGRectMake(0,0,1,1), fromRect: CGRectMake(0,0,1,1))
+                myContext.draw((averageFilter?.outputImage)!, in: CGRect(x: 0,y: 0,width: 1,height: 1), from: CGRect(x: 0,y: 0,width: 1,height: 1))
                 
                 let r = Int(pixelBuffer[0])
                 let g = Int(pixelBuffer[1])
@@ -368,19 +406,21 @@ class NewPicture: UIViewController,UIImagePickerControllerDelegate, UINavigation
                 // we don't need to update the rectangle position _every_ time
                 if xPosition % 10 == 0 {
                     
-                    var newPosition = self.calcSearchRectanglePosition(Float(largeImageWidth), fullHeight: Float(largeImageHeight), xPos: Float(xPosition), yPos: Float(yPosition))
+                    var newPosition = self.calcSearchRectanglePosition(fullWidth: Float(largeImageWidth), fullHeight: Float(largeImageHeight), xPos: Float(xPosition), yPos: Float(yPosition))
                     
-                    NSOperationQueue.mainQueue().addOperationWithBlock( {
+                    OperationQueue.main.addOperation( {
                         // change position
                         self.movingSearchRectangle.frame = CGRect(x: newPosition.0, y: newPosition.1, width: newPosition.2, height: newPosition.3)
                     })
                 }
                 // move the transform one pixel to the right
-                affineTransform.translateXBy(1, yBy: 0)
+                affineTransform.translatedBy(x : 1, y : 0)
+                
+            
             }
             // after each movement along the X axis, move back to the start of X
             // and up one on the Y axis
-            affineTransform.translateXBy(-CGFloat(maximumX-startingX), yBy: 1 )
+            affineTransform.translatedBy(x: -CGFloat(maximumX-startingX), y: 1 )
         }
         
         return (lowestPixelValue, lowestPixelXPosition, lowestPixelYPosition)

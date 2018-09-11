@@ -21,6 +21,8 @@
 		BF661EA3212BB9CD00D7B6BF /* MathVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF661EA2212BB9CD00D7B6BF /* MathVC.swift */; };
 		BFAF0706214424FE00D42EA8 /* AlarmVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAF0705214424FE00D42EA8 /* AlarmVC.swift */; };
 		BFAF07092144256700D42EA8 /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAF07082144256700D42EA8 /* Alarm.swift */; };
+		E2367E4D2147867900EC3B4A /* tableViewCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2367E4C2147867900EC3B4A /* tableViewCellTableViewCell.swift */; };
+		E2367E4F2148037500EC3B4A /* alarmTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2367E4E2148037500EC3B4A /* alarmTableViewCell.swift */; };
 		E2485DB52142019F00EAE371 /* AlarmPIC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2485DB42142019F00EAE371 /* AlarmPIC.swift */; };
 		E248B1A82144D9F800CE00B3 /* imageUICollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E248B1A72144D9F800CE00B3 /* imageUICollectionViewCell.swift */; };
 		E248B1B0214515EC00CE00B3 /* NewPicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = E248B1AF214515EC00CE00B3 /* NewPicture.swift */; };
@@ -64,6 +66,8 @@
 		BF661EA2212BB9CD00D7B6BF /* MathVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathVC.swift; sourceTree = "<group>"; };
 		BFAF0705214424FE00D42EA8 /* AlarmVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmVC.swift; sourceTree = "<group>"; };
 		BFAF07082144256700D42EA8 /* Alarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
+		E2367E4C2147867900EC3B4A /* tableViewCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tableViewCellTableViewCell.swift; sourceTree = "<group>"; };
+		E2367E4E2148037500EC3B4A /* alarmTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = alarmTableViewCell.swift; sourceTree = "<group>"; };
 		E2485DB42142019F00EAE371 /* AlarmPIC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmPIC.swift; sourceTree = "<group>"; };
 		E248B1A72144D9F800CE00B3 /* imageUICollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageUICollectionViewCell.swift; sourceTree = "<group>"; };
 		E248B1AF214515EC00CE00B3 /* NewPicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPicture.swift; sourceTree = "<group>"; };
@@ -167,6 +171,8 @@
 				E2485DB42142019F00EAE371 /* AlarmPIC.swift */,
 				BFAF0705214424FE00D42EA8 /* AlarmVC.swift */,
 				E248B1AF214515EC00CE00B3 /* NewPicture.swift */,
+				E2367E4C2147867900EC3B4A /* tableViewCellTableViewCell.swift */,
+				E2367E4E2148037500EC3B4A /* alarmTableViewCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -317,6 +323,8 @@
 				BF661E99212BAB5500D7B6BF /* ReminderVC.swift in Sources */,
 				BF661EA1212BB00800D7B6BF /* SetMethodAlarmVC.swift in Sources */,
 				BF661E9D212BADD700D7B6BF /* NoteVC.swift in Sources */,
+				E2367E4F2148037500EC3B4A /* alarmTableViewCell.swift in Sources */,
+				E2367E4D2147867900EC3B4A /* tableViewCellTableViewCell.swift in Sources */,
 				BF661E61212BA61200D7B6BF /* AppDelegate.swift in Sources */,
 				BFAF07092144256700D42EA8 /* Alarm.swift in Sources */,
 				BF661E9F212BAFE700D7B6BF /* SetTimeAlarmVC.swift in Sources */,
