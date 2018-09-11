@@ -8,9 +8,9 @@
 
 import UIKit
 
-import UIKit
+import AVFoundation
 
-class SetTimeAlarmVC: UIViewController, UITextFieldDelegate {
+class SetTimeAlarmVC: UIViewController, UITextFieldDelegate, AVAudioPlayerDelegate {
     
     var alarm: Alarm?
     @IBOutlet weak var saveButton: UIBarButtonItem!
@@ -82,6 +82,7 @@ class SetTimeAlarmVC: UIViewController, UITextFieldDelegate {
             notification.alertBody = "Ding Dong"
             notification.fireDate = time
             notification.soundName = UILocalNotificationDefaultSoundName
+            //player.play()
             
             UIApplication.shared.scheduledLocalNotifications?.append(notification)
             

@@ -28,6 +28,10 @@
 		E2485DB52142019F00EAE371 /* AlarmPIC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2485DB42142019F00EAE371 /* AlarmPIC.swift */; };
 		E248B1A82144D9F800CE00B3 /* imageUICollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E248B1A72144D9F800CE00B3 /* imageUICollectionViewCell.swift */; };
 		E248B1B0214515EC00CE00B3 /* NewPicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = E248B1AF214515EC00CE00B3 /* NewPicture.swift */; };
+		FC68C23C214790EE00EAA7C4 /* SoundBrowsingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC68C23B214790EE00EAA7C4 /* SoundBrowsingVC.swift */; };
+		FC68C23E2147AC8F00EAA7C4 /* Apologize - One Republic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FC68C23D2147AC8D00EAA7C4 /* Apologize - One Republic.mp3 */; };
+		FC68C2402147ACAA00EAA7C4 /* Let her go - The Passenger.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FC68C23F2147ACA800EAA7C4 /* Let her go - The Passenger.mp3 */; };
+		FC68C2422147ACB500EAA7C4 /* Thinking out loud - Ed Sheeran.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FC68C2412147ACB400EAA7C4 /* Thinking out loud - Ed Sheeran.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +79,10 @@
 		E2485DB42142019F00EAE371 /* AlarmPIC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmPIC.swift; sourceTree = "<group>"; };
 		E248B1A72144D9F800CE00B3 /* imageUICollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageUICollectionViewCell.swift; sourceTree = "<group>"; };
 		E248B1AF214515EC00CE00B3 /* NewPicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPicture.swift; sourceTree = "<group>"; };
+		FC68C23B214790EE00EAA7C4 /* SoundBrowsingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundBrowsingVC.swift; sourceTree = "<group>"; };
+		FC68C23D2147AC8D00EAA7C4 /* Apologize - One Republic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Apologize - One Republic.mp3"; sourceTree = "<group>"; };
+		FC68C23F2147ACA800EAA7C4 /* Let her go - The Passenger.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Let her go - The Passenger.mp3"; sourceTree = "<group>"; };
+		FC68C2412147ACB400EAA7C4 /* Thinking out loud - Ed Sheeran.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Thinking out loud - Ed Sheeran.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,8 +185,12 @@
 				BF661EA2212BB9CD00D7B6BF /* MathVC.swift */,
 				E2485DB42142019F00EAE371 /* AlarmPIC.swift */,
 				BFAF0705214424FE00D42EA8 /* AlarmVC.swift */,
+				FC68C2412147ACB400EAA7C4 /* Thinking out loud - Ed Sheeran.mp3 */,
+				FC68C23F2147ACA800EAA7C4 /* Let her go - The Passenger.mp3 */,
+				FC68C23D2147AC8D00EAA7C4 /* Apologize - One Republic.mp3 */,
 				E248B1AF214515EC00CE00B3 /* NewPicture.swift */,
 				BFAF072621467AF000D42EA8 /* WeekdaysVC.swift */,
+				FC68C23B214790EE00EAA7C4 /* SoundBrowsingVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -312,7 +324,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF661E6B212BA61200D7B6BF /* LaunchScreen.storyboard in Resources */,
+				FC68C2402147ACAA00EAA7C4 /* Let her go - The Passenger.mp3 in Resources */,
+				FC68C23E2147AC8F00EAA7C4 /* Apologize - One Republic.mp3 in Resources */,
 				BF661E68212BA61200D7B6BF /* Assets.xcassets in Resources */,
+				FC68C2422147ACB500EAA7C4 /* Thinking out loud - Ed Sheeran.mp3 in Resources */,
 				BF661E66212BA61200D7B6BF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -346,6 +361,7 @@
 				BF661EA1212BB00800D7B6BF /* SetMethodAlarmVC.swift in Sources */,
 				BFAF072721467AF000D42EA8 /* WeekdaysVC.swift in Sources */,
 				BFAF072521467AC500D42EA8 /* Weekdays.swift in Sources */,
+				FC68C23C214790EE00EAA7C4 /* SoundBrowsingVC.swift in Sources */,
 				BF661E9D212BADD700D7B6BF /* NoteVC.swift in Sources */,
 				BF661E61212BA61200D7B6BF /* AppDelegate.swift in Sources */,
 				BFAF072921467C6E00D42EA8 /* WeekdaysCell.swift in Sources */,

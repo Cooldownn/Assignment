@@ -213,23 +213,39 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M3P-1x-lxa">
-                                <rect key="frame" x="20" y="390" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="20" y="390" width="49" height="30"/>
+                                <state key="normal" title="Repeat"/>
                                 <connections>
                                     <action selector="repeatTapped:" destination="kDs-D0-xgb" eventType="touchUpInside" id="lb5-rj-c3R"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nj0-df-Wyn">
+                                <rect key="frame" x="20" y="428" width="156" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Select ringtone"/>
+                                <connections>
+                                    <segue destination="nZP-Pe-aI0" kind="presentation" id="4Zk-X4-Aqo"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="nj0-df-Wyn" firstAttribute="leading" secondItem="FFN-FL-4om" secondAttribute="leading" constant="20" id="1TE-Fx-BiY"/>
+                            <constraint firstItem="f1C-nc-Tub" firstAttribute="trailing" secondItem="FFN-FL-4om" secondAttribute="trailing" id="1nx-AK-Wsh"/>
+                            <constraint firstItem="afC-cC-1Fc" firstAttribute="trailing" secondItem="FFN-FL-4om" secondAttribute="trailing" id="9iy-IC-U0s"/>
                             <constraint firstItem="M3P-1x-lxa" firstAttribute="leading" secondItem="FFN-FL-4om" secondAttribute="leading" constant="20" id="9my-Fq-glR"/>
+                            <constraint firstItem="nj0-df-Wyn" firstAttribute="top" secondItem="M3P-1x-lxa" secondAttribute="bottom" constant="8" id="EDt-Zh-rzW"/>
+                            <constraint firstItem="f1C-nc-Tub" firstAttribute="leading" secondItem="FFN-FL-4om" secondAttribute="leading" id="GZS-ih-CMu"/>
                             <constraint firstItem="f1C-nc-Tub" firstAttribute="leading" secondItem="FFN-FL-4om" secondAttribute="leading" id="HVh-gI-jkt"/>
                             <constraint firstItem="f1C-nc-Tub" firstAttribute="top" secondItem="FFN-FL-4om" secondAttribute="top" id="LmI-lY-lep"/>
                             <constraint firstItem="afC-cC-1Fc" firstAttribute="leading" secondItem="FFN-FL-4om" secondAttribute="leading" id="RkS-Wc-RBg"/>
                             <constraint firstItem="f1C-nc-Tub" firstAttribute="trailing" secondItem="FFN-FL-4om" secondAttribute="trailing" id="Sal-Lq-sJ9"/>
+                            <constraint firstItem="afC-cC-1Fc" firstAttribute="leading" secondItem="FFN-FL-4om" secondAttribute="leading" id="W94-tf-pMK"/>
                             <constraint firstItem="FFN-FL-4om" firstAttribute="trailing" secondItem="afC-cC-1Fc" secondAttribute="trailing" id="Y3m-Eh-9UE"/>
                             <constraint firstItem="afC-cC-1Fc" firstAttribute="top" secondItem="f1C-nc-Tub" secondAttribute="bottom" constant="70" id="dwy-5m-Pyx"/>
                             <constraint firstItem="M3P-1x-lxa" firstAttribute="top" secondItem="afC-cC-1Fc" secondAttribute="bottom" constant="10" id="hfa-4d-bmi"/>
+                            <constraint firstItem="afC-cC-1Fc" firstAttribute="top" secondItem="f1C-nc-Tub" secondAttribute="bottom" constant="70" id="iBJ-ND-ynT"/>
+                            <constraint firstItem="f1C-nc-Tub" firstAttribute="top" secondItem="FFN-FL-4om" secondAttribute="top" id="tQH-p8-vzh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="FFN-FL-4om"/>
                     </view>
@@ -241,7 +257,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="BxL-wm-W6B">
                             <connections>
-                                <segue destination="Pfr-yh-aCc" kind="unwind" unwindAction="unwindtoAlarmWithSender:" id="LFJ-er-mAw"/>
+                                <segue destination="Pfr-yh-aCc" kind="unwind" unwindAction="unwindtoAlarmWithSender:" id="u2K-My-hmz"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -256,6 +272,48 @@
                 <exit id="Pfr-yh-aCc" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3405.7971014492755" y="-369.29347826086962"/>
+        </scene>
+        <!--AddRingToneController-->
+        <scene sceneID="Vm9-2n-2Hz">
+            <objects>
+                <tableViewController title="AddRingToneController" id="PrE-si-50T" customClass="SoundBrowsingVC" customModule="Assignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Caa-JC-Ytf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="sound" id="Z4p-YG-Rda">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Z4p-YG-Rda" id="cMT-aE-S5m">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="PrE-si-50T" id="wxY-UV-cWc"/>
+                            <outlet property="delegate" destination="PrE-si-50T" id="fVm-t9-2c7"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Sound" id="Cpv-dG-53c">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="Wvx-iv-j2W">
+                            <connections>
+                                <action selector="abortSelecting:" destination="PrE-si-50T" id="jeb-d8-a2A"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="ngS-PO-UNP">
+                            <connections>
+                                <action selector="backToPrev:" destination="PrE-si-50T" id="fW8-lt-RJb"/>
+                                <segue destination="ZoJ-NX-kyb" kind="unwind" unwindAction="backToPrev:" id="Kye-Fj-AUm"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ryi-9b-LTz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="ZoJ-NX-kyb" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="5213.04347826087" y="-386.41304347826087"/>
         </scene>
         <!--Repeat-->
         <scene sceneID="fxJ-u4-9rd">
@@ -311,7 +369,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="epV-Rt-sfB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4305.7971014492759" y="-730.43478260869574"/>
+            <point key="canvasLocation" x="4306" y="-1061"/>
         </scene>
         <!--AlarmVC-->
         <scene sceneID="L5u-K2-7e7">
@@ -390,9 +448,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MethodVC" translatesAutoresizingMaskIntoConstraints="NO" id="Z5B-7W-Dfw">
-                                <rect key="frame" x="0.0" y="20" width="414" height="672"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GJO-oV-h4l">
                                 <rect key="frame" x="16" y="379" width="198" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -430,6 +485,9 @@
                                     <segue destination="VBR-7V-Odu" kind="show" id="dTx-VH-T4O"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="MethodVC" translatesAutoresizingMaskIntoConstraints="NO" id="Z5B-7W-Dfw">
+                                <rect key="frame" x="0.0" y="159" width="414" height="672"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -852,6 +910,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="guH-iE-BdR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5244.9275362318849" y="438.58695652173918"/>
+        </scene>
+        <!--AddRingToneNavigation-->
+        <scene sceneID="eMv-gD-EUz">
+            <objects>
+                <navigationController title="AddRingToneNavigation" automaticallyAdjustsScrollViewInsets="NO" id="nZP-Pe-aI0" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="NVN-Kc-kOM">
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="PrE-si-50T" kind="relationship" relationship="rootViewController" id="5aM-ZY-TGq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ohl-qb-JGz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4305.7971014492759" y="-386.41304347826087"/>
         </scene>
     </scenes>
     <resources>
