@@ -109,7 +109,7 @@
 		BF19253921420299003FBA55 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				BFAF072821467C6E00D42EA8 /* WeekdaysCell.swift */,
+				BF661E64212BA61200D7B6BF /* Main.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -121,6 +121,7 @@
 				BF661E74212BA61300D7B6BF /* AssignmentTests */,
 				BF661E7F212BA61300D7B6BF /* AssignmentUITests */,
 				BF661E5E212BA61200D7B6BF /* Products */,
+				E2367E502148113100EC3B4A /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -144,7 +145,6 @@
 				BF661E95212BAB1100D7B6BF /* Controller */,
 				BF661E60212BA61200D7B6BF /* AppDelegate.swift */,
 				BF661E67212BA61200D7B6BF /* Assets.xcassets */,
-				BF661E64212BA61200D7B6BF /* Main.storyboard */,
 				BF661E69212BA61200D7B6BF /* LaunchScreen.storyboard */,
 				BF661E6C212BA61200D7B6BF /* Info.plist */,
 			);
@@ -202,7 +202,6 @@
 		BFAF071F21467A9400D42EA8 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				BFAF072021467AA600D42EA8 /* DayServices.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -210,9 +209,16 @@
 		BFAF072221467AAE00D42EA8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				BFAF072421467AC500D42EA8 /* Weekdays.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		E2367E502148113100EC3B4A /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				FC68C23B214790EE00EAA7C4 /* SoundBrowsingVC.swift */,
+			);
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -355,16 +361,12 @@
 				BF661E9B212BAB7100D7B6BF /* SettingVC.swift in Sources */,
 				BF661E99212BAB5500D7B6BF /* ReminderVC.swift in Sources */,
 				BF661EA1212BB00800D7B6BF /* SetMethodAlarmVC.swift in Sources */,
-				BFAF072721467AF000D42EA8 /* WeekdaysVC.swift in Sources */,
-				BFAF072521467AC500D42EA8 /* Weekdays.swift in Sources */,
 				FC68C23C214790EE00EAA7C4 /* SoundBrowsingVC.swift in Sources */,
 				BF661E9D212BADD700D7B6BF /* NoteVC.swift in Sources */,
 				E2367E4F2148037500EC3B4A /* alarmTableViewCell.swift in Sources */,
 				E2367E4D2147867900EC3B4A /* tableViewCellTableViewCell.swift in Sources */,
 				BF661E61212BA61200D7B6BF /* AppDelegate.swift in Sources */,
-				BFAF072921467C6E00D42EA8 /* WeekdaysCell.swift in Sources */,
 				BFAF07092144256700D42EA8 /* Alarm.swift in Sources */,
-				BFAF072121467AA600D42EA8 /* DayServices.swift in Sources */,
 				BF661E9F212BAFE700D7B6BF /* SetTimeAlarmVC.swift in Sources */,
 				BF661EA3212BB9CD00D7B6BF /* MathVC.swift in Sources */,
 				E248B1A82144D9F800CE00B3 /* imageUICollectionViewCell.swift in Sources */,
