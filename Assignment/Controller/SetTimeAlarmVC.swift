@@ -8,9 +8,9 @@
 
 import UIKit
 
-import UIKit
+import AVFoundation
 
-class SetTimeAlarmVC: UIViewController, UITextFieldDelegate {
+class SetTimeAlarmVC: UIViewController, UITextFieldDelegate, AVAudioPlayerDelegate {
     
     var weekday: Weekdays!
     
