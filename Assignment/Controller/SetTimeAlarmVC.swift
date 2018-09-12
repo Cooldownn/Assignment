@@ -12,10 +12,14 @@ import AVFoundation
 
 class SetTimeAlarmVC: UIViewController, UITextFieldDelegate, AVAudioPlayerDelegate {
     
+    var weekday: Weekdays!
+    
     var alarm: Alarm?
     @IBOutlet weak var saveButton: UIBarButtonItem!
     @IBOutlet weak var timePicker: UIDatePicker!
     @IBOutlet weak var alarmLbl: UITextField!
+    
+    @IBOutlet weak var testDaysLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +29,11 @@ class SetTimeAlarmVC: UIViewController, UITextFieldDelegate, AVAudioPlayerDelega
         // set minimum date/time for picker
         timePicker.minimumDate = NSDate() as Date
         timePicker.locale = NSLocale.current
+        
+        if alarm != nil {
+            alarmLbl.text = alarm?.name
+            timePicker.date = alarm?.time as! Date
+        }
         
     }
     
@@ -66,33 +75,54 @@ class SetTimeAlarmVC: UIViewController, UITextFieldDelegate, AVAudioPlayerDelega
     }
     
     @IBAction func cancelBtn(_ sender: Any?) {
-        dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
+    //    dismiss(animated: true, completion: nil)
     }
     
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
             let alarmName = alarmLbl.text
             var time = timePicker.date
             let timeInterval = floor(time.timeIntervalSinceReferenceDate/60) * 60
-            
+        
             time = NSDate(timeIntervalSinceReferenceDate: timeInterval) as Date
             // build notification
-            
+        
             let notification = UILocalNotification()
             notification.alertTitle = "Alarm"
             notification.alertBody = "Ding Dong"
             notification.fireDate = time
             notification.soundName = UILocalNotificationDefaultSoundName
-            //player.play()
-            
+        
             UIApplication.shared.scheduledLocalNotifications?.append(notification)
-            
+        
             alarm = Alarm(time: time as NSDate, name: alarmName!, notification: notification)
-            
+        
+        
     }
     
     
     @IBAction func repeatTapped(_ sender: Any) {
-        performSegue(withIdentifier: "repeatSegue", sender: self)
+        let vc = storyboard?.instantiateViewController(withIdentifier: "WeekdaysVC") as! WeekdaysVC
+        vc.setTimeAlarmVC = self
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
+    
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

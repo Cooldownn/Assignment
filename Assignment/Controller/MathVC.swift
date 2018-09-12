@@ -315,4 +315,7 @@ class MathVC: UIViewController {
     @IBAction func nextBtn(_ sender: Any) {
         viewDidLoad()
     }
+    @IBAction func cancelBtn(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
 }

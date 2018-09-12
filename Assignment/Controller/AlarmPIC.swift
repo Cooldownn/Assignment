@@ -8,11 +8,12 @@
 
 import UIKit
 
-class AlarmPIC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate,UICollectionViewDataSource,UICollectionViewDelegate {
+class AlarmPIC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate,UICollectionViewDataSource,UICollectionViewDelegate, UITableViewDelegate
+    ,UITableViewDataSource{
     //  @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var changeView: UIBarButtonItem!
-   
+    @IBOutlet weak var tableView : UITableView!
     var alarmPIC: AlarmPIC!
     let reuseIdentifier = "cell" // also enter this string as the cell identifier in the storyboard
 //    var collectionView : UICollectionView!
@@ -86,7 +87,29 @@ class AlarmPIC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
 //            }
 //        }
     }
-    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell",for: indexPath) as! alarmTableViewCell
+        //cell.button.setImage(method[indexPath.item], for: .normal)
+        cell.backgroundColor = UIColor.orange
+        cell.label.text = ""
+        cell.label.backgroundColor = UIColor(patternImage: resizeImage(image: UIImage(named: "camera")! ,newWidth: CGFloat(120)))
+        
+        return cell
+    }
+    func resizeImage(image: UIImage, newWidth: CGFloat) -> UIImage {
+        
+        let scale = newWidth / image.size.width
+        let newHeight = image.size.height * scale
+        UIGraphicsBeginImageContext(CGSize(width: newWidth,height: newHeight))
+        image.draw(in :CGRect(x: 0,y: 0,width: newWidth,height: newHeight))
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return newImage!
+    }
     @objc func imageTapped(_ sender: UITapGestureRecognizer) {
         imageView = sender.view as! UIImageView
         popupimage(imageView)

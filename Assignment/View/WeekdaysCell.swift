@@ -9,12 +9,12 @@
 import UIKit
 
 class WeekdaysCell: UITableViewCell {
-
+    
     @IBOutlet weak var weeksday: UILabel!
     
     func updateViews(days: Weekdays)
     {
         weeksday.text = days.weekdays
     }
-
+    
 }

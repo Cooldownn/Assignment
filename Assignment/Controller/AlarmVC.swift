@@ -15,6 +15,7 @@ class AlarmVC: UITableViewController, AVAudioPlayerDelegate {
     var alarms = [Alarm]()
     let dateFormatter = DateFormatter()
     let locale = NSLocale.current
+    var indexPath: IndexPath!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +24,7 @@ class AlarmVC: UITableViewController, AVAudioPlayerDelegate {
         // self.clearsSelectionOnViewWillAppear = false
         
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        self.navigationItem.leftBarButtonItem = self.editButtonItem
+        // self.navigationItem.leftBarButtonItem = self.editButtonItem
         
         // Set Formatter date setting
         //  dateFormatter.locale = locale
@@ -86,6 +87,11 @@ class AlarmVC: UITableViewController, AVAudioPlayerDelegate {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.indexPath = indexPath
+    }
+    
+    
     @IBAction func switchChanged(_ sender: UISwitch!) {
         if sender.isOn {
             print("ON")
@@ -96,6 +102,8 @@ class AlarmVC: UITableViewController, AVAudioPlayerDelegate {
         }
         
     }
+    
+    
     
     
     
@@ -165,5 +173,18 @@ class AlarmVC: UITableViewController, AVAudioPlayerDelegate {
     func loadAlarm() -> [Alarm]? {
         return NSKeyedUnarchiver.unarchiveObject(withFile: Alarm.ArchiveURL.path) as? [Alarm]
     }
+    
+    
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "editAlarm" {
+//            if let setTimeAlarmVC = segue.destination as? SetTimeAlarmVC {
+//                setTimeAlarmVC.alarm = alarms[(tableView.indexPathForSelectedRow?.row)!]
+//            }
+//        }
+//    }
+    
+    
+    
     
 }
