@@ -12,6 +12,11 @@ class WeekdaysVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var weeksdayTable: UITableView!
     
+    var setTimeAlarmVC: SetTimeAlarmVC!
+    
+//    var selectedDayArray: [String] = []
+    var storedDay: [Int] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         weeksdayTable.dataSource = self
@@ -51,6 +56,12 @@ class WeekdaysVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         if let cell = tableView.cellForRow(at: indexPath) {
             if cell.isSelected {
                 cell.accessoryType = .checkmark
+//                selectedDayArray.append(DayServices.instance.getWeekdays()[indexPath.row].weekdays)
+                storedDay.append(indexPath.row)
+                
+//                print(DayServices.instance.getWeekdays()[indexPath.row].weekdays)
+//                print(selectedDayArray)
+//                print(storedDay)
             }
         }
     }
@@ -58,14 +69,57 @@ class WeekdaysVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         if let cell = tableView.cellForRow(at: indexPath) {
             cell.accessoryType = .none
+            if let index = storedDay.index(of: indexPath.row) {
+                storedDay.remove(at: index)
+            }
+//            if let index = selectedDayArray.index(of: DayServices.instance.getWeekdays()[indexPath.row].weekdays) {
+//                selectedDayArray.remove(at: index)
+//                storedDay.remove(at: index)
+//            }
+           // print(selectedDayArray)
         }
     }
     
+    @IBAction func done(_ sender: UIBarButtonItem) {
+        // setTimeAlarmVC.testDaysLabel.text = selectedDayArray.description
+        setTimeAlarmVC.testDaysLabel.text = repeatText(storedDay: storedDay)
+        if storedDay.count == 7 {
+            setTimeAlarmVC.testDaysLabel.text = "Every day"
+        }
+        else if storedDay.isEmpty {
+            setTimeAlarmVC.testDaysLabel.text = "Never"
+        }
+        
+        self.navigationController?.popViewController(animated: true)
+    }
     
-    
-    
-    
-    
-    
+    func repeatText(storedDay: [Int]) -> String {
+        var ret = String()
+        var weekdaysSorted:[Int] = [Int]()
+        
+        weekdaysSorted = storedDay.sorted(by: <)
+        for day in weekdaysSorted {
+            switch day{
+            case 0:
+                ret += "Mon "
+            case 1:
+                ret += "Tue "
+            case 2:
+                ret += "Wed "
+            case 3:
+                ret += "Thur "
+            case 4:
+                ret += "Fri "
+            case 5:
+                ret += "Sat "
+            case 6:
+                ret += "Sun "
+            default:
+                break
+            }
+        }
+        return ret
+    }
+
     
 }
