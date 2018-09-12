@@ -208,7 +208,7 @@
                                 </connections>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X4E-os-LtH">
-                                <rect key="frame" x="20" y="330" width="55" height="31"/>
+                                <rect key="frame" x="20" y="340" width="55" height="31"/>
                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
                                 <state key="normal" title="Repeat">
                                     <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -217,31 +217,43 @@
                                     <action selector="repeatTapped:" destination="kDs-D0-xgb" eventType="touchUpInside" id="cWI-vE-Nin"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="None" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Cn-gV-El6">
-                                <rect key="frame" x="353.33333333333331" y="335" width="40.666666666666686" height="19"/>
-                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Alarm name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1fp-rg-WhX">
                                 <rect key="frame" x="20" y="290" width="374" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Dp-MP-1i3">
+                                <rect key="frame" x="20" y="391" width="50" height="31"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
+                                <state key="normal" title="Sound">
+                                    <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="nZP-Pe-aI0" kind="presentation" id="Fne-MZ-Vp7"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="None" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Cn-gV-El6">
+                                <rect key="frame" x="353.33333333333331" y="346" width="40.666666666666686" height="19"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="FFN-FL-4om" firstAttribute="trailing" secondItem="6Cn-gV-El6" secondAttribute="trailing" constant="20" id="1W3-q3-Tap"/>
                             <constraint firstItem="f1C-nc-Tub" firstAttribute="trailing" secondItem="FFN-FL-4om" secondAttribute="trailing" id="4vP-eQ-Qqd"/>
                             <constraint firstItem="f1C-nc-Tub" firstAttribute="top" secondItem="FFN-FL-4om" secondAttribute="top" id="52a-3Z-2he"/>
-                            <constraint firstItem="6Cn-gV-El6" firstAttribute="top" secondItem="1fp-rg-WhX" secondAttribute="bottom" constant="15" id="9Wp-hf-nb4"/>
                             <constraint firstItem="X4E-os-LtH" firstAttribute="leading" secondItem="FFN-FL-4om" secondAttribute="leading" constant="20" id="ChR-ZC-X0S"/>
                             <constraint firstItem="FFN-FL-4om" firstAttribute="trailing" secondItem="1fp-rg-WhX" secondAttribute="trailing" constant="20" id="GLG-lm-ktQ"/>
-                            <constraint firstItem="X4E-os-LtH" firstAttribute="top" secondItem="1fp-rg-WhX" secondAttribute="bottom" constant="10" id="YCR-Ot-VJo"/>
+                            <constraint firstItem="3Dp-MP-1i3" firstAttribute="top" secondItem="X4E-os-LtH" secondAttribute="bottom" constant="20" id="UIb-MA-AcC"/>
+                            <constraint firstItem="X4E-os-LtH" firstAttribute="top" secondItem="1fp-rg-WhX" secondAttribute="bottom" constant="20" id="YCR-Ot-VJo"/>
                             <constraint firstItem="1fp-rg-WhX" firstAttribute="top" secondItem="f1C-nc-Tub" secondAttribute="bottom" constant="10" id="axh-iI-Khk"/>
                             <constraint firstItem="f1C-nc-Tub" firstAttribute="leading" secondItem="FFN-FL-4om" secondAttribute="leading" id="krH-lK-2kD"/>
                             <constraint firstItem="1fp-rg-WhX" firstAttribute="leading" secondItem="FFN-FL-4om" secondAttribute="leading" constant="20" id="sVD-ei-r9s"/>
-                            <constraint firstItem="FFN-FL-4om" firstAttribute="trailing" secondItem="6Cn-gV-El6" secondAttribute="trailing" constant="20" id="sXd-54-JQu"/>
+                            <constraint firstItem="3Dp-MP-1i3" firstAttribute="leading" secondItem="FFN-FL-4om" secondAttribute="leading" constant="20" id="usk-Cz-SGg"/>
+                            <constraint firstItem="6Cn-gV-El6" firstAttribute="centerY" secondItem="X4E-os-LtH" secondAttribute="centerY" id="wTR-l0-V9M"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="FFN-FL-4om"/>
                     </view>
@@ -376,7 +388,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="epV-Rt-sfB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3681" y="-547"/>
+            <point key="canvasLocation" x="3387" y="-862"/>
         </scene>
         <!--AlarmVC-->
         <scene sceneID="L5u-K2-7e7">
@@ -957,7 +969,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ohl-qb-JGz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4305.7971014492759" y="-386.41304347826087"/>
+            <point key="canvasLocation" x="4201" y="-326"/>
         </scene>
     </scenes>
     <resources>

@@ -147,6 +147,7 @@
 		BF661E5F212BA61200D7B6BF /* Assignment */ = {
 			isa = PBXGroup;
 			children = (
+				BFD6155B21497C7400A56F25 /* Sound */,
 				BFAF072221467AAE00D42EA8 /* Model */,
 				BFAF071F21467A9400D42EA8 /* Services */,
 				BFAF07072144254F00D42EA8 /* Persistent Data */,
@@ -190,9 +191,6 @@
 				BF661EA2212BB9CD00D7B6BF /* MathVC.swift */,
 				E2485DB42142019F00EAE371 /* AlarmPIC.swift */,
 				BFAF0705214424FE00D42EA8 /* AlarmVC.swift */,
-				FC68C2412147ACB400EAA7C4 /* Thinking out loud - Ed Sheeran.mp3 */,
-				FC68C23F2147ACA800EAA7C4 /* Let her go - The Passenger.mp3 */,
-				FC68C23D2147AC8D00EAA7C4 /* Apologize - One Republic.mp3 */,
 				E248B1AF214515EC00CE00B3 /* NewPicture.swift */,
 				E2367E4C2147867900EC3B4A /* tableViewCellTableViewCell.swift */,
 				E2367E4E2148037500EC3B4A /* alarmTableViewCell.swift */,
@@ -224,6 +222,16 @@
 				BFD61555214975F400A56F25 /* Weekdays.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		BFD6155B21497C7400A56F25 /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				FC68C2412147ACB400EAA7C4 /* Thinking out loud - Ed Sheeran.mp3 */,
+				FC68C23F2147ACA800EAA7C4 /* Let her go - The Passenger.mp3 */,
+				FC68C23D2147AC8D00EAA7C4 /* Apologize - One Republic.mp3 */,
+			);
+			path = Sound;
 			sourceTree = "<group>";
 		};
 		E2367E502148113100EC3B4A /* Recovered References */ = {

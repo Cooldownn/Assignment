@@ -77,6 +77,7 @@ class SoundBrowsingVC: UITableViewController, AVAudioPlayerDelegate {
         catch {
             //ERROR
         }
+        player.play()
     }
     /*
      // Override to support conditional editing of the table view.
