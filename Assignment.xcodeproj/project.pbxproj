@@ -21,12 +21,16 @@
 		BF661EA3212BB9CD00D7B6BF /* MathVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF661EA2212BB9CD00D7B6BF /* MathVC.swift */; };
 		BFAF0706214424FE00D42EA8 /* AlarmVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAF0705214424FE00D42EA8 /* AlarmVC.swift */; };
 		BFAF07092144256700D42EA8 /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAF07082144256700D42EA8 /* Alarm.swift */; };
+		BFD615522149757300A56F25 /* WeekdaysVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD615512149757300A56F25 /* WeekdaysVC.swift */; };
+		BFD61554214975D000A56F25 /* DayServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD61553214975D000A56F25 /* DayServices.swift */; };
+		BFD61556214975F400A56F25 /* Weekdays.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD61555214975F400A56F25 /* Weekdays.swift */; };
+		BFD615582149761600A56F25 /* WeekdaysCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD615572149761600A56F25 /* WeekdaysCell.swift */; };
+		BFD6155A2149768200A56F25 /* SoundBrowsingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD615592149768200A56F25 /* SoundBrowsingVC.swift */; };
 		E2367E4D2147867900EC3B4A /* tableViewCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2367E4C2147867900EC3B4A /* tableViewCellTableViewCell.swift */; };
 		E2367E4F2148037500EC3B4A /* alarmTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2367E4E2148037500EC3B4A /* alarmTableViewCell.swift */; };
 		E2485DB52142019F00EAE371 /* AlarmPIC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2485DB42142019F00EAE371 /* AlarmPIC.swift */; };
 		E248B1A82144D9F800CE00B3 /* imageUICollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E248B1A72144D9F800CE00B3 /* imageUICollectionViewCell.swift */; };
 		E248B1B0214515EC00CE00B3 /* NewPicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = E248B1AF214515EC00CE00B3 /* NewPicture.swift */; };
-		FC68C23C214790EE00EAA7C4 /* SoundBrowsingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC68C23B214790EE00EAA7C4 /* SoundBrowsingVC.swift */; };
 		FC68C23E2147AC8F00EAA7C4 /* Apologize - One Republic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FC68C23D2147AC8D00EAA7C4 /* Apologize - One Republic.mp3 */; };
 		FC68C2402147ACAA00EAA7C4 /* Let her go - The Passenger.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FC68C23F2147ACA800EAA7C4 /* Let her go - The Passenger.mp3 */; };
 		FC68C2422147ACB500EAA7C4 /* Thinking out loud - Ed Sheeran.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FC68C2412147ACB400EAA7C4 /* Thinking out loud - Ed Sheeran.mp3 */; };
@@ -70,12 +74,16 @@
 		BF661EA2212BB9CD00D7B6BF /* MathVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathVC.swift; sourceTree = "<group>"; };
 		BFAF0705214424FE00D42EA8 /* AlarmVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmVC.swift; sourceTree = "<group>"; };
 		BFAF07082144256700D42EA8 /* Alarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
+		BFD615512149757300A56F25 /* WeekdaysVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekdaysVC.swift; sourceTree = "<group>"; };
+		BFD61553214975D000A56F25 /* DayServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayServices.swift; sourceTree = "<group>"; };
+		BFD61555214975F400A56F25 /* Weekdays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weekdays.swift; sourceTree = "<group>"; };
+		BFD615572149761600A56F25 /* WeekdaysCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekdaysCell.swift; sourceTree = "<group>"; };
+		BFD615592149768200A56F25 /* SoundBrowsingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundBrowsingVC.swift; sourceTree = "<group>"; };
 		E2367E4C2147867900EC3B4A /* tableViewCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tableViewCellTableViewCell.swift; sourceTree = "<group>"; };
 		E2367E4E2148037500EC3B4A /* alarmTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = alarmTableViewCell.swift; sourceTree = "<group>"; };
 		E2485DB42142019F00EAE371 /* AlarmPIC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmPIC.swift; sourceTree = "<group>"; };
 		E248B1A72144D9F800CE00B3 /* imageUICollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageUICollectionViewCell.swift; sourceTree = "<group>"; };
 		E248B1AF214515EC00CE00B3 /* NewPicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPicture.swift; sourceTree = "<group>"; };
-		FC68C23B214790EE00EAA7C4 /* SoundBrowsingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundBrowsingVC.swift; sourceTree = "<group>"; };
 		FC68C23D2147AC8D00EAA7C4 /* Apologize - One Republic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Apologize - One Republic.mp3"; sourceTree = "<group>"; };
 		FC68C23F2147ACA800EAA7C4 /* Let her go - The Passenger.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Let her go - The Passenger.mp3"; sourceTree = "<group>"; };
 		FC68C2412147ACB400EAA7C4 /* Thinking out loud - Ed Sheeran.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Thinking out loud - Ed Sheeran.mp3"; sourceTree = "<group>"; };
@@ -110,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				BF661E64212BA61200D7B6BF /* Main.storyboard */,
+				BFD615572149761600A56F25 /* WeekdaysCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -187,6 +196,8 @@
 				E248B1AF214515EC00CE00B3 /* NewPicture.swift */,
 				E2367E4C2147867900EC3B4A /* tableViewCellTableViewCell.swift */,
 				E2367E4E2148037500EC3B4A /* alarmTableViewCell.swift */,
+				BFD615512149757300A56F25 /* WeekdaysVC.swift */,
+				BFD615592149768200A56F25 /* SoundBrowsingVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -202,6 +213,7 @@
 		BFAF071F21467A9400D42EA8 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				BFD61553214975D000A56F25 /* DayServices.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -209,6 +221,7 @@
 		BFAF072221467AAE00D42EA8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BFD61555214975F400A56F25 /* Weekdays.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -216,7 +229,6 @@
 		E2367E502148113100EC3B4A /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
-				FC68C23B214790EE00EAA7C4 /* SoundBrowsingVC.swift */,
 			);
 			name = "Recovered References";
 			sourceTree = "<group>";
@@ -355,18 +367,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFD615582149761600A56F25 /* WeekdaysCell.swift in Sources */,
 				E2485DB52142019F00EAE371 /* AlarmPIC.swift in Sources */,
+				BFD615522149757300A56F25 /* WeekdaysVC.swift in Sources */,
 				E248B1B0214515EC00CE00B3 /* NewPicture.swift in Sources */,
 				BFAF0706214424FE00D42EA8 /* AlarmVC.swift in Sources */,
 				BF661E9B212BAB7100D7B6BF /* SettingVC.swift in Sources */,
 				BF661E99212BAB5500D7B6BF /* ReminderVC.swift in Sources */,
 				BF661EA1212BB00800D7B6BF /* SetMethodAlarmVC.swift in Sources */,
-				FC68C23C214790EE00EAA7C4 /* SoundBrowsingVC.swift in Sources */,
 				BF661E9D212BADD700D7B6BF /* NoteVC.swift in Sources */,
 				E2367E4F2148037500EC3B4A /* alarmTableViewCell.swift in Sources */,
 				E2367E4D2147867900EC3B4A /* tableViewCellTableViewCell.swift in Sources */,
+				BFD6155A2149768200A56F25 /* SoundBrowsingVC.swift in Sources */,
+				BFD61554214975D000A56F25 /* DayServices.swift in Sources */,
 				BF661E61212BA61200D7B6BF /* AppDelegate.swift in Sources */,
 				BFAF07092144256700D42EA8 /* Alarm.swift in Sources */,
+				BFD61556214975F400A56F25 /* Weekdays.swift in Sources */,
 				BF661E9F212BAFE700D7B6BF /* SetTimeAlarmVC.swift in Sources */,
 				BF661EA3212BB9CD00D7B6BF /* MathVC.swift in Sources */,
 				E248B1A82144D9F800CE00B3 /* imageUICollectionViewCell.swift in Sources */,

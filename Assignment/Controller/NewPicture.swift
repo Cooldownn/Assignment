@@ -10,18 +10,18 @@ import UIKit
 
 class NewPicture: UIViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
-//    @IBOutlet weak var imageView: UIImageView!
-//    var imageView0 = UIImage()
-//    var smallImageViewPlaceholder = UIImageView()
-//    var largeImageViewPlaceholder = UIImageView()
-//     @IBOutlet weak var imageView1: UIImageView!
-//    @IBOutlet weak var mess : UILabel!
-//
-//    let movingSearchRectangle = UIView()
-//    //@IBOutlet weak var TakePic: UIButton
-//    @IBOutlet weak var Back: UIButton!
-//    @IBOutlet weak var SaveButton: UIButton!
-//    @IBOutlet weak var Upload: UIButton!
+    @IBOutlet weak var imageView: UIImageView!
+    var imageView0 = UIImage()
+    var smallImageViewPlaceholder = UIImageView()
+    var largeImageViewPlaceholder = UIImageView()
+     @IBOutlet weak var imageView1: UIImageView!
+    @IBOutlet weak var mess : UILabel!
+
+    let movingSearchRectangle = UIView()
+    //@IBOutlet weak var TakePic: UIButton
+    @IBOutlet weak var Back: UIButton!
+    @IBOutlet weak var SaveButton: UIButton!
+    @IBOutlet weak var Upload: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
      //   imageView1.image = imageView0

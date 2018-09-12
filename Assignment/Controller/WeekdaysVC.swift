@@ -14,7 +14,7 @@ class WeekdaysVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var setTimeAlarmVC: SetTimeAlarmVC!
     
-//    var selectedDayArray: [String] = []
+    //    var selectedDayArray: [String] = []
     var storedDay: [Int] = []
     
     override func viewDidLoad() {
@@ -56,12 +56,12 @@ class WeekdaysVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         if let cell = tableView.cellForRow(at: indexPath) {
             if cell.isSelected {
                 cell.accessoryType = .checkmark
-//                selectedDayArray.append(DayServices.instance.getWeekdays()[indexPath.row].weekdays)
+                //                selectedDayArray.append(DayServices.instance.getWeekdays()[indexPath.row].weekdays)
                 storedDay.append(indexPath.row)
                 
-//                print(DayServices.instance.getWeekdays()[indexPath.row].weekdays)
-//                print(selectedDayArray)
-//                print(storedDay)
+                //                print(DayServices.instance.getWeekdays()[indexPath.row].weekdays)
+                //                print(selectedDayArray)
+                //                print(storedDay)
             }
         }
     }
@@ -72,11 +72,11 @@ class WeekdaysVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
             if let index = storedDay.index(of: indexPath.row) {
                 storedDay.remove(at: index)
             }
-//            if let index = selectedDayArray.index(of: DayServices.instance.getWeekdays()[indexPath.row].weekdays) {
-//                selectedDayArray.remove(at: index)
-//                storedDay.remove(at: index)
-//            }
-           // print(selectedDayArray)
+            //            if let index = selectedDayArray.index(of: DayServices.instance.getWeekdays()[indexPath.row].weekdays) {
+            //                selectedDayArray.remove(at: index)
+            //                storedDay.remove(at: index)
+            //            }
+            // print(selectedDayArray)
         }
     }
     
@@ -120,6 +120,6 @@ class WeekdaysVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         }
         return ret
     }
-
+    
     
 }
