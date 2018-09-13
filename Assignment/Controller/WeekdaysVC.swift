@@ -82,12 +82,13 @@ class WeekdaysVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBAction func done(_ sender: UIBarButtonItem) {
         // setTimeAlarmVC.testDaysLabel.text = selectedDayArray.description
-        setTimeAlarmVC.testDaysLabel.text = repeatText(storedDay: storedDay)
+        setTimeAlarmVC.repeatDaysLabel.text = repeatText(storedDay: storedDay)
+        setTimeAlarmVC.repeatDay = storedDay
         if storedDay.count == 7 {
-            setTimeAlarmVC.testDaysLabel.text = "Every day"
+            setTimeAlarmVC.repeatDaysLabel.text = "Every day"
         }
         else if storedDay.isEmpty {
-            setTimeAlarmVC.testDaysLabel.text = "Never"
+            setTimeAlarmVC.repeatDaysLabel.text = "Never"
         }
         
         self.navigationController?.popViewController(animated: true)
@@ -101,19 +102,19 @@ class WeekdaysVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         for day in weekdaysSorted {
             switch day{
             case 0:
-                ret += "Mon "
-            case 1:
-                ret += "Tue "
-            case 2:
-                ret += "Wed "
-            case 3:
-                ret += "Thur "
-            case 4:
-                ret += "Fri "
-            case 5:
-                ret += "Sat "
-            case 6:
                 ret += "Sun "
+            case 1:
+                ret += "Mon "
+            case 2:
+                ret += "Tue "
+            case 3:
+                ret += "Wed "
+            case 4:
+                ret += "Thur "
+            case 5:
+                ret += "Fri "
+            case 6:
+                ret += "Sat "
             default:
                 break
             }

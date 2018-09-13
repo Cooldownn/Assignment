@@ -10,30 +10,34 @@ import UIKit
 
 import AVFoundation
 
+import UserNotifications
+
+
 class SetTimeAlarmVC: UIViewController, UITextFieldDelegate, AVAudioPlayerDelegate {
     
     var weekday: Weekdays!
+    var repeatDay: [Int] = []
+    var dateComponents = DateComponents()
     
     var alarm: Alarm?
     @IBOutlet weak var saveButton: UIBarButtonItem!
     @IBOutlet weak var timePicker: UIDatePicker!
     @IBOutlet weak var alarmLbl: UITextField!
     
-    @IBOutlet weak var testDaysLabel: UILabel!
+    @IBOutlet weak var repeatDaysLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.alarmLbl.delegate = self
         
         // set minimum date/time for picker
         timePicker.minimumDate = NSDate() as Date
         timePicker.locale = NSLocale.current
         
-        if alarm != nil {
-            alarmLbl.text = alarm?.name
-            timePicker.date = alarm?.time as! Date
-        }
+//        if alarm != nil {
+//            alarmLbl.text = alarm?.name
+//            timePicker.date = alarm?.time as! Date
+//        }
         
     }
     
@@ -89,13 +93,27 @@ class SetTimeAlarmVC: UIViewController, UITextFieldDelegate, AVAudioPlayerDelega
             time = NSDate(timeIntervalSinceReferenceDate: timeInterval) as Date
             // build notification
         
+            for i in repeatDay
+            {
+               let num = repeatDay.count
+               if (num == 0)
+               {
+                break
+                }
+               else {
+                dateComponents.weekday = repeatDay[i]
+                }
+            }
+        
             let notification = UILocalNotification()
             notification.alertTitle = "Alarm"
             notification.alertBody = "Ding Dong"
             notification.fireDate = time
             notification.soundName = UILocalNotificationDefaultSoundName
         
+            let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
             UIApplication.shared.scheduledLocalNotifications?.append(notification)
+        
         
             alarm = Alarm(time: time as NSDate, name: alarmName!, notification: notification)
         

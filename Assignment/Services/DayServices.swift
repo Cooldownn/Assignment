@@ -11,13 +11,13 @@ class DayServices {
     static let instance = DayServices()
     
     private let weekdays = [
+        Weekdays(weekdays: "Every Sunday"),
         Weekdays(weekdays: "Every Monday"),
         Weekdays(weekdays: "Every Tuesday"),
         Weekdays(weekdays: "Every Wednesday"),
         Weekdays(weekdays: "Every Thursday"),
         Weekdays(weekdays: "Every Friday"),
-        Weekdays(weekdays: "Every Saturday"),
-        Weekdays(weekdays: "Every Sunday")
+        Weekdays(weekdays: "Every Saturday")
     ]
     
     func getWeekdays() -> [Weekdays] {

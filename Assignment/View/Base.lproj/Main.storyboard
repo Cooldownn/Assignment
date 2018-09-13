@@ -273,8 +273,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="alarmLbl" destination="1fp-rg-WhX" id="TWM-ew-Xrg"/>
+                        <outlet property="repeatDaysLabel" destination="6Cn-gV-El6" id="tqy-S8-PPw"/>
                         <outlet property="saveButton" destination="BxL-wm-W6B" id="kRd-zA-ddp"/>
-                        <outlet property="testDaysLabel" destination="6Cn-gV-El6" id="DcO-BR-VSR"/>
                         <outlet property="timePicker" destination="f1C-nc-Tub" id="gFH-SN-2sG"/>
                     </connections>
                 </viewController>
@@ -344,8 +344,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Every Sunday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tba-5D-vE4">
-                                                    <rect key="frame" x="20" y="10.000000000000002" width="130" height="23.666666666666671"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Every Monday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tba-5D-vE4">
+                                                    <rect key="frame" x="20" y="10.000000000000002" width="135.33333333333334" height="23.666666666666671"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -388,7 +388,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="epV-Rt-sfB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3387" y="-862"/>
+            <point key="canvasLocation" x="3287" y="-960"/>
         </scene>
         <!--AlarmVC-->
         <scene sceneID="L5u-K2-7e7">
