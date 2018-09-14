@@ -77,6 +77,7 @@ class AlarmVC: UITableViewController, AVAudioPlayerDelegate {
         // Create switch
         let sw = UISwitch(frame: CGRect())
         sw.setOn(false, animated: true)
+        sw.isOn = true
         sw.tag = indexPath.row
         sw.addTarget(self, action: #selector(self.switchChanged(_:)), for: UIControlEvents.valueChanged)
         sw.isOn = UserDefaults.standard.bool(forKey: "isDarkMode")

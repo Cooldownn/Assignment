@@ -56,6 +56,14 @@ class SoundBrowsingVC: UITableViewController, AVAudioPlayerDelegate {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         indexOfCell = indexPath.row
+        for indexCell in 0...soundList.count-1{
+            var indexPath1 = NSIndexPath(row: indexCell, section: 0)
+            var cell = tableView.cellForRow(at: indexPath1 as IndexPath)
+            cell?.accessoryType = .none
+            if (indexCell == indexPath.row){
+                continue
+            }
+        }
         do{
             let audioPlayer = Bundle.main.path(forResource: soundList[indexOfCell], ofType: "mp3")
             try player = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: audioPlayer!) as URL)

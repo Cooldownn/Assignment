@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -118,9 +118,16 @@
 			isa = PBXGroup;
 			children = (
 				BF661E64212BA61200D7B6BF /* Main.storyboard */,
-				BFD615572149761600A56F25 /* WeekdaysCell.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		BF5771C5214A3C3F00499CB2 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				BF661E60212BA61200D7B6BF /* AppDelegate.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 		BF661E54212BA61200D7B6BF = {
@@ -147,13 +154,14 @@
 		BF661E5F212BA61200D7B6BF /* Assignment */ = {
 			isa = PBXGroup;
 			children = (
+				BF9B6929214B63FF00824E93 /* Table View Cell */,
+				BF5771C5214A3C3F00499CB2 /* App */,
 				BFD6155B21497C7400A56F25 /* Sound */,
 				BFAF072221467AAE00D42EA8 /* Model */,
 				BFAF071F21467A9400D42EA8 /* Services */,
 				BFAF07072144254F00D42EA8 /* Persistent Data */,
 				BF19253921420299003FBA55 /* View */,
 				BF661E95212BAB1100D7B6BF /* Controller */,
-				BF661E60212BA61200D7B6BF /* AppDelegate.swift */,
 				BF661E67212BA61200D7B6BF /* Assets.xcassets */,
 				BF661E69212BA61200D7B6BF /* LaunchScreen.storyboard */,
 				BF661E6C212BA61200D7B6BF /* Info.plist */,
@@ -198,6 +206,14 @@
 				BFD615592149768200A56F25 /* SoundBrowsingVC.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		BF9B6929214B63FF00824E93 /* Table View Cell */ = {
+			isa = PBXGroup;
+			children = (
+				BFD615572149761600A56F25 /* WeekdaysCell.swift */,
+			);
+			path = "Table View Cell";
 			sourceTree = "<group>";
 		};
 		BFAF07072144254F00D42EA8 /* Persistent Data */ = {
@@ -321,7 +337,7 @@
 				};
 			};
 			buildConfigurationList = BF661E58212BA61200D7B6BF /* Build configuration list for PBXProject "Assignment" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
