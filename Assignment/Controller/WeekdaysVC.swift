@@ -57,11 +57,11 @@ class WeekdaysVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
             if cell.isSelected {
                 cell.accessoryType = .checkmark
                 //                selectedDayArray.append(DayServices.instance.getWeekdays()[indexPath.row].weekdays)
-                storedDay.append(indexPath.row)
+                storedDay.append(indexPath.row + 1)
                 
                 //                print(DayServices.instance.getWeekdays()[indexPath.row].weekdays)
                 //                print(selectedDayArray)
-                //                print(storedDay)
+                                print(storedDay)
             }
         }
     }
@@ -70,7 +70,7 @@ class WeekdaysVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         if let cell = tableView.cellForRow(at: indexPath) {
             cell.accessoryType = .none
             if let index = storedDay.index(of: indexPath.row) {
-                storedDay.remove(at: index)
+                storedDay.remove(at: index + 1)
             }
             //            if let index = selectedDayArray.index(of: DayServices.instance.getWeekdays()[indexPath.row].weekdays) {
             //                selectedDayArray.remove(at: index)
@@ -101,19 +101,19 @@ class WeekdaysVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         weekdaysSorted = storedDay.sorted(by: <)
         for day in weekdaysSorted {
             switch day{
-            case 0:
-                ret += "Sun "
             case 1:
-                ret += "Mon "
+                ret += "Sun "
             case 2:
-                ret += "Tue "
+                ret += "Mon "
             case 3:
-                ret += "Wed "
+                ret += "Tue "
             case 4:
-                ret += "Thur "
+                ret += "Wed "
             case 5:
-                ret += "Fri "
+                ret += "Thur "
             case 6:
+                ret += "Fri "
+            case 7:
                 ret += "Sat "
             default:
                 break
