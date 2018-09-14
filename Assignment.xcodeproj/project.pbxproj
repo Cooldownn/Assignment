@@ -118,7 +118,6 @@
 			isa = PBXGroup;
 			children = (
 				BF661E64212BA61200D7B6BF /* Main.storyboard */,
-				BFD615572149761600A56F25 /* WeekdaysCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -155,6 +154,7 @@
 		BF661E5F212BA61200D7B6BF /* Assignment */ = {
 			isa = PBXGroup;
 			children = (
+				BF9B6929214B63FF00824E93 /* Table View Cell */,
 				BF5771C5214A3C3F00499CB2 /* App */,
 				BFD6155B21497C7400A56F25 /* Sound */,
 				BFAF072221467AAE00D42EA8 /* Model */,
@@ -206,6 +206,14 @@
 				BFD615592149768200A56F25 /* SoundBrowsingVC.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		BF9B6929214B63FF00824E93 /* Table View Cell */ = {
+			isa = PBXGroup;
+			children = (
+				BFD615572149761600A56F25 /* WeekdaysCell.swift */,
+			);
+			path = "Table View Cell";
 			sourceTree = "<group>";
 		};
 		BFAF07072144254F00D42EA8 /* Persistent Data */ = {

@@ -149,18 +149,26 @@ class MathVC: UIViewController {
         resultLbl.isHidden = false
         nextProblem.isHidden = false
         if ansmixnum == 0 {
-            score = score - 1
-            scoreLbl.text = "Score:\(score)"
-            resultLbl.text = "Sai mẹ rồi ÓC CHÓ"
+            if (score == 0) {
+                score = 0
+            } else {
+                score = score - 1
+            }
+            scoreLbl.text = "Score: \(score)"
+            resultLbl.text = "Wrong !!!"
             questionLbl.isHidden = true
             ans1.isHidden = true
             ans2.isHidden = true
             ans3.isHidden = true
             ans4.isHidden = true
         } else if ansmixnum == 1 {
-            score = score - 1
-            scoreLbl.text = "Score:\(score)"
-            resultLbl.text = "Sai mẹ rồi ÓC CHÓ"
+            if (score == 0) {
+                score = 0
+            } else {
+                score = score - 1
+            }
+            scoreLbl.text = "Score: \(score)"
+            resultLbl.text = "Wrong !!!"
             questionLbl.isHidden = true
             ans1.isHidden = true
             ans2.isHidden = true
@@ -168,7 +176,7 @@ class MathVC: UIViewController {
             ans4.isHidden = true
         } else if ansmixnum == 2 {
             score = score + 1
-            scoreLbl.text = "Score:\(score)"
+            scoreLbl.text = "Score: \(score)"
             resultLbl.text = "Correct"
             questionLbl.isHidden = true
             ans1.isHidden = true
@@ -176,9 +184,13 @@ class MathVC: UIViewController {
             ans3.isHidden = true
             ans4.isHidden = true
         } else if ansmixnum == 3 {
-            score = score - 1
-            scoreLbl.text = "Score:\(score)"
-            resultLbl.text = "Sai mẹ rồi ÓC CHÓ"
+            if (score == 0) {
+                score = 0
+            } else {
+                score = score - 1
+            }
+            scoreLbl.text = "Score: \(score)"
+            resultLbl.text = "Wrong !!!"
             questionLbl.isHidden = true
             ans1.isHidden = true
             ans2.isHidden = true
@@ -191,18 +203,26 @@ class MathVC: UIViewController {
         resultLbl.isHidden = false
         nextProblem.isHidden = false
         if ansmixnum == 0 {
-            score = score - 1
-            scoreLbl.text = "Score:\(score)"
-            resultLbl.text = "Sai mẹ rồi ÓC CHÓ"
+            if (score == 0) {
+                score = 0
+            } else {
+                score = score - 1
+            }
+            scoreLbl.text = "Score: \(score)"
+            resultLbl.text = "Wrong !!!"
             questionLbl.isHidden = true
             ans1.isHidden = true
             ans2.isHidden = true
             ans3.isHidden = true
             ans4.isHidden = true
         } else if ansmixnum == 1 {
-            score = score - 1
-            scoreLbl.text = "Score:\(score)"
-            resultLbl.text = "Sai mẹ rồi ÓC CHÓ"
+            if (score == 0) {
+                score = 0
+            } else {
+                score = score - 1
+            }
+            scoreLbl.text = "Score: \(score)"
+            resultLbl.text = "Wrong !!!"
             questionLbl.isHidden = true
             ans1.isHidden = true
             ans2.isHidden = true
@@ -210,7 +230,7 @@ class MathVC: UIViewController {
             ans4.isHidden = true
         } else if ansmixnum == 3 {
             score = score + 1
-            scoreLbl.text = "Score:\(score)"
+            scoreLbl.text = "Score: \(score)"
             resultLbl.text = "Correct"
             questionLbl.isHidden = true
             ans1.isHidden = true
@@ -218,9 +238,13 @@ class MathVC: UIViewController {
             ans3.isHidden = true
             ans4.isHidden = true
         } else if ansmixnum == 2 {
-            score = score - 1
-            scoreLbl.text = "Score:\(score)"
-            resultLbl.text = "Sai mẹ rồi ÓC CHÓ"
+            if (score == 0) {
+                score = 0
+            } else {
+                score = score - 1
+            }
+            scoreLbl.text = "Score: \(score)"
+            resultLbl.text = "Wrong !!!"
             questionLbl.isHidden = true
             ans1.isHidden = true
             ans2.isHidden = true
@@ -233,18 +257,26 @@ class MathVC: UIViewController {
         resultLbl.isHidden = false
         nextProblem.isHidden = false
         if ansmixnum == 3 {
-            score = score - 1
-            scoreLbl.text = "Score:\(score)"
-            resultLbl.text = "Sai mẹ rồi ÓC CHÓ"
+            if (score == 0) {
+                score = 0
+            } else {
+                score = score - 1
+            }
+            scoreLbl.text = "Score: \(score)"
+            resultLbl.text = "Wrong !!!"
             questionLbl.isHidden = true
             ans1.isHidden = true
             ans2.isHidden = true
             ans3.isHidden = true
             ans4.isHidden = true
         } else if ansmixnum == 1 {
-            score = score - 1
-            scoreLbl.text = "Score:\(score)"
-            resultLbl.text = "Sai mẹ rồi ÓC CHÓ"
+            if (score == 0) {
+                score = 0
+            } else {
+                score = score - 1
+            }
+            scoreLbl.text = "Score: \(score)"
+            resultLbl.text = "Wrong !!!"
             questionLbl.isHidden = true
             ans1.isHidden = true
             ans2.isHidden = true
@@ -252,7 +284,7 @@ class MathVC: UIViewController {
             ans4.isHidden = true
         } else if ansmixnum == 0 {
             score = score + 1
-            scoreLbl.text = "Score:\(score)"
+            scoreLbl.text = "Score: \(score)"
             resultLbl.text = "Correct"
             questionLbl.isHidden = true
             ans1.isHidden = true
@@ -260,9 +292,13 @@ class MathVC: UIViewController {
             ans3.isHidden = true
             ans4.isHidden = true
         } else if ansmixnum == 2 {
-            score = score - 1
-            scoreLbl.text = "Score:\(score)"
-            resultLbl.text = "Sai mẹ rồi ÓC CHÓ"
+            if (score == 0) {
+                score = 0
+            } else {
+                score = score - 1
+            }
+            scoreLbl.text = "Score: \(score)"
+            resultLbl.text = "Wrong !!!"
             questionLbl.isHidden = true
             ans1.isHidden = true
             ans2.isHidden = true
@@ -275,18 +311,26 @@ class MathVC: UIViewController {
         resultLbl.isHidden = false
         nextProblem.isHidden = false
         if ansmixnum == 0 {
-            score = score - 1
-            scoreLbl.text = "Score:\(score)"
-            resultLbl.text = "Sai mẹ rồi ÓC CHÓ"
+            if (score == 0) {
+                score = 0
+            } else {
+                score = score - 1
+            }
+            scoreLbl.text = "Score: \(score)"
+            resultLbl.text = "Wrong !!!"
             questionLbl.isHidden = true
             ans1.isHidden = true
             ans2.isHidden = true
             ans3.isHidden = true
             ans4.isHidden = true
         } else if ansmixnum == 3 {
-            score = score - 1
-            scoreLbl.text = "Score:\(score)"
-            resultLbl.text = "Sai mẹ rồi ÓC CHÓ"
+            if (score == 0) {
+                score = 0
+            } else {
+                score = score - 1
+            }
+            scoreLbl.text = "Score: \(score)"
+            resultLbl.text = "Wrong !!!"
             questionLbl.isHidden = true
             ans1.isHidden = true
             ans2.isHidden = true
@@ -294,7 +338,7 @@ class MathVC: UIViewController {
             ans4.isHidden = true
         } else if ansmixnum == 1 {
             score = score + 1
-            scoreLbl.text = "Score:\(score)"
+            scoreLbl.text = "Score: \(score)"
             resultLbl.text = "Correct"
             questionLbl.isHidden = true
             ans1.isHidden = true
@@ -302,9 +346,13 @@ class MathVC: UIViewController {
             ans3.isHidden = true
             ans4.isHidden = true
         } else if ansmixnum == 2 {
-            score = score - 1
-            scoreLbl.text = "Score:\(score)"
-            resultLbl.text = "Sai mẹ rồi ÓC CHÓ"
+            if (score == 0) {
+                score = 0
+            } else {
+                score = score - 1
+            }
+            scoreLbl.text = "Score: \(score)"
+            resultLbl.text = "Wrong !!!"
             questionLbl.isHidden = true
             ans1.isHidden = true
             ans2.isHidden = true
@@ -314,8 +362,5 @@ class MathVC: UIViewController {
     }
     @IBAction func nextBtn(_ sender: Any) {
         viewDidLoad()
-    }
-    @IBAction func cancelBtn(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
     }
 }

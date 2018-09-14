@@ -18,6 +18,7 @@ class SetTimeAlarmVC: UIViewController, UITextFieldDelegate, AVAudioPlayerDelega
     var weekday: Weekdays!
     var repeatDay: [Int] = []
     var dateComponents = DateComponents()
+    var index:Int?
     
     var alarm: Alarm?
     @IBOutlet weak var saveButton: UIBarButtonItem!
@@ -38,6 +39,7 @@ class SetTimeAlarmVC: UIViewController, UITextFieldDelegate, AVAudioPlayerDelega
 //            alarmLbl.text = alarm?.name
 //            timePicker.date = alarm?.time as! Date
 //        }
+        
         
     }
     
@@ -93,7 +95,8 @@ class SetTimeAlarmVC: UIViewController, UITextFieldDelegate, AVAudioPlayerDelega
             time = NSDate(timeIntervalSinceReferenceDate: timeInterval) as Date
             // build notification
         
-            for i in repeatDay
+            // repeat
+            for (element) in repeatDay.enumerated()
             {
                let num = repeatDay.count
                if (num == 0)
@@ -101,7 +104,7 @@ class SetTimeAlarmVC: UIViewController, UITextFieldDelegate, AVAudioPlayerDelega
                 break
                 }
                else {
-                dateComponents.weekday = repeatDay[i]
+                    dateComponents.weekday = element.element
                 }
             }
         
@@ -109,6 +112,7 @@ class SetTimeAlarmVC: UIViewController, UITextFieldDelegate, AVAudioPlayerDelega
             notification.alertTitle = "Alarm"
             notification.alertBody = "Ding Dong"
             notification.fireDate = time
+            notification.hasAction = true
             notification.soundName = UILocalNotificationDefaultSoundName
         
             let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
@@ -127,7 +131,23 @@ class SetTimeAlarmVC: UIViewController, UITextFieldDelegate, AVAudioPlayerDelega
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
-    
+    func drawRect(rect: CGRect) {
+        var aPath = UIBezierPath()
+        
+        aPath.move(to: CGPoint(x:100, y:100))
+        
+        aPath.addLine(to: CGPoint(x:100, y:100))
+        
+        //Keep using the method addLineToPoint until you get to the one where about to close the path
+        
+        aPath.close()
+        
+        //If you want to stroke it with a red color
+        UIColor.red
+        aPath.stroke()
+        //If you want to fill it as well
+        aPath.fill()
+    }
 }
 
 
