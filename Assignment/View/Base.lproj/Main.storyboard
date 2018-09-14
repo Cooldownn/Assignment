@@ -199,7 +199,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="f1C-nc-Tub">
-                                <rect key="frame" x="0.0" y="64" width="414" height="216"/>
+                                <rect key="frame" x="0.0" y="20" width="414" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="558113278.37955594">
                                     <!--2018-09-08 15:27:58 +0000-->
                                 </date>
@@ -208,7 +208,7 @@
                                 </connections>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X4E-os-LtH">
-                                <rect key="frame" x="20" y="340" width="55" height="31"/>
+                                <rect key="frame" x="20" y="296" width="55" height="31"/>
                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
                                 <state key="normal" title="Repeat">
                                     <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -218,13 +218,13 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Alarm name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1fp-rg-WhX">
-                                <rect key="frame" x="20" y="290" width="374" height="30"/>
+                                <rect key="frame" x="20" y="246" width="374" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Dp-MP-1i3">
-                                <rect key="frame" x="20" y="391" width="50" height="31"/>
+                                <rect key="frame" x="20" y="347" width="50" height="31"/>
                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
                                 <state key="normal" title="Sound">
                                     <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -234,7 +234,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="None" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Cn-gV-El6">
-                                <rect key="frame" x="353.33333333333331" y="346" width="40.666666666666686" height="19"/>
+                                <rect key="frame" x="353.33333333333331" y="302" width="40.666666666666686" height="19"/>
                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -281,7 +281,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SPT-tM-GrA" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Pfr-yh-aCc" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2534.7826086956525" y="-355.43478260869568"/>
+            <point key="canvasLocation" x="3428" y="-355"/>
         </scene>
         <!--AddRingToneController-->
         <scene sceneID="Vm9-2n-2Hz">
@@ -312,18 +312,15 @@
                                 <action selector="abortSelecting:" destination="PrE-si-50T" id="jeb-d8-a2A"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="ngS-PO-UNP">
-                            <connections>
-                                <action selector="backToPrev:" destination="PrE-si-50T" id="fW8-lt-RJb"/>
-                                <segue destination="ZoJ-NX-kyb" kind="unwind" unwindAction="backToPrev:" id="Kye-Fj-AUm"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="FiR-vX-bLM"/>
                     </navigationItem>
+                    <connections>
+                        <segue destination="kDs-D0-xgb" kind="show" identifier="segue" id="dA2-8H-sMq"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ryi-9b-LTz" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="ZoJ-NX-kyb" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="5213.04347826087" y="-386.41304347826087"/>
+            <point key="canvasLocation" x="4836" y="-354"/>
         </scene>
         <!--Repeat-->
         <scene sceneID="fxJ-u4-9rd">
@@ -333,8 +330,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FBK-Ai-e7U">
-                                <rect key="frame" x="0.0" y="20" width="414" height="672"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FBK-Ai-e7U">
+                                <rect key="frame" x="122" y="48" width="414" height="672"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="WeekdaysCell" id="q4D-qN-i38" customClass="WeekdaysCell" customModule="Assignment" customModuleProvider="target">
@@ -388,7 +385,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="epV-Rt-sfB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3387" y="-862"/>
+            <point key="canvasLocation" x="3032" y="-1303"/>
         </scene>
         <!--AlarmVC-->
         <scene sceneID="L5u-K2-7e7">
@@ -969,7 +966,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ohl-qb-JGz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4201" y="-326"/>
+            <point key="canvasLocation" x="4130" y="-854"/>
         </scene>
     </scenes>
     <resources>
@@ -981,4 +978,7 @@
         <image name="alam_icon" width="25" height="25"/>
         <image name="reminder_icon" width="25" height="25"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="dA2-8H-sMq"/>
+    </inferredMetricsTieBreakers>
 </document>

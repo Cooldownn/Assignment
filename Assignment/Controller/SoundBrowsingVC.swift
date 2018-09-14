@@ -16,19 +16,6 @@ var player: AVAudioPlayer = AVAudioPlayer()
 
 class SoundBrowsingVC: UITableViewController, AVAudioPlayerDelegate {
     
-    @IBAction func backToPrev(_ sender: UIStoryboardSegue) {
-        if let sourceView = sender.source as? SetTimeAlarmVC{
-            do{
-                let audioPlayer = Bundle.main.path(forResource: soundList[indexOfCell], ofType: "mp3")
-                try player = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: audioPlayer!) as URL)
-                
-            }
-            catch {
-                //ERROR
-            }
-        }
-    }
-    
     @IBAction func abortSelecting(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
@@ -77,7 +64,12 @@ class SoundBrowsingVC: UITableViewController, AVAudioPlayerDelegate {
         catch {
             //ERROR
         }
+        if let cell = tableView.cellForRow(at: indexPath){
+            if cell.isSelected{
+                cell.accessoryType = .checkmark
+            }
         player.play()
+        }
     }
     /*
      // Override to support conditional editing of the table view.
