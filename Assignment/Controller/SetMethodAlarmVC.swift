@@ -52,14 +52,14 @@ class SetMethodAlarmVC: UIViewController,UITableViewDelegate, UITableViewDataSou
         
         let scale = newWidth / image.size.width
         let newHeight = image.size.height * scale
-        UIGraphicsBeginImageContext(CGSize(width: newWidth,height: newHeight))
-        image.draw(in :CGRect(x: 0,y: 0,width: newWidth,height: newHeight))
+        UIGraphicsBeginImageContext(CGSize(width: newWidth,height: newWidth))
+        image.draw(in :CGRect(x: 0,y: 0,width: newWidth,height: newWidth))
         let newImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         
         return newImage!
     }
-
+    
 }
 //extension SetMethodAlarmVC: CellDelegate {
 //    func changeController(title: String) {
