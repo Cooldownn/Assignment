@@ -15,18 +15,8 @@ var indexOfCell = 0
 var player: AVAudioPlayer = AVAudioPlayer()
 
 class SoundBrowsingVC: UITableViewController, AVAudioPlayerDelegate {
-    
-    @IBAction func backToPrev(_ sender: UIStoryboardSegue) {
-        if let sourceView = sender.source as? SetTimeAlarmVC{
-            do{
-                let audioPlayer = Bundle.main.path(forResource: soundList[indexOfCell], ofType: "mp3")
-                try player = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: audioPlayer!) as URL)
-                
-            }
-            catch {
-                //ERROR
-            }
-        }
+    @IBAction func saveSound(_ sender: Any) {
+        
     }
     
     @IBAction func abortSelecting(_ sender: Any) {
@@ -69,6 +59,14 @@ class SoundBrowsingVC: UITableViewController, AVAudioPlayerDelegate {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         indexOfCell = indexPath.row
+        for indexCell in 0...soundList.count-1{
+            var indexPath1 = NSIndexPath(row: indexCell, section: 0)
+            var cell = tableView.cellForRow(at: indexPath1 as IndexPath)
+            cell?.accessoryType = .none
+            if (indexCell == indexPath.row){
+                continue
+            }
+        }
         do{
             let audioPlayer = Bundle.main.path(forResource: soundList[indexOfCell], ofType: "mp3")
             try player = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: audioPlayer!) as URL)
@@ -78,6 +76,17 @@ class SoundBrowsingVC: UITableViewController, AVAudioPlayerDelegate {
             //ERROR
         }
         player.play()
+        if let cell = tableView.cellForRow(at: <#T##IndexPath#>){
+            //cell.accessoryType = .checkmark
+            if cell.accessoryType == UITableViewCellAccessoryType.checkmark{
+                cell.accessoryType = .none
+                player.stop()
+            }
+            else{
+                cell.accessoryType = .checkmark
+                player.play()
+            }
+        }
     }
     /*
      // Override to support conditional editing of the table view.

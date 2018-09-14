@@ -40,6 +40,7 @@ class SetTimeAlarmVC: UIViewController, UITextFieldDelegate, AVAudioPlayerDelega
 //            timePicker.date = alarm?.time as! Date
 //        }
         
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -130,7 +131,23 @@ class SetTimeAlarmVC: UIViewController, UITextFieldDelegate, AVAudioPlayerDelega
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
-    
+    func drawRect(rect: CGRect) {
+        var aPath = UIBezierPath()
+        
+        aPath.move(to: CGPoint(x:100, y:100))
+        
+        aPath.addLine(to: CGPoint(x:100, y:100))
+        
+        //Keep using the method addLineToPoint until you get to the one where about to close the path
+        
+        aPath.close()
+        
+        //If you want to stroke it with a red color
+        UIColor.red
+        aPath.stroke()
+        //If you want to fill it as well
+        aPath.fill()
+    }
 }
 
 
