@@ -10,6 +10,7 @@ import UIKit
 
 class alarmTableViewCell: UITableViewCell {
     @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var image1 : UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
