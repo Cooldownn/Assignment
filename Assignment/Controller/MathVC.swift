@@ -202,7 +202,7 @@ class MathVC: UIViewController {
         } else if ansmixnum == 2 {
             score = score + 1
             scoreLbl.text = "Score: \(score)"
-            resultLbl.text = "Correct!!!"
+            resultLbl.text = "Correct !!!"
             resultLbl.textColor = UIColor.init(cgColor: #colorLiteral(red: 0, green: 0.5603182912, blue: 0, alpha: 0.7524079623))
             questionLbl.isHidden = true
             ans1.isHidden = true
@@ -264,7 +264,7 @@ class MathVC: UIViewController {
         } else if ansmixnum == 3 {
             score = score + 1
             scoreLbl.text = "Score: \(score)"
-            resultLbl.text = "Correct!!!"
+            resultLbl.text = "Correct !!!"
             resultLbl.textColor = UIColor.init(cgColor: #colorLiteral(red: 0, green: 0.5603182912, blue: 0, alpha: 0.7524079623))
             questionLbl.isHidden = true
             ans1.isHidden = true
@@ -326,7 +326,7 @@ class MathVC: UIViewController {
         } else if ansmixnum == 0 {
             score = score + 1
             scoreLbl.text = "Score: \(score)"
-            resultLbl.text = "Correct!!!"
+            resultLbl.text = "Correct !!!"
             resultLbl.textColor = UIColor.init(cgColor: #colorLiteral(red: 0, green: 0.5603182912, blue: 0, alpha: 0.7524079623))
             questionLbl.isHidden = true
             ans1.isHidden = true
@@ -388,7 +388,7 @@ class MathVC: UIViewController {
         } else if ansmixnum == 1 {
             score = score + 1
             scoreLbl.text = "Score: \(score)"
-            resultLbl.text = "Correct!!!"
+            resultLbl.text = "Correct !!!"
             resultLbl.textColor = UIColor.init(cgColor: #colorLiteral(red: 0, green: 0.5603182912, blue: 0, alpha: 0.7524079623))
             questionLbl.isHidden = true
             ans1.isHidden = true

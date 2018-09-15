@@ -11,14 +11,13 @@
 		BF42B82A214CC63D00620BC1 /* TicTacToeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF42B829214CC63D00620BC1 /* TicTacToeVC.swift */; };
 		BF48FE57214CFA2500DA8DB4 /* Correct.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BF48FE56214CFA2500DA8DB4 /* Correct.mp3 */; };
 		BF48FE59214CFA7100DA8DB4 /* Wrong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BF48FE58214CFA7100DA8DB4 /* Wrong.mp3 */; };
+		BF48FE5B214D614D00DA8DB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF48FE5A214D614D00DA8DB4 /* Main.storyboard */; };
 		BF661E61212BA61200D7B6BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF661E60212BA61200D7B6BF /* AppDelegate.swift */; };
-		BF661E66212BA61200D7B6BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF661E64212BA61200D7B6BF /* Main.storyboard */; };
 		BF661E68212BA61200D7B6BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF661E67212BA61200D7B6BF /* Assets.xcassets */; };
 		BF661E6B212BA61200D7B6BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF661E69212BA61200D7B6BF /* LaunchScreen.storyboard */; };
 		BF661E76212BA61300D7B6BF /* AssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF661E75212BA61300D7B6BF /* AssignmentTests.swift */; };
 		BF661E81212BA61300D7B6BF /* AssignmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF661E80212BA61300D7B6BF /* AssignmentUITests.swift */; };
 		BF661E99212BAB5500D7B6BF /* ReminderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF661E98212BAB5500D7B6BF /* ReminderVC.swift */; };
-		BF661E9B212BAB7100D7B6BF /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF661E9A212BAB7100D7B6BF /* SettingVC.swift */; };
 		BF661E9D212BADD700D7B6BF /* NoteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF661E9C212BADD700D7B6BF /* NoteVC.swift */; };
 		BF661E9F212BAFE700D7B6BF /* SetTimeAlarmVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF661E9E212BAFE700D7B6BF /* SetTimeAlarmVC.swift */; };
 		BF661EA1212BB00800D7B6BF /* SetMethodAlarmVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF661EA0212BB00800D7B6BF /* SetMethodAlarmVC.swift */; };
@@ -62,9 +61,9 @@
 		BF42B829214CC63D00620BC1 /* TicTacToeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeVC.swift; sourceTree = "<group>"; };
 		BF48FE56214CFA2500DA8DB4 /* Correct.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Correct.mp3; sourceTree = "<group>"; };
 		BF48FE58214CFA7100DA8DB4 /* Wrong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Wrong.mp3; sourceTree = "<group>"; };
+		BF48FE5A214D614D00DA8DB4 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../../../../Downloads/Main.storyboard; sourceTree = "<group>"; };
 		BF661E5D212BA61200D7B6BF /* Assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Assignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF661E60212BA61200D7B6BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BF661E65212BA61200D7B6BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BF661E67212BA61200D7B6BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF661E6A212BA61200D7B6BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF661E6C212BA61200D7B6BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -75,7 +74,6 @@
 		BF661E80212BA61300D7B6BF /* AssignmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentUITests.swift; sourceTree = "<group>"; };
 		BF661E82212BA61300D7B6BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF661E98212BAB5500D7B6BF /* ReminderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderVC.swift; sourceTree = "<group>"; };
-		BF661E9A212BAB7100D7B6BF /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
 		BF661E9C212BADD700D7B6BF /* NoteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteVC.swift; sourceTree = "<group>"; };
 		BF661E9E212BAFE700D7B6BF /* SetTimeAlarmVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTimeAlarmVC.swift; sourceTree = "<group>"; };
 		BF661EA0212BB00800D7B6BF /* SetMethodAlarmVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetMethodAlarmVC.swift; sourceTree = "<group>"; };
@@ -125,7 +123,7 @@
 		BF19253921420299003FBA55 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				BF661E64212BA61200D7B6BF /* Main.storyboard */,
+				BF48FE5A214D614D00DA8DB4 /* Main.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -200,7 +198,6 @@
 			children = (
 				E248B1A72144D9F800CE00B3 /* imageUICollectionViewCell.swift */,
 				BF661E98212BAB5500D7B6BF /* ReminderVC.swift */,
-				BF661E9A212BAB7100D7B6BF /* SettingVC.swift */,
 				BF661E9C212BADD700D7B6BF /* NoteVC.swift */,
 				BF661E9E212BAFE700D7B6BF /* SetTimeAlarmVC.swift */,
 				BF661EA0212BB00800D7B6BF /* SetMethodAlarmVC.swift */,
@@ -379,11 +376,11 @@
 				BF48FE57214CFA2500DA8DB4 /* Correct.mp3 in Resources */,
 				BF661E6B212BA61200D7B6BF /* LaunchScreen.storyboard in Resources */,
 				FC68C2402147ACAA00EAA7C4 /* Let her go - The Passenger.mp3 in Resources */,
+				BF48FE5B214D614D00DA8DB4 /* Main.storyboard in Resources */,
 				FC68C23E2147AC8F00EAA7C4 /* Apologize - One Republic.mp3 in Resources */,
 				BF48FE59214CFA7100DA8DB4 /* Wrong.mp3 in Resources */,
 				BF661E68212BA61200D7B6BF /* Assets.xcassets in Resources */,
 				FC68C2422147ACB500EAA7C4 /* Thinking out loud - Ed Sheeran.mp3 in Resources */,
-				BF661E66212BA61200D7B6BF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,7 +410,6 @@
 				BFD615522149757300A56F25 /* WeekdaysVC.swift in Sources */,
 				E248B1B0214515EC00CE00B3 /* NewPicture.swift in Sources */,
 				BFAF0706214424FE00D42EA8 /* AlarmVC.swift in Sources */,
-				BF661E9B212BAB7100D7B6BF /* SettingVC.swift in Sources */,
 				BF661E99212BAB5500D7B6BF /* ReminderVC.swift in Sources */,
 				BF661EA1212BB00800D7B6BF /* SetMethodAlarmVC.swift in Sources */,
 				BF661E9D212BADD700D7B6BF /* NoteVC.swift in Sources */,
@@ -464,14 +460,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		BF661E64212BA61200D7B6BF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BF661E65212BA61200D7B6BF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		BF661E69212BA61200D7B6BF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
