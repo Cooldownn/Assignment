@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BF42B828214CBAC700620BC1 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF42B827214CBAC700620BC1 /* Line.swift */; };
+		BF42B82A214CC63D00620BC1 /* TicTacToeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF42B829214CC63D00620BC1 /* TicTacToeVC.swift */; };
 		BF661E61212BA61200D7B6BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF661E60212BA61200D7B6BF /* AppDelegate.swift */; };
 		BF661E66212BA61200D7B6BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF661E64212BA61200D7B6BF /* Main.storyboard */; };
 		BF661E68212BA61200D7B6BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF661E67212BA61200D7B6BF /* Assets.xcassets */; };
@@ -56,6 +57,7 @@
 
 /* Begin PBXFileReference section */
 		BF42B827214CBAC700620BC1 /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
+		BF42B829214CC63D00620BC1 /* TicTacToeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeVC.swift; sourceTree = "<group>"; };
 		BF661E5D212BA61200D7B6BF /* Assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Assignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF661E60212BA61200D7B6BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF661E65212BA61200D7B6BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 				E2367E4E2148037500EC3B4A /* alarmTableViewCell.swift */,
 				BFD615512149757300A56F25 /* WeekdaysVC.swift */,
 				BFD615592149768200A56F25 /* SoundBrowsingVC.swift */,
+				BF42B829214CC63D00620BC1 /* TicTacToeVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -411,6 +414,7 @@
 				E2367E4D2147867900EC3B4A /* tableViewCellTableViewCell.swift in Sources */,
 				BFD6155A2149768200A56F25 /* SoundBrowsingVC.swift in Sources */,
 				BFD61554214975D000A56F25 /* DayServices.swift in Sources */,
+				BF42B82A214CC63D00620BC1 /* TicTacToeVC.swift in Sources */,
 				BF661E61212BA61200D7B6BF /* AppDelegate.swift in Sources */,
 				BFAF07092144256700D42EA8 /* Alarm.swift in Sources */,
 				BFD61556214975F400A56F25 /* Weekdays.swift in Sources */,
