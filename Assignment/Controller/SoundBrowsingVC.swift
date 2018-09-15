@@ -15,7 +15,11 @@ var indexOfCell = 0
 var player: AVAudioPlayer = AVAudioPlayer()
 
 class SoundBrowsingVC: UITableViewController, AVAudioPlayerDelegate {
-    
+    var setTimeAlarmVC: SetTimeAlarmVC!
+    @IBAction func saveSound(_sender: Any){
+        setTimeAlarmVC.soundName.text = soundList[indexOfCell]
+        performSegue(withIdentifier: "segueOfSound", sender: self)
+    }
     @IBAction func abortSelecting(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }

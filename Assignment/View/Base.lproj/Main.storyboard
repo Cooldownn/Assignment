@@ -199,7 +199,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="f1C-nc-Tub">
-                                <rect key="frame" x="0.0" y="20" width="414" height="216"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="558113278.37955594">
                                     <!--2018-09-08 15:27:58 +0000-->
                                 </date>
@@ -208,7 +208,7 @@
                                 </connections>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X4E-os-LtH">
-                                <rect key="frame" x="20" y="296" width="55" height="31"/>
+                                <rect key="frame" x="20" y="340" width="55" height="31"/>
                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
                                 <state key="normal" title="Repeat">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -218,13 +218,13 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Alarm name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1fp-rg-WhX">
-                                <rect key="frame" x="20" y="246" width="374" height="30"/>
+                                <rect key="frame" x="20" y="290" width="374" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Dp-MP-1i3">
-                                <rect key="frame" x="20" y="347" width="50" height="31"/>
+                                <rect key="frame" x="20" y="391" width="66.333333333333329" height="31"/>
                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
                                 <state key="normal" title="Sound">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -234,7 +234,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="None" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Cn-gV-El6">
-                                <rect key="frame" x="353.33333333333331" y="302" width="40.666666666666686" height="19"/>
+                                <rect key="frame" x="353.33333333333331" y="346" width="40.666666666666686" height="19"/>
                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -275,6 +275,12 @@
                                     <segue destination="B1f-9p-Trj" kind="show" id="VY2-pG-a3E"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sound Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uNs-Hd-Abv">
+                                <rect key="frame" x="295.33333333333331" y="391" width="98.666666666666686" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -288,11 +294,14 @@
                             <constraint firstItem="3Dp-MP-1i3" firstAttribute="top" secondItem="X4E-os-LtH" secondAttribute="bottom" constant="20" id="Qsq-iC-3dq"/>
                             <constraint firstItem="X4E-os-LtH" firstAttribute="top" secondItem="1fp-rg-WhX" secondAttribute="bottom" constant="20" id="YCR-Ot-VJo"/>
                             <constraint firstItem="J3g-91-4k4" firstAttribute="leading" secondItem="FFN-FL-4om" secondAttribute="leading" constant="20" id="YGT-gz-tL2"/>
+                            <constraint firstItem="uNs-Hd-Abv" firstAttribute="top" secondItem="6Cn-gV-El6" secondAttribute="bottom" constant="26" id="ZFS-e4-AYD"/>
+                            <constraint firstItem="FFN-FL-4om" firstAttribute="trailing" secondItem="uNs-Hd-Abv" secondAttribute="trailing" constant="20" id="ahw-GK-Hgy"/>
                             <constraint firstItem="1fp-rg-WhX" firstAttribute="top" secondItem="f1C-nc-Tub" secondAttribute="bottom" constant="10" id="axh-iI-Khk"/>
                             <constraint firstItem="6Ac-Mi-WhC" firstAttribute="leading" secondItem="FFN-FL-4om" secondAttribute="leading" constant="20" id="dd6-tV-X9p"/>
                             <constraint firstItem="110-aL-YrB" firstAttribute="top" secondItem="3Dp-MP-1i3" secondAttribute="bottom" constant="20" id="kjQ-yp-wRl"/>
                             <constraint firstItem="f1C-nc-Tub" firstAttribute="leading" secondItem="FFN-FL-4om" secondAttribute="leading" id="krH-lK-2kD"/>
                             <constraint firstItem="1fp-rg-WhX" firstAttribute="leading" secondItem="FFN-FL-4om" secondAttribute="leading" constant="20" id="sVD-ei-r9s"/>
+                            <constraint firstItem="uNs-Hd-Abv" firstAttribute="leading" secondItem="3Dp-MP-1i3" secondAttribute="trailing" constant="209" id="uaB-d6-00W"/>
                             <constraint firstItem="3Dp-MP-1i3" firstAttribute="leading" secondItem="FFN-FL-4om" secondAttribute="leading" constant="20" id="usk-Cz-SGg"/>
                             <constraint firstItem="6Cn-gV-El6" firstAttribute="centerY" secondItem="X4E-os-LtH" secondAttribute="centerY" id="wTR-l0-V9M"/>
                             <constraint firstItem="6Ac-Mi-WhC" firstAttribute="top" secondItem="J3g-91-4k4" secondAttribute="bottom" constant="20" id="yPs-eL-kh2"/>
@@ -317,13 +326,14 @@
                         <outlet property="alarmLbl" destination="1fp-rg-WhX" id="TWM-ew-Xrg"/>
                         <outlet property="repeatDaysLabel" destination="6Cn-gV-El6" id="tqy-S8-PPw"/>
                         <outlet property="saveButton" destination="BxL-wm-W6B" id="kRd-zA-ddp"/>
+                        <outlet property="soundName" destination="uNs-Hd-Abv" id="pMr-cM-Tkk"/>
                         <outlet property="timePicker" destination="f1C-nc-Tub" id="gFH-SN-2sG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SPT-tM-GrA" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Pfr-yh-aCc" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3428" y="-355"/>
+            <point key="canvasLocation" x="3427.5362318840585" y="-355.43478260869568"/>
         </scene>
         <!--AddRingToneController-->
         <scene sceneID="Vm9-2n-2Hz">
@@ -354,16 +364,17 @@
                                 <action selector="abortSelecting:" destination="PrE-si-50T" id="jeb-d8-a2A"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="FiR-vX-bLM"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="FiR-vX-bLM">
+                            <connections>
+                                <action selector="saveSoundWith_sender:" destination="PrE-si-50T" id="Zag-uw-yMr"/>
+                                <segue destination="kDs-D0-xgb" kind="show" identifier="segueOfSound" id="PAr-jc-Rwf"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <segue destination="kDs-D0-xgb" kind="show" identifier="segue" id="dA2-8H-sMq"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ryi-9b-LTz" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="ZoJ-NX-kyb" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4836" y="-354"/>
+            <point key="canvasLocation" x="5022" y="-342"/>
         </scene>
         <!--Repeat-->
         <scene sceneID="fxJ-u4-9rd">
@@ -626,13 +637,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rX8-q3-0YO">
-                                <rect key="frame" x="341" y="97" width="52.333333333333314" height="22.666666666666671"/>
+                                <rect key="frame" x="341" y="52.999999999999993" width="52.333333333333314" height="22.666666666666664"/>
                                 <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wwt-aN-iqe">
-                                <rect key="frame" x="20" y="84" width="150" height="50"/>
+                                <rect key="frame" x="20" y="40" width="150" height="50"/>
                                 <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="0.2950021404109589" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="1fj-Bj-anj"/>
@@ -1051,6 +1062,9 @@
         <image name="reminder_icon" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="dA2-8H-sMq"/>
+        <segue reference="Fne-MZ-Vp7"/>
+        <segue reference="Qia-HK-7hf"/>
+        <segue reference="VY2-pG-a3E"/>
+        <segue reference="PAr-jc-Rwf"/>
     </inferredMetricsTieBreakers>
 </document>

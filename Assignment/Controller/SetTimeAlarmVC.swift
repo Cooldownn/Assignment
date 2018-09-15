@@ -24,6 +24,8 @@ class SetTimeAlarmVC: UIViewController, UITextFieldDelegate, AVAudioPlayerDelega
     @IBOutlet weak var saveButton: UIBarButtonItem!
     @IBOutlet weak var timePicker: UIDatePicker!
     @IBOutlet weak var alarmLbl: UITextField!
+    @IBOutlet weak var soundName: UILabel!
+    
     
     @IBOutlet weak var repeatDaysLabel: UILabel!
     
