@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DYC-ec-o9r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Qhc-xw-ARE">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -194,7 +194,7 @@
         <scene sceneID="Vr3-jS-tIt">
             <objects>
                 <viewController id="kDs-D0-xgb" customClass="SetTimeAlarmVC" customModule="Assignment" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="n6J-DK-igv">
+                    <view key="view" contentMode="scaleToFill" id="n6J-DK-igv" customClass="Line" customModule="Assignment" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -207,11 +207,14 @@
                                     <action selector="timeChanged:" destination="kDs-D0-xgb" eventType="valueChanged" id="MkH-aT-5pJ"/>
                                 </connections>
                             </datePicker>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X4E-os-LtH">
-                                <rect key="frame" x="20" y="340" width="55" height="31"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X4E-os-LtH">
+                                <rect key="frame" x="20" y="340" width="140" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="qlV-eM-bXb"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
                                 <state key="normal" title="Repeat">
-                                    <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="repeatTapped:" destination="kDs-D0-xgb" eventType="touchUpInside" id="cWI-vE-Nin"/>
@@ -223,11 +226,14 @@
                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Dp-MP-1i3">
-                                <rect key="frame" x="20" y="391" width="50" height="31"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Dp-MP-1i3">
+                                <rect key="frame" x="20" y="391" width="140" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="uFP-jD-GGp"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
                                 <state key="normal" title="Sound">
-                                    <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="nZP-Pe-aI0" kind="presentation" id="Fne-MZ-Vp7"/>
@@ -239,6 +245,36 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="110-aL-YrB">
+                                <rect key="frame" x="20" y="442" width="140" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="KbG-Ez-Grh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
+                                <state key="normal" title="Take a picture">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J3g-91-4k4">
+                                <rect key="frame" x="20" y="493" width="140" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="XZ4-nB-PlC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
+                                <state key="normal" title="Playing TicTacToe">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ac-Mi-WhC">
+                                <rect key="frame" x="20" y="544" width="140" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="WEs-MG-MA3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
+                                <state key="normal" title="Math problems">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -246,14 +282,20 @@
                             <constraint firstItem="f1C-nc-Tub" firstAttribute="trailing" secondItem="FFN-FL-4om" secondAttribute="trailing" id="4vP-eQ-Qqd"/>
                             <constraint firstItem="f1C-nc-Tub" firstAttribute="top" secondItem="FFN-FL-4om" secondAttribute="top" id="52a-3Z-2he"/>
                             <constraint firstItem="X4E-os-LtH" firstAttribute="leading" secondItem="FFN-FL-4om" secondAttribute="leading" constant="20" id="ChR-ZC-X0S"/>
+                            <constraint firstItem="110-aL-YrB" firstAttribute="leading" secondItem="FFN-FL-4om" secondAttribute="leading" constant="20" id="EF9-JP-E9a"/>
+                            <constraint firstItem="J3g-91-4k4" firstAttribute="top" secondItem="110-aL-YrB" secondAttribute="bottom" constant="20" id="G7V-9Y-VAY"/>
                             <constraint firstItem="FFN-FL-4om" firstAttribute="trailing" secondItem="1fp-rg-WhX" secondAttribute="trailing" constant="20" id="GLG-lm-ktQ"/>
-                            <constraint firstItem="3Dp-MP-1i3" firstAttribute="top" secondItem="X4E-os-LtH" secondAttribute="bottom" constant="20" id="UIb-MA-AcC"/>
+                            <constraint firstItem="3Dp-MP-1i3" firstAttribute="top" secondItem="X4E-os-LtH" secondAttribute="bottom" constant="20" id="Qsq-iC-3dq"/>
                             <constraint firstItem="X4E-os-LtH" firstAttribute="top" secondItem="1fp-rg-WhX" secondAttribute="bottom" constant="20" id="YCR-Ot-VJo"/>
+                            <constraint firstItem="J3g-91-4k4" firstAttribute="leading" secondItem="FFN-FL-4om" secondAttribute="leading" constant="20" id="YGT-gz-tL2"/>
                             <constraint firstItem="1fp-rg-WhX" firstAttribute="top" secondItem="f1C-nc-Tub" secondAttribute="bottom" constant="10" id="axh-iI-Khk"/>
+                            <constraint firstItem="6Ac-Mi-WhC" firstAttribute="leading" secondItem="FFN-FL-4om" secondAttribute="leading" constant="20" id="dd6-tV-X9p"/>
+                            <constraint firstItem="110-aL-YrB" firstAttribute="top" secondItem="3Dp-MP-1i3" secondAttribute="bottom" constant="20" id="kjQ-yp-wRl"/>
                             <constraint firstItem="f1C-nc-Tub" firstAttribute="leading" secondItem="FFN-FL-4om" secondAttribute="leading" id="krH-lK-2kD"/>
                             <constraint firstItem="1fp-rg-WhX" firstAttribute="leading" secondItem="FFN-FL-4om" secondAttribute="leading" constant="20" id="sVD-ei-r9s"/>
                             <constraint firstItem="3Dp-MP-1i3" firstAttribute="leading" secondItem="FFN-FL-4om" secondAttribute="leading" constant="20" id="usk-Cz-SGg"/>
                             <constraint firstItem="6Cn-gV-El6" firstAttribute="centerY" secondItem="X4E-os-LtH" secondAttribute="centerY" id="wTR-l0-V9M"/>
+                            <constraint firstItem="6Ac-Mi-WhC" firstAttribute="top" secondItem="J3g-91-4k4" secondAttribute="bottom" constant="20" id="yPs-eL-kh2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="FFN-FL-4om"/>
                     </view>
