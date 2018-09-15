@@ -258,6 +258,14 @@ SWIFT_CLASS("_TtC10Assignment11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+
+SWIFT_CLASS("_TtC10Assignment4Line")
+@interface Line : UIView
+- (void)drawRect:(CGRect)rect;
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
 @class UILabel;
 
 SWIFT_CLASS("_TtC10Assignment6MathVC")
@@ -377,6 +385,27 @@ SWIFT_CLASS("_TtC10Assignment15SoundBrowsingVC")
 - (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
 - (void)tableView:(UITableView * _Nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 - (nonnull instancetype)initWithStyle:(UITableViewStyle)style OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC10Assignment11TicTacToeVC")
+@interface TicTacToeVC : UIViewController
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified newGameButton;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified statusLabel;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified button1;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified button2;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified button3;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified button4;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified button5;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified button6;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified button7;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified button8;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified button9;
+- (IBAction)newGameButton:(id _Nonnull)sender;
+- (IBAction)buttonClicked:(id _Nonnull)sender;
+- (void)viewDidLoad;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end

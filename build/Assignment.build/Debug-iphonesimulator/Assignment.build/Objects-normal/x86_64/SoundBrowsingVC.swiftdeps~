@@ -378,7 +378,6 @@ depends-member:
 - ["10Assignment15SoundBrowsingVCC", "saveSound"]
 - !private ["10Assignment15SoundBrowsingVCC", "soundList"]
 - ["10Assignment15SoundBrowsingVCC", "tableView"]
-- !private ["s12StaticStringV", "init"]
 - ["SS", "init"]
 - ["s14StringProtocolP", "init"]
 - ["s16TextOutputStreamP", "init"]
@@ -766,7 +765,6 @@ depends-nominal:
 - !private "10Foundation20ReferenceConvertibleP"
 - "s8SequenceP"
 - "10Assignment15SoundBrowsingVCC"
-- !private "s12StaticStringV"
 - "SS"
 - "s14StringProtocolP"
 - "s16TextOutputStreamP"

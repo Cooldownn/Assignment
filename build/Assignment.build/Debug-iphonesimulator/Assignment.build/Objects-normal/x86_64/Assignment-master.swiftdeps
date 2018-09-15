@@ -1,8 +1,8 @@
 version: "Apple Swift version 4.1.2 (swiftlang-902.0.54 clang-902.0.39.2)"
 options: "53d499070714d9b3ac2343a6644c84ae"
-build_time: [1536938865, 146132000]
+build_time: [1537018198, 567638000]
 inputs:
-  "/Users/mac/Desktop/Assignment1111/Assignment/Table View Cell/WeekdaysCell.swift": [1536899523, 0]
+  "/Users/mac/Desktop/Assignment1111/Assignment/Function/WeekdaysCell.swift": [1537018196, 0]
   "/Users/mac/Desktop/Assignment1111/Assignment/Controller/AlarmPIC.swift": [1536900232, 0]
   "/Users/mac/Desktop/Assignment1111/Assignment/Controller/WeekdaysVC.swift": [1536899523, 0]
   "/Users/mac/Desktop/Assignment1111/Assignment/Controller/NewPicture.swift": [1536900232, 0]
@@ -11,13 +11,15 @@ inputs:
   "/Users/mac/Desktop/Assignment1111/Assignment/Controller/ReminderVC.swift": [1536899523, 0]
   "/Users/mac/Desktop/Assignment1111/Assignment/Controller/SetMethodAlarmVC.swift": [1536936512, 0]
   "/Users/mac/Desktop/Assignment1111/Assignment/Controller/NoteVC.swift": [1536899523, 0]
+  "/Users/mac/Desktop/Assignment1111/Assignment/Function/Line.swift": [1537018196, 0]
   "/Users/mac/Desktop/Assignment1111/Assignment/Controller/alarmTableViewCell.swift": [1536900232, 0]
   "/Users/mac/Desktop/Assignment1111/Assignment/Controller/tableViewCellTableViewCell.swift": [1536899523, 0]
   "/Users/mac/Desktop/Assignment1111/Assignment/Controller/SoundBrowsingVC.swift": [1536938865, 0]
   "/Users/mac/Desktop/Assignment1111/Assignment/Services/DayServices.swift": [1536899523, 0]
+  "/Users/mac/Desktop/Assignment1111/Assignment/Controller/TicTacToeVC.swift": [1537018196, 0]
   "/Users/mac/Desktop/Assignment1111/Assignment/App/AppDelegate.swift": [1536899523, 0]
   "/Users/mac/Desktop/Assignment1111/Assignment/Persistent Data/Alarm.swift": [1536899523, 0]
   "/Users/mac/Desktop/Assignment1111/Assignment/Model/Weekdays.swift": [1536899523, 0]
   "/Users/mac/Desktop/Assignment1111/Assignment/Controller/SetTimeAlarmVC.swift": [1536938427, 0]
-  "/Users/mac/Desktop/Assignment1111/Assignment/Controller/MathVC.swift": [1536899523, 0]
+  "/Users/mac/Desktop/Assignment1111/Assignment/Controller/MathVC.swift": [1537018196, 0]
   "/Users/mac/Desktop/Assignment1111/Assignment/Controller/imageUICollectionViewCell.swift": [1536899523, 0]
