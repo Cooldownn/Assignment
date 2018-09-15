@@ -41,7 +41,7 @@ class TicTacToeVC: UIViewController {
         
         
         if playerOneMoves.contains(sender.tag) || playerTwoMoves.contains(sender.tag) {
-            statusLabel.text = "Space is already checked"
+            statusLabel.text = "Try Again"
         } else {
             if playerTurn % 2 != 0 {
                 
@@ -58,13 +58,15 @@ class TicTacToeVC: UIViewController {
                     button.setImage(UIImage(named: "Nought.png"), for: UIControlState())
                     playerTurn = 1
                     statusLabel.text = "Your Turn"
+                    statusLabel.textColor = UIColor.init(cgColor: #colorLiteral(red: 0.6679978967, green: 0.4751212597, blue: 0.2586010993, alpha: 1))
                     
                     isWinner(player: 2)
                 }
             }
             
             playerTurn = +1
-            if playerTurn > 9 && isWinner(player: 1) < 1 {
+            print(playerTurn)
+            if (playerTurn > 9 && isWinner(player: 1) < 1) {
                 statusLabel.text = "Draw"
                 for index in 1...9 {
                     let button = self.view.viewWithTag(index) as! UIButton
@@ -72,8 +74,6 @@ class TicTacToeVC: UIViewController {
                 }
             }
         }
-        
-        
     }
     
     
@@ -85,6 +85,7 @@ class TicTacToeVC: UIViewController {
         
         // change status label and set player turn
         statusLabel.text = "You Go First !!!"
+        statusLabel.textColor = UIColor.init(cgColor: #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1))
         playerTurn = 1
         
         // setup titles
@@ -113,10 +114,12 @@ class TicTacToeVC: UIViewController {
             if moveList.contains(combo[0]) && moveList.contains(combo[1]) && moveList.contains(combo[2]) && moveList.count > 2 {
                 winner = player
                 if winner == 1 {
-                    statusLabel.text = "You Won"
+                    statusLabel.text = "You Won!"
+                    statusLabel.textColor = UIColor.init(cgColor: #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1))
                 }
                 else if winner == 2 {
                     statusLabel.text = "GG! Loser"
+                    statusLabel.textColor = UIColor.init(cgColor: #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1))
                 }
                 for index in 1...9 {
                     let title = self.view.viewWithTag(index) as! UIButton
