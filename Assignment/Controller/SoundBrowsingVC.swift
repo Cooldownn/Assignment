@@ -76,7 +76,7 @@ class SoundBrowsingVC: UITableViewController, AVAudioPlayerDelegate {
             //ERROR
         }
         player.play()
-        if let cell = tableView.cellForRow(at: <#T##IndexPath#>){
+        if let cell = tableView.cellForRow(at: indexPath){
             //cell.accessoryType = .checkmark
             if cell.accessoryType == UITableViewCellAccessoryType.checkmark{
                 cell.accessoryType = .none

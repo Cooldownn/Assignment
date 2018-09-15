@@ -371,7 +371,7 @@ SWIFT_CLASS("_TtC10Assignment9SettingVC")
 
 SWIFT_CLASS("_TtC10Assignment15SoundBrowsingVC")
 @interface SoundBrowsingVC : UITableViewController <AVAudioPlayerDelegate>
-- (IBAction)backToPrev:(UIStoryboardSegue * _Nonnull)sender;
+- (IBAction)saveSound:(id _Nonnull)sender;
 - (IBAction)abortSelecting:(id _Nonnull)sender;
 - (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
 - (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
