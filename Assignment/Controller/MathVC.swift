@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class MathVC: UIViewController {
     
@@ -18,6 +19,9 @@ class MathVC: UIViewController {
     @IBOutlet weak var ans4: UIButton!
     @IBOutlet weak var resultLbl: UILabel!
     @IBOutlet weak var nextProblem: UIButton!
+    
+    var correctSong = AVAudioPlayer()
+    var wrongSong = AVAudioPlayer()
     
     var num1 = Int()
     var num2 = Int()
@@ -36,15 +40,32 @@ class MathVC: UIViewController {
         ans4.isHidden = false
         resultLbl.isHidden = true
         nextProblem.isHidden = true
-        scoreLbl.text = "Score:\(score)"
+        scoreLbl.text = "Score: \(score)"
         num1 = Int(arc4random_uniform(100))
         num2 = Int(arc4random_uniform(99))
         signnum = Int(arc4random_uniform(3))
+        
+        do {
+            correctSong = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource: "Correct", ofType: "mp3")!))
+            correctSong.prepareToPlay()
+        }
+        catch {
+            print(error)
+        }
+        
+        do {
+            wrongSong = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource: "Wrong", ofType: "mp3")!))
+            wrongSong.prepareToPlay()
+        }
+        catch {
+            print(error)
+        }
+        
         switch signnum {
         case 0:
             sign = "+"
             answer = num1 + num2
-            questionLbl.text = "\(num1)\(sign)\(num2) = "
+            questionLbl.text = "\(num1) \(sign) \(num2) = "
             ansmixnum = Int(arc4random_uniform(4))
             switch ansmixnum {
             case 0:
@@ -77,7 +98,7 @@ class MathVC: UIViewController {
         case 1:
             sign = "-"
             answer = num1 - num2
-            questionLbl.text = "\(num1)\(sign)\(num2) = "
+            questionLbl.text = "\(num1) \(sign) \(num2) = "
             ansmixnum = Int(arc4random_uniform(4))
             switch ansmixnum {
             case 0:
@@ -110,7 +131,7 @@ class MathVC: UIViewController {
         case 2:
             sign = "x"
             answer = num1 * num2
-            questionLbl.text = "\(num1)\(sign)\(num2) = "
+            questionLbl.text = "\(num1) \(sign) \(num2) = "
             ansmixnum = Int(arc4random_uniform(4))
             switch ansmixnum {
             case 0:
@@ -156,11 +177,13 @@ class MathVC: UIViewController {
             }
             scoreLbl.text = "Score: \(score)"
             resultLbl.text = "Wrong !!!"
+            resultLbl.textColor = UIColor.init(cgColor: #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1))
             questionLbl.isHidden = true
             ans1.isHidden = true
             ans2.isHidden = true
             ans3.isHidden = true
             ans4.isHidden = true
+            wrongSong.play()
         } else if ansmixnum == 1 {
             if (score == 0) {
                 score = 0
@@ -169,20 +192,24 @@ class MathVC: UIViewController {
             }
             scoreLbl.text = "Score: \(score)"
             resultLbl.text = "Wrong !!!"
+            resultLbl.textColor = UIColor.init(cgColor: #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1))
             questionLbl.isHidden = true
             ans1.isHidden = true
             ans2.isHidden = true
             ans3.isHidden = true
             ans4.isHidden = true
+            wrongSong.play()
         } else if ansmixnum == 2 {
             score = score + 1
             scoreLbl.text = "Score: \(score)"
-            resultLbl.text = "Correct"
+            resultLbl.text = "Correct!!!"
+            resultLbl.textColor = UIColor.init(cgColor: #colorLiteral(red: 0, green: 0.5603182912, blue: 0, alpha: 0.7524079623))
             questionLbl.isHidden = true
             ans1.isHidden = true
             ans2.isHidden = true
             ans3.isHidden = true
             ans4.isHidden = true
+            correctSong.play()
         } else if ansmixnum == 3 {
             if (score == 0) {
                 score = 0
@@ -191,11 +218,13 @@ class MathVC: UIViewController {
             }
             scoreLbl.text = "Score: \(score)"
             resultLbl.text = "Wrong !!!"
+            resultLbl.textColor = UIColor.init(cgColor: #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1))
             questionLbl.isHidden = true
             ans1.isHidden = true
             ans2.isHidden = true
             ans3.isHidden = true
             ans4.isHidden = true
+            wrongSong.play()
         }
     }
     
@@ -210,11 +239,13 @@ class MathVC: UIViewController {
             }
             scoreLbl.text = "Score: \(score)"
             resultLbl.text = "Wrong !!!"
+            resultLbl.textColor = UIColor.init(cgColor: #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1))
             questionLbl.isHidden = true
             ans1.isHidden = true
             ans2.isHidden = true
             ans3.isHidden = true
             ans4.isHidden = true
+            wrongSong.play()
         } else if ansmixnum == 1 {
             if (score == 0) {
                 score = 0
@@ -223,20 +254,24 @@ class MathVC: UIViewController {
             }
             scoreLbl.text = "Score: \(score)"
             resultLbl.text = "Wrong !!!"
+            resultLbl.textColor = UIColor.init(cgColor: #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1))
             questionLbl.isHidden = true
             ans1.isHidden = true
             ans2.isHidden = true
             ans3.isHidden = true
             ans4.isHidden = true
+            wrongSong.play()
         } else if ansmixnum == 3 {
             score = score + 1
             scoreLbl.text = "Score: \(score)"
-            resultLbl.text = "Correct"
+            resultLbl.text = "Correct!!!"
+            resultLbl.textColor = UIColor.init(cgColor: #colorLiteral(red: 0, green: 0.5603182912, blue: 0, alpha: 0.7524079623))
             questionLbl.isHidden = true
             ans1.isHidden = true
             ans2.isHidden = true
             ans3.isHidden = true
             ans4.isHidden = true
+            correctSong.play()
         } else if ansmixnum == 2 {
             if (score == 0) {
                 score = 0
@@ -245,11 +280,13 @@ class MathVC: UIViewController {
             }
             scoreLbl.text = "Score: \(score)"
             resultLbl.text = "Wrong !!!"
+            resultLbl.textColor = UIColor.init(cgColor: #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1))
             questionLbl.isHidden = true
             ans1.isHidden = true
             ans2.isHidden = true
             ans3.isHidden = true
             ans4.isHidden = true
+            wrongSong.play()
         }
     }
     
@@ -264,11 +301,13 @@ class MathVC: UIViewController {
             }
             scoreLbl.text = "Score: \(score)"
             resultLbl.text = "Wrong !!!"
+            resultLbl.textColor = UIColor.init(cgColor: #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1))
             questionLbl.isHidden = true
             ans1.isHidden = true
             ans2.isHidden = true
             ans3.isHidden = true
             ans4.isHidden = true
+            wrongSong.play()
         } else if ansmixnum == 1 {
             if (score == 0) {
                 score = 0
@@ -277,20 +316,24 @@ class MathVC: UIViewController {
             }
             scoreLbl.text = "Score: \(score)"
             resultLbl.text = "Wrong !!!"
+            resultLbl.textColor = UIColor.init(cgColor: #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1))
             questionLbl.isHidden = true
             ans1.isHidden = true
             ans2.isHidden = true
             ans3.isHidden = true
             ans4.isHidden = true
+            wrongSong.play()
         } else if ansmixnum == 0 {
             score = score + 1
             scoreLbl.text = "Score: \(score)"
-            resultLbl.text = "Correct"
+            resultLbl.text = "Correct!!!"
+            resultLbl.textColor = UIColor.init(cgColor: #colorLiteral(red: 0, green: 0.5603182912, blue: 0, alpha: 0.7524079623))
             questionLbl.isHidden = true
             ans1.isHidden = true
             ans2.isHidden = true
             ans3.isHidden = true
             ans4.isHidden = true
+            correctSong.play()
         } else if ansmixnum == 2 {
             if (score == 0) {
                 score = 0
@@ -299,11 +342,13 @@ class MathVC: UIViewController {
             }
             scoreLbl.text = "Score: \(score)"
             resultLbl.text = "Wrong !!!"
+            resultLbl.textColor = UIColor.init(cgColor: #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1))
             questionLbl.isHidden = true
             ans1.isHidden = true
             ans2.isHidden = true
             ans3.isHidden = true
             ans4.isHidden = true
+            wrongSong.play()
         }
     }
     
@@ -318,11 +363,13 @@ class MathVC: UIViewController {
             }
             scoreLbl.text = "Score: \(score)"
             resultLbl.text = "Wrong !!!"
+            resultLbl.textColor = UIColor.init(cgColor: #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1))
             questionLbl.isHidden = true
             ans1.isHidden = true
             ans2.isHidden = true
             ans3.isHidden = true
             ans4.isHidden = true
+            wrongSong.play()
         } else if ansmixnum == 3 {
             if (score == 0) {
                 score = 0
@@ -331,20 +378,24 @@ class MathVC: UIViewController {
             }
             scoreLbl.text = "Score: \(score)"
             resultLbl.text = "Wrong !!!"
+            resultLbl.textColor = UIColor.init(cgColor: #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1))
             questionLbl.isHidden = true
             ans1.isHidden = true
             ans2.isHidden = true
             ans3.isHidden = true
             ans4.isHidden = true
+            wrongSong.play()
         } else if ansmixnum == 1 {
             score = score + 1
             scoreLbl.text = "Score: \(score)"
-            resultLbl.text = "Correct"
+            resultLbl.text = "Correct!!!"
+            resultLbl.textColor = UIColor.init(cgColor: #colorLiteral(red: 0, green: 0.5603182912, blue: 0, alpha: 0.7524079623))
             questionLbl.isHidden = true
             ans1.isHidden = true
             ans2.isHidden = true
             ans3.isHidden = true
             ans4.isHidden = true
+            correctSong.play()
         } else if ansmixnum == 2 {
             if (score == 0) {
                 score = 0
@@ -353,11 +404,13 @@ class MathVC: UIViewController {
             }
             scoreLbl.text = "Score: \(score)"
             resultLbl.text = "Wrong !!!"
+            resultLbl.textColor = UIColor.init(cgColor: #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1))
             questionLbl.isHidden = true
             ans1.isHidden = true
             ans2.isHidden = true
             ans3.isHidden = true
             ans4.isHidden = true
+            wrongSong.play()
         }
     }
     @IBAction func nextBtn(_ sender: Any) {
