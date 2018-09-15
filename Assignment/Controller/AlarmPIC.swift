@@ -114,12 +114,16 @@ class AlarmPIC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
             cell.image1.isUserInteractionEnabled = true
             cell.backgroundColor = UIColor.white
         }
+        else if indexPath.item == 0 {
+            cell.image1.addGestureRecognizer(longpress)
+            cell.image1.isUserInteractionEnabled = true
+            cell.backgroundColor = UIColor.orange
+        }
         else {
             cell.image1.addGestureRecognizer(longpress)
             cell.image1.isUserInteractionEnabled = true
             cell.backgroundColor = UIColor.orange
         }
-        
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
