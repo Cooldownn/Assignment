@@ -33,7 +33,11 @@
 		E2485DB52142019F00EAE371 /* AlarmPIC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2485DB42142019F00EAE371 /* AlarmPIC.swift */; };
 		E248B1A82144D9F800CE00B3 /* imageUICollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E248B1A72144D9F800CE00B3 /* imageUICollectionViewCell.swift */; };
 		E248B1B0214515EC00CE00B3 /* NewPicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = E248B1AF214515EC00CE00B3 /* NewPicture.swift */; };
+<<<<<<< HEAD
 		E252064D214E8C6700AF9BCE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E252064C214E8C6700AF9BCE /* Main.storyboard */; };
+=======
+		FC3ACC0C214E8B420038862B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC3ACC0B214E8B420038862B /* Main.storyboard */; };
+>>>>>>> 9095b3279b7bb7729f07ce2dad439b3eb2fdaa53
 		FC68C23E2147AC8F00EAA7C4 /* Apologize - One Republic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FC68C23D2147AC8D00EAA7C4 /* Apologize - One Republic.mp3 */; };
 		FC68C2402147ACAA00EAA7C4 /* Let her go - The Passenger.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FC68C23F2147ACA800EAA7C4 /* Let her go - The Passenger.mp3 */; };
 		FC68C2422147ACB500EAA7C4 /* Thinking out loud - Ed Sheeran.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FC68C2412147ACB400EAA7C4 /* Thinking out loud - Ed Sheeran.mp3 */; };
@@ -89,7 +93,11 @@
 		E2485DB42142019F00EAE371 /* AlarmPIC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmPIC.swift; sourceTree = "<group>"; };
 		E248B1A72144D9F800CE00B3 /* imageUICollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageUICollectionViewCell.swift; sourceTree = "<group>"; };
 		E248B1AF214515EC00CE00B3 /* NewPicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPicture.swift; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		E252064C214E8C6700AF9BCE /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+=======
+		FC3ACC0B214E8B420038862B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+>>>>>>> 9095b3279b7bb7729f07ce2dad439b3eb2fdaa53
 		FC68C23D2147AC8D00EAA7C4 /* Apologize - One Republic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Apologize - One Republic.mp3"; sourceTree = "<group>"; };
 		FC68C23F2147ACA800EAA7C4 /* Let her go - The Passenger.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Let her go - The Passenger.mp3"; sourceTree = "<group>"; };
 		FC68C2412147ACB400EAA7C4 /* Thinking out loud - Ed Sheeran.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Thinking out loud - Ed Sheeran.mp3"; sourceTree = "<group>"; };
@@ -123,7 +131,11 @@
 		BF19253921420299003FBA55 /* View */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
 				E252064C214E8C6700AF9BCE /* Main.storyboard */,
+=======
+				FC3ACC0B214E8B420038862B /* Main.storyboard */,
+>>>>>>> 9095b3279b7bb7729f07ce2dad439b3eb2fdaa53
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -376,7 +388,11 @@
 				BF48FE57214CFA2500DA8DB4 /* Correct.mp3 in Resources */,
 				BF661E6B212BA61200D7B6BF /* LaunchScreen.storyboard in Resources */,
 				FC68C2402147ACAA00EAA7C4 /* Let her go - The Passenger.mp3 in Resources */,
+<<<<<<< HEAD
 				E252064D214E8C6700AF9BCE /* Main.storyboard in Resources */,
+=======
+				FC3ACC0C214E8B420038862B /* Main.storyboard in Resources */,
+>>>>>>> 9095b3279b7bb7729f07ce2dad439b3eb2fdaa53
 				FC68C23E2147AC8F00EAA7C4 /* Apologize - One Republic.mp3 in Resources */,
 				BF48FE59214CFA7100DA8DB4 /* Wrong.mp3 in Resources */,
 				BF661E68212BA61200D7B6BF /* Assets.xcassets in Resources */,

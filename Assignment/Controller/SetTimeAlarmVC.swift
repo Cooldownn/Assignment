@@ -25,18 +25,22 @@ class SetTimeAlarmVC: UIViewController, UITextFieldDelegate, AVAudioPlayerDelega
     @IBOutlet weak var timePicker: UIDatePicker!
     @IBOutlet weak var alarmLbl: UITextField!
     @IBOutlet weak var soundName: UILabel!
+<<<<<<< HEAD
 
     @IBOutlet weak var alarmMethod: UILabel!
 
     
     
 
+=======
+    @IBOutlet weak var alarmMethod: UILabel!
+>>>>>>> 9095b3279b7bb7729f07ce2dad439b3eb2fdaa53
     @IBOutlet weak var repeatDaysLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.alarmLbl.delegate = self
-        soundName.text = "None"
+        //soundName.text = "None"
         // set minimum date/time for picker
         timePicker.minimumDate = NSDate() as Date
         timePicker.locale = NSLocale.current
