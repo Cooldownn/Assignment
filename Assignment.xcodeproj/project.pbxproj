@@ -11,7 +11,6 @@
 		BF42B82A214CC63D00620BC1 /* TicTacToeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF42B829214CC63D00620BC1 /* TicTacToeVC.swift */; };
 		BF48FE57214CFA2500DA8DB4 /* Correct.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BF48FE56214CFA2500DA8DB4 /* Correct.mp3 */; };
 		BF48FE59214CFA7100DA8DB4 /* Wrong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BF48FE58214CFA7100DA8DB4 /* Wrong.mp3 */; };
-		BF48FE5B214D614D00DA8DB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF48FE5A214D614D00DA8DB4 /* Main.storyboard */; };
 		BF661E61212BA61200D7B6BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF661E60212BA61200D7B6BF /* AppDelegate.swift */; };
 		BF661E68212BA61200D7B6BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF661E67212BA61200D7B6BF /* Assets.xcassets */; };
 		BF661E6B212BA61200D7B6BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF661E69212BA61200D7B6BF /* LaunchScreen.storyboard */; };
@@ -34,6 +33,7 @@
 		E2485DB52142019F00EAE371 /* AlarmPIC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2485DB42142019F00EAE371 /* AlarmPIC.swift */; };
 		E248B1A82144D9F800CE00B3 /* imageUICollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E248B1A72144D9F800CE00B3 /* imageUICollectionViewCell.swift */; };
 		E248B1B0214515EC00CE00B3 /* NewPicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = E248B1AF214515EC00CE00B3 /* NewPicture.swift */; };
+		FC3ACC0C214E8B420038862B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC3ACC0B214E8B420038862B /* Main.storyboard */; };
 		FC68C23E2147AC8F00EAA7C4 /* Apologize - One Republic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FC68C23D2147AC8D00EAA7C4 /* Apologize - One Republic.mp3 */; };
 		FC68C2402147ACAA00EAA7C4 /* Let her go - The Passenger.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FC68C23F2147ACA800EAA7C4 /* Let her go - The Passenger.mp3 */; };
 		FC68C2422147ACB500EAA7C4 /* Thinking out loud - Ed Sheeran.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FC68C2412147ACB400EAA7C4 /* Thinking out loud - Ed Sheeran.mp3 */; };
@@ -61,7 +61,6 @@
 		BF42B829214CC63D00620BC1 /* TicTacToeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeVC.swift; sourceTree = "<group>"; };
 		BF48FE56214CFA2500DA8DB4 /* Correct.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Correct.mp3; sourceTree = "<group>"; };
 		BF48FE58214CFA7100DA8DB4 /* Wrong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Wrong.mp3; sourceTree = "<group>"; };
-		BF48FE5A214D614D00DA8DB4 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../../../../Downloads/Main.storyboard; sourceTree = "<group>"; };
 		BF661E5D212BA61200D7B6BF /* Assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Assignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF661E60212BA61200D7B6BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF661E67212BA61200D7B6BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -90,6 +89,7 @@
 		E2485DB42142019F00EAE371 /* AlarmPIC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmPIC.swift; sourceTree = "<group>"; };
 		E248B1A72144D9F800CE00B3 /* imageUICollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageUICollectionViewCell.swift; sourceTree = "<group>"; };
 		E248B1AF214515EC00CE00B3 /* NewPicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPicture.swift; sourceTree = "<group>"; };
+		FC3ACC0B214E8B420038862B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		FC68C23D2147AC8D00EAA7C4 /* Apologize - One Republic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Apologize - One Republic.mp3"; sourceTree = "<group>"; };
 		FC68C23F2147ACA800EAA7C4 /* Let her go - The Passenger.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Let her go - The Passenger.mp3"; sourceTree = "<group>"; };
 		FC68C2412147ACB400EAA7C4 /* Thinking out loud - Ed Sheeran.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Thinking out loud - Ed Sheeran.mp3"; sourceTree = "<group>"; };
@@ -123,7 +123,7 @@
 		BF19253921420299003FBA55 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				BF48FE5A214D614D00DA8DB4 /* Main.storyboard */,
+				FC3ACC0B214E8B420038862B /* Main.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -376,7 +376,7 @@
 				BF48FE57214CFA2500DA8DB4 /* Correct.mp3 in Resources */,
 				BF661E6B212BA61200D7B6BF /* LaunchScreen.storyboard in Resources */,
 				FC68C2402147ACAA00EAA7C4 /* Let her go - The Passenger.mp3 in Resources */,
-				BF48FE5B214D614D00DA8DB4 /* Main.storyboard in Resources */,
+				FC3ACC0C214E8B420038862B /* Main.storyboard in Resources */,
 				FC68C23E2147AC8F00EAA7C4 /* Apologize - One Republic.mp3 in Resources */,
 				BF48FE59214CFA7100DA8DB4 /* Wrong.mp3 in Resources */,
 				BF661E68212BA61200D7B6BF /* Assets.xcassets in Resources */,
@@ -592,7 +592,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P53TMVH27X;
 				INFOPLIST_FILE = Assignment/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "hung-dang.Assignment";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -609,7 +612,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P53TMVH27X;
 				INFOPLIST_FILE = Assignment/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "hung-dang.Assignment";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -626,7 +632,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P53TMVH27X;
 				INFOPLIST_FILE = AssignmentTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = Cooldown.AssignmentTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -643,7 +653,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P53TMVH27X;
 				INFOPLIST_FILE = AssignmentTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = Cooldown.AssignmentTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -659,7 +673,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P53TMVH27X;
 				INFOPLIST_FILE = AssignmentUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = Cooldown.AssignmentUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -675,7 +693,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P53TMVH27X;
 				INFOPLIST_FILE = AssignmentUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = Cooldown.AssignmentUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
