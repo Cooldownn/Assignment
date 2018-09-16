@@ -365,19 +365,6 @@ SWIFT_CLASS("_TtC10Assignment14SetTimeAlarmVC")
 @end
 
 
-SWIFT_CLASS("_TtC10Assignment9SettingVC")
-@interface SettingVC : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
-@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified imageView;
-- (void)viewDidLoad;
-- (IBAction)chooseImg:(id _Nonnull)sender;
-- (void)imagePickerController:(UIImagePickerController * _Nonnull)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *, id> * _Nonnull)info;
-- (void)imagePickerControllerDidCancel:(UIImagePickerController * _Nonnull)picker;
-- (IBAction)cancelBtn:(UIButton * _Nonnull)sender;
-- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
 SWIFT_CLASS("_TtC10Assignment15SoundBrowsingVC")
 @interface SoundBrowsingVC : UITableViewController <AVAudioPlayerDelegate>
 - (IBAction)saveSound:(id _Nonnull)sender;
