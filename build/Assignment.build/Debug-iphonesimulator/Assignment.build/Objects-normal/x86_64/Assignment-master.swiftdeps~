@@ -1,12 +1,12 @@
 version: "Apple Swift version 4.1.2 (swiftlang-902.0.54 clang-902.0.39.2)"
 options: "6250d6d4208a086f4fde0d8203e51687"
-build_time: [1537090823, 101241000]
+build_time: [1537091129, 75351000]
 inputs:
   "/Users/mac/Desktop/Assignment_IOS1/Assignment/Function/WeekdaysCell.swift": [1537021057, 0]
   "/Users/mac/Desktop/Assignment_IOS1/Assignment/Controller/AlarmPIC.swift": [1537087079, 0]
   "/Users/mac/Desktop/Assignment_IOS1/Assignment/Controller/WeekdaysVC.swift": [1537080699, 0]
   "/Users/mac/Desktop/Assignment_IOS1/Assignment/Controller/NewPicture.swift": [1537021057, 0]
-  "/Users/mac/Desktop/Assignment_IOS1/Assignment/Controller/AlarmVC.swift": [1537090823, 0]
+  "/Users/mac/Desktop/Assignment_IOS1/Assignment/Controller/AlarmVC.swift": [1537091129, 0]
   "/Users/mac/Desktop/Assignment_IOS1/Assignment/Controller/SettingVC.swift": [1537021057, 0]
   "/Users/mac/Desktop/Assignment_IOS1/Assignment/Controller/ReminderVC.swift": [1537021057, 0]
   "/Users/mac/Desktop/Assignment_IOS1/Assignment/Controller/SetMethodAlarmVC.swift": [1537088668, 0]

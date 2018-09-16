@@ -25,7 +25,12 @@ class SetTimeAlarmVC: UIViewController, UITextFieldDelegate, AVAudioPlayerDelega
     @IBOutlet weak var timePicker: UIDatePicker!
     @IBOutlet weak var alarmLbl: UITextField!
     @IBOutlet weak var soundName: UILabel!
+<<<<<<< HEAD
     @IBOutlet weak var alarmMethod: UILabel!
+=======
+    
+    
+>>>>>>> cf3da9a8e9a1f15b38f620f95a29e935adf27f55
     @IBOutlet weak var repeatDaysLabel: UILabel!
     
     override func viewDidLoad() {
