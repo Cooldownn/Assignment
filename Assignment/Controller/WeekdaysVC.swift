@@ -24,6 +24,8 @@ class WeekdaysVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
         // Select multiple days
         weeksdayTable.allowsMultipleSelection = true
+         weeksdayTable.accessibilityIdentifier = "weeksdayTable"
+        //weeksdayTable.identi
         
     }
     

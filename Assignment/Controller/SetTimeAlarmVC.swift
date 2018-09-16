@@ -24,13 +24,14 @@ class SetTimeAlarmVC: UIViewController, UITextFieldDelegate, AVAudioPlayerDelega
     @IBOutlet weak var saveButton: UIBarButtonItem!
     @IBOutlet weak var timePicker: UIDatePicker!
     @IBOutlet weak var alarmLbl: UITextField!
-    
+    @IBOutlet weak var soundName: UILabel!
+    @IBOutlet weak var alarmMethod: UILabel!
     @IBOutlet weak var repeatDaysLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.alarmLbl.delegate = self
-        
+        soundName.text = "None"
         // set minimum date/time for picker
         timePicker.minimumDate = NSDate() as Date
         timePicker.locale = NSLocale.current
@@ -114,7 +115,7 @@ class SetTimeAlarmVC: UIViewController, UITextFieldDelegate, AVAudioPlayerDelega
             notification.fireDate = time
             notification.hasAction = true
             notification.soundName = UILocalNotificationDefaultSoundName
-        
+        //notification.soundName = UNNotificationSound.init(name: "Wrong.mp3")
             let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
             UIApplication.shared.scheduledLocalNotifications?.append(notification)
         

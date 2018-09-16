@@ -219,6 +219,7 @@ SWIFT_CLASS("_TtC10Assignment8AlarmPIC")
 - (void)dismissFullscreenImage:(UITapGestureRecognizer * _Nonnull)sender;
 - (void)imagePickerController:(UIImagePickerController * _Nonnull)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *, id> * _Nonnull)info;
 - (void)imagePickerControllerDidCancel:(UIImagePickerController * _Nonnull)picker;
+- (IBAction)saveAction:(id _Nonnull)sender;
 - (IBAction)cancelBtn:(UIButton * _Nonnull)sender;
 - (void)prepareForSegue:(UIStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
@@ -330,13 +331,11 @@ SWIFT_CLASS("_TtC10Assignment10ReminderVC")
 SWIFT_CLASS("_TtC10Assignment16SetMethodAlarmVC")
 @interface SetMethodAlarmVC : UIViewController <UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) IBOutlet UITableView * _Null_unspecified tableView;
-@property (nonatomic, strong) IBOutlet UIButton * _Null_unspecified takePic;
-@property (nonatomic, strong) IBOutlet UIButton * _Null_unspecified playTTT;
-@property (nonatomic, strong) IBOutlet UIButton * _Null_unspecified solveM;
 - (void)viewDidLoad;
 - (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
 - (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
 - (void)tableView:(UITableView * _Nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
+- (IBAction)Back:(UIBarButtonItem * _Nonnull)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -349,6 +348,8 @@ SWIFT_CLASS("_TtC10Assignment14SetTimeAlarmVC")
 @property (nonatomic, weak) IBOutlet UIBarButtonItem * _Null_unspecified saveButton;
 @property (nonatomic, weak) IBOutlet UIDatePicker * _Null_unspecified timePicker;
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified alarmLbl;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified soundName;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified alarmMethod;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified repeatDaysLabel;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
