@@ -23,10 +23,13 @@ class AlarmPIC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
     var imagesDirectoryPath:String!
     var chosenimagesDirectoryPath:String!
     var titles:[String]!
+    var chosenpath:[String]!
     var imagetemp:[UIImage] = [UIImage(named: "camera")!,UIImage(named: "camera")!,UIImage(named: "camera")!]
     
+    let alert = UIAlertController(title: "Compare Image", message: "You havent chosen any image or taken any image", preferredStyle: .actionSheet)
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.accessibilityIdentifier = "alarmPICtv"
         images = [UIImage(named:"camera")!]
         titles = ["set"]
         let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
@@ -73,7 +76,22 @@ class AlarmPIC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
             }
         }
         else {
+            do{
             
+            chosenpath = try FileManager.default.contentsOfDirectory(atPath: chosenimagesDirectoryPath)
+                for image in chosenpath {
+                 let data = FileManager.default.contents(atPath: chosenimagesDirectoryPath + "/\(image)")
+                 let chosenImage: UIImage!
+                 chosenImage = UIImage(data: data!)
+                 chooseImage = chosenImage
+            }
+            
+           
+
+            }
+            catch {
+                print("error")
+            }
         }
     }
     
@@ -114,55 +132,46 @@ class AlarmPIC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
             cell.image1.isUserInteractionEnabled = true
             cell.backgroundColor = UIColor.white
         }
+        else if indexPath.item == 0 {
+            cell.image1.addGestureRecognizer(longpress)
+            cell.image1.isUserInteractionEnabled = true
+            cell.backgroundColor = UIColor.orange
+        }
         else {
             cell.image1.addGestureRecognizer(longpress)
             cell.image1.isUserInteractionEnabled = true
             cell.backgroundColor = UIColor.orange
         }
-        
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        
-        //images[indexPath.item] = UIImage(named: "X")!
         chooseImage = images[indexPath.item]
-        //position = indexPath.item
         
     }
     @objc func takeImage(_ sender: UITapGestureRecognizer){
-        
-        //let index = self.tableView.indexPathForSelectedRow
-        
-        //self.tableView.selectRow(at: sender.tag, animated: true, scrollPosition: .none)
-        
         let imagePickerController = UIImagePickerController()
         imagePickerController.delegate = self
-        
         let actionSheet = UIAlertController(title: "Photo Source", message: "Choose a source", preferredStyle: .actionSheet)
-        
-        actionSheet.addAction(UIAlertAction(title: "Camera", style: .default, handler: { (action: UIAlertAction) in
+        actionSheet.view.accessibilityIdentifier = "custom_alert"
+        actionSheet.view.accessibilityValue = "\(title)"
+        let actionCamera:UIAlertAction = UIAlertAction(title: "Camera", style: .default, handler: { (action: UIAlertAction) in
             imagePickerController.sourceType = .camera
             imagePickerController.allowsEditing = true
-            self.present(imagePickerController, animated: true, completion: nil)}))
-        
-        actionSheet.addAction(UIAlertAction(title: "Photo Library", style: .default, handler: { (action: UIAlertAction) in
+            self.present(imagePickerController, animated: true, completion: nil)})
+        let actionPhoto:UIAlertAction = UIAlertAction(title: "Photo Library", style: .default, handler: { (action: UIAlertAction) in
             imagePickerController.sourceType = .photoLibrary
             imagePickerController.allowsEditing = true
-            self.present(imagePickerController, animated: true, completion: nil)}))
-        
-        actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+            self.present(imagePickerController, animated: true, completion: nil)})
+        let actionCancel:UIAlertAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        actionSheet.addAction(actionCamera)
+        actionSheet.addAction(actionPhoto)
+        actionSheet.addAction(actionCancel)
         
         self.present(actionSheet, animated: true, completion: nil)
         
     }
     
-    //    @objc func normaltap(_ sender: UIGestureRecognizer){
-    //        if let index = self.tableView.indexPathForSelectedRow{
-    //            let cell = tableView.dequeueReusableCell(withIdentifier: "cell",for: index) as! alarmTableViewCell
-    //            cell.backgroundColor = UIColor.gray
-    //        }
-    //    }
     func resizeImage(image: UIImage, newWidth: CGFloat) -> UIImage {
         
         let scale = newWidth / image.size.width
@@ -212,6 +221,36 @@ class AlarmPIC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
         picker.dismiss(animated: true, completion: nil)
     }
     
+
+    @IBAction func saveAction(_ sender: Any) {
+        if images.count == 0 || chooseImage == nil {
+           
+            self.present(alert, animated: true, completion: nil)
+        }
+        else {
+
+            let filemanager = FileManager.default
+            do{
+            try filemanager.removeItem(atPath: chosenimagesDirectoryPath)
+            }
+            catch let error as NSError {
+                print("Error: \(error.localizedDescription )")
+            }
+            do{
+                try FileManager.default.createDirectory(atPath: chosenimagesDirectoryPath, withIntermediateDirectories: true, attributes: nil)
+            }catch{
+                print("Something went wrong while creating a new folder")
+            }
+            var imagePath = NSDate().description
+            
+            imagePath = imagePath.replacingOccurrences(of: " ", with: "")
+            imagePath = chosenimagesDirectoryPath+"/\(imagePath).png"
+            let data = UIImagePNGRepresentation(chooseImage)
+            let success = FileManager.default.createFile(atPath: imagePath, contents: data, attributes: nil)
+        }
+        self.dismiss(animated: true, completion: nil)
+        
+    }
     @IBAction func cancelBtn(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
@@ -222,7 +261,6 @@ class AlarmPIC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
         {
             let vc = segue.destination as? NewPicture
             vc?.imageView0 = chooseImage
-            //            vc?.usename = "Set"
             
         }
     }

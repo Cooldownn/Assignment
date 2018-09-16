@@ -10,16 +10,14 @@ import UIKit
 
 class SetMethodAlarmVC: UIViewController,UITableViewDelegate, UITableViewDataSource  {
     @IBOutlet var tableView : UITableView!
-    @IBOutlet var takePic : UIButton!
-    @IBOutlet var playTTT : UIButton!
-    @IBOutlet var solveM : UIButton!
+    var setTimeAlarmVC:SetTimeAlarmVC!
     var method: [UIImage] = [UIImage(named: "camera")!,UIImage(named:"tictactoe-1")!,UIImage(named:"math")!]
     var color: [UIColor] = [UIColor .orange,UIColor .blue,UIColor .green]
     var position: [Int] = [0,1,2]
     //
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        tableView.accessibilityIdentifier = "tableViewMethod"
         // Do any additional setup after loading the view.
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -30,20 +28,25 @@ class SetMethodAlarmVC: UIViewController,UITableViewDelegate, UITableViewDataSou
         //cell.button.setImage(method[indexPath.item], for: .normal)
         cell.backgroundColor = color[indexPath.item]
         cell.label.text = ""
-        cell.label.backgroundColor = UIColor(patternImage: resizeImage(image: method[indexPath.item],newWidth: CGFloat(120)))
+        cell.label.backgroundColor = UIColor(patternImage: resizeImage(image: method[indexPath.item],newWidth: CGFloat(140)))
         
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let position1 = position[indexPath.item]
         if position1 == 0 {
+            //setTimeAlarmVC.alarmMethod.text = "Compare Picture"
             self.performSegue(withIdentifier: "alarmPIC", sender: self)
         }
         else if position1 == 1 {
-            self.performSegue(withIdentifier: "tictactoeVC", sender: self)
+           //setTimeAlarmVC.alarmMethod.text = "Tic Tac Toe"
+           //self.navigationController?.popViewController(animated: true)
+           //performSegue(withIdentifier: "saveDone", sender: self)
+           self.dismiss(animated: true, completion: nil)
         }
         else {
-            self.performSegue(withIdentifier: "mathVC", sender: self)
+            //setTimeAlarmVC.alarmMethod.text = "Math"
+           self.dismiss(animated: true, completion: nil)
         }
         tableView.deselectRow(at: indexPath, animated: true)
     }
@@ -60,6 +63,10 @@ class SetMethodAlarmVC: UIViewController,UITableViewDelegate, UITableViewDataSou
         return newImage!
     }
     
+    @IBAction func Back(_ sender: UIBarButtonItem) {
+         self.dismiss(animated: true, completion: nil)
+        
+    }
 }
 //extension SetMethodAlarmVC: CellDelegate {
 //    func changeController(title: String) {

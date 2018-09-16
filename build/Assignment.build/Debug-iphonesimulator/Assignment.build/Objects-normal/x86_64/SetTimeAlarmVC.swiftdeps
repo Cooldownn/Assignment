@@ -7,12 +7,14 @@ provides-member:
 - ["10Assignment14SetTimeAlarmVCC", ""]
 provides-dynamic-lookup:
 - "alarmLbl"
+- "alarmMethod"
 - "cancelBtn"
 - "didReceiveMemoryWarning"
 - "prepare"
 - "repeatDaysLabel"
 - "repeatTapped"
 - "saveButton"
+- "soundName"
 - "textFieldDidBeginEditing"
 - "textFieldDidEndEditing"
 - "textFieldShouldReturn"
@@ -83,6 +85,7 @@ depends-member:
 - !private ["So21AVAudioPlayerDelegateP", "navigationItem"]
 - !private ["So21AVAudioPlayerDelegateP", "repeatDay"]
 - !private ["So21AVAudioPlayerDelegateP", "saveButton"]
+- !private ["So21AVAudioPlayerDelegateP", "soundName"]
 - !private ["So21AVAudioPlayerDelegateP", "storyboard"]
 - ["So21AVAudioPlayerDelegateP", "textField"]
 - ["So21AVAudioPlayerDelegateP", "textFieldDidBeginEditing"]
@@ -633,6 +636,7 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "repeatDay"]
 - !private ["So26NSExtensionRequestHandlingP", "saveButton"]
 - !private ["So26NSExtensionRequestHandlingP", "setTimeAlarmVC"]
+- !private ["So26NSExtensionRequestHandlingP", "soundName"]
 - !private ["So26NSExtensionRequestHandlingP", "storyboard"]
 - ["So26NSExtensionRequestHandlingP", "textField"]
 - ["So26NSExtensionRequestHandlingP", "textFieldDidBeginEditing"]
@@ -674,6 +678,7 @@ depends-member:
 - !private ["So8NSObjectC", "addLine"]
 - ["So8NSObjectC", "alarm"]
 - ["So8NSObjectC", "alarmLbl"]
+- ["So8NSObjectC", "alarmMethod"]
 - !private ["So8NSObjectC", "alertBody"]
 - !private ["So8NSObjectC", "alertTitle"]
 - ["So8NSObjectC", "audioPlayerBeginInterruption"]
@@ -717,7 +722,7 @@ depends-member:
 - !private ["So8NSObjectC", "scheduledLocalNotifications"]
 - !private ["So8NSObjectC", "setTimeAlarmVC"]
 - !private ["So8NSObjectC", "shared"]
-- !private ["So8NSObjectC", "soundName"]
+- ["So8NSObjectC", "soundName"]
 - !private ["So8NSObjectC", "storyboard"]
 - !private ["So8NSObjectC", "stroke"]
 - !private ["So8NSObjectC", "text"]
@@ -850,6 +855,7 @@ depends-member:
 - !private ["10Assignment14SetTimeAlarmVCC", "WeekdaysVC"]
 - ["10Assignment14SetTimeAlarmVCC", "alarm"]
 - ["10Assignment14SetTimeAlarmVCC", "alarmLbl"]
+- ["10Assignment14SetTimeAlarmVCC", "alarmMethod"]
 - ["10Assignment14SetTimeAlarmVCC", "audioPlayerBeginInterruption"]
 - ["10Assignment14SetTimeAlarmVCC", "audioPlayerDecodeErrorDidOccur"]
 - ["10Assignment14SetTimeAlarmVCC", "audioPlayerDidFinishPlaying"]
@@ -871,6 +877,7 @@ depends-member:
 - ["10Assignment14SetTimeAlarmVCC", "repeatDaysLabel"]
 - ["10Assignment14SetTimeAlarmVCC", "repeatTapped"]
 - ["10Assignment14SetTimeAlarmVCC", "saveButton"]
+- ["10Assignment14SetTimeAlarmVCC", "soundName"]
 - !private ["10Assignment14SetTimeAlarmVCC", "storyboard"]
 - ["10Assignment14SetTimeAlarmVCC", "textField"]
 - ["10Assignment14SetTimeAlarmVCC", "textFieldDidBeginEditing"]
@@ -941,6 +948,7 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "resignFirstResponder"]
 - !private ["So21UIAppearanceContainerP", "saveButton"]
 - !private ["So21UIAppearanceContainerP", "setTimeAlarmVC"]
+- !private ["So21UIAppearanceContainerP", "soundName"]
 - !private ["So21UIAppearanceContainerP", "storyboard"]
 - !private ["So21UIAppearanceContainerP", "text"]
 - ["So21UIAppearanceContainerP", "textField"]
@@ -994,6 +1002,7 @@ depends-member:
 - !private ["So18UIContentContainerP", "repeatDay"]
 - !private ["So18UIContentContainerP", "saveButton"]
 - !private ["So18UIContentContainerP", "setTimeAlarmVC"]
+- !private ["So18UIContentContainerP", "soundName"]
 - !private ["So18UIContentContainerP", "storyboard"]
 - ["So18UIContentContainerP", "textField"]
 - ["So18UIContentContainerP", "textFieldDidBeginEditing"]
@@ -1064,6 +1073,7 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "resignFirstResponder"]
 - !private ["So18UIFocusEnvironmentP", "saveButton"]
 - !private ["So18UIFocusEnvironmentP", "setTimeAlarmVC"]
+- !private ["So18UIFocusEnvironmentP", "soundName"]
 - !private ["So18UIFocusEnvironmentP", "storyboard"]
 - !private ["So18UIFocusEnvironmentP", "text"]
 - ["So18UIFocusEnvironmentP", "textField"]
@@ -1084,6 +1094,7 @@ depends-member:
 - !private ["So10UIKeyInputP", "delegate"]
 - !private ["So10UIKeyInputP", "resignFirstResponder"]
 - !private ["So10UIKeyInputP", "text"]
+- !private ["So7UILabelC", "text"]
 - !private ["So19UILocalNotificationC", "alertBody"]
 - !private ["So19UILocalNotificationC", "alertTitle"]
 - !private ["So19UILocalNotificationC", "fireDate"]
@@ -1131,6 +1142,7 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "scheduledLocalNotifications"]
 - !private ["So30UIPasteConfigurationSupportingP", "setTimeAlarmVC"]
 - !private ["So30UIPasteConfigurationSupportingP", "shared"]
+- !private ["So30UIPasteConfigurationSupportingP", "soundName"]
 - !private ["So30UIPasteConfigurationSupportingP", "storyboard"]
 - !private ["So30UIPasteConfigurationSupportingP", "text"]
 - ["So30UIPasteConfigurationSupportingP", "textField"]
@@ -1166,6 +1178,7 @@ depends-member:
 - !private ["So11UIResponderC", "WeekdaysVC"]
 - ["So11UIResponderC", "alarm"]
 - ["So11UIResponderC", "alarmLbl"]
+- ["So11UIResponderC", "alarmMethod"]
 - ["So11UIResponderC", "audioPlayerBeginInterruption"]
 - ["So11UIResponderC", "audioPlayerDecodeErrorDidOccur"]
 - ["So11UIResponderC", "audioPlayerDidFinishPlaying"]
@@ -1196,6 +1209,7 @@ depends-member:
 - !private ["So11UIResponderC", "scheduledLocalNotifications"]
 - !private ["So11UIResponderC", "setTimeAlarmVC"]
 - !private ["So11UIResponderC", "shared"]
+- ["So11UIResponderC", "soundName"]
 - !private ["So11UIResponderC", "storyboard"]
 - !private ["So11UIResponderC", "text"]
 - ["So11UIResponderC", "textField"]
@@ -1247,6 +1261,7 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "scheduledLocalNotifications"]
 - !private ["So30UIResponderStandardEditActionsP", "setTimeAlarmVC"]
 - !private ["So30UIResponderStandardEditActionsP", "shared"]
+- !private ["So30UIResponderStandardEditActionsP", "soundName"]
 - !private ["So30UIResponderStandardEditActionsP", "storyboard"]
 - !private ["So30UIResponderStandardEditActionsP", "text"]
 - ["So30UIResponderStandardEditActionsP", "textField"]
@@ -1291,6 +1306,7 @@ depends-member:
 - !private ["So16UIStateRestoringP", "repeatDay"]
 - !private ["So16UIStateRestoringP", "saveButton"]
 - !private ["So16UIStateRestoringP", "setTimeAlarmVC"]
+- !private ["So16UIStateRestoringP", "soundName"]
 - !private ["So16UIStateRestoringP", "storyboard"]
 - ["So16UIStateRestoringP", "textField"]
 - ["So16UIStateRestoringP", "textFieldDidBeginEditing"]
@@ -1339,6 +1355,7 @@ depends-member:
 - !private ["So19UITextFieldDelegateP", "navigationItem"]
 - !private ["So19UITextFieldDelegateP", "repeatDay"]
 - !private ["So19UITextFieldDelegateP", "saveButton"]
+- !private ["So19UITextFieldDelegateP", "soundName"]
 - !private ["So19UITextFieldDelegateP", "storyboard"]
 - ["So19UITextFieldDelegateP", "textField"]
 - ["So19UITextFieldDelegateP", "textFieldDidBeginEditing"]
@@ -1393,6 +1410,7 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "resignFirstResponder"]
 - !private ["So18UITraitEnvironmentP", "saveButton"]
 - !private ["So18UITraitEnvironmentP", "setTimeAlarmVC"]
+- !private ["So18UITraitEnvironmentP", "soundName"]
 - !private ["So18UITraitEnvironmentP", "storyboard"]
 - !private ["So18UITraitEnvironmentP", "text"]
 - ["So18UITraitEnvironmentP", "textField"]
@@ -1435,6 +1453,7 @@ depends-member:
 - ["So16UIViewControllerC", ""]
 - ["So16UIViewControllerC", "alarm"]
 - ["So16UIViewControllerC", "alarmLbl"]
+- ["So16UIViewControllerC", "alarmMethod"]
 - ["So16UIViewControllerC", "audioPlayerBeginInterruption"]
 - ["So16UIViewControllerC", "audioPlayerDecodeErrorDidOccur"]
 - ["So16UIViewControllerC", "audioPlayerDidFinishPlaying"]
@@ -1458,6 +1477,7 @@ depends-member:
 - ["So16UIViewControllerC", "repeatTapped"]
 - ["So16UIViewControllerC", "saveButton"]
 - !private ["So16UIViewControllerC", "setTimeAlarmVC"]
+- ["So16UIViewControllerC", "soundName"]
 - !private ["So16UIViewControllerC", "storyboard"]
 - ["So16UIViewControllerC", "textField"]
 - ["So16UIViewControllerC", "textFieldDidBeginEditing"]
@@ -1646,6 +1666,7 @@ depends-nominal:
 - "So18UIFocusEnvironmentP"
 - !private "So11UIFocusItemP"
 - !private "So10UIKeyInputP"
+- !private "So7UILabelC"
 - !private "So19UILocalNotificationC"
 - !private "So22UINavigationControllerC"
 - !private "So16UINavigationItemC"
@@ -1718,4 +1739,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
-interface-hash: "c9cc04678f016d42072abf95678180a3"
+interface-hash: "ff874ce13771aec4838371826ef599a1"

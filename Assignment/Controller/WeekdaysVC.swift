@@ -14,7 +14,6 @@ class WeekdaysVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var setTimeAlarmVC: SetTimeAlarmVC!
     
-    //    var selectedDayArray: [String] = []
     var storedDay: [Int] = []
     
     override func viewDidLoad() {
@@ -24,6 +23,8 @@ class WeekdaysVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
         // Select multiple days
         weeksdayTable.allowsMultipleSelection = true
+         weeksdayTable.accessibilityIdentifier = "weeksdayTable"
+        //weeksdayTable.identi
         
     }
     
@@ -56,11 +57,8 @@ class WeekdaysVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         if let cell = tableView.cellForRow(at: indexPath) {
             if cell.isSelected {
                 cell.accessoryType = .checkmark
-                //                selectedDayArray.append(DayServices.instance.getWeekdays()[indexPath.row].weekdays)
                 storedDay.append(indexPath.row + 1)
                 
-                //                print(DayServices.instance.getWeekdays()[indexPath.row].weekdays)
-                //                print(selectedDayArray)
                                 print(storedDay)
             }
         }
@@ -72,16 +70,10 @@ class WeekdaysVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
             if let index = storedDay.index(of: indexPath.row) {
                 storedDay.remove(at: index + 1)
             }
-            //            if let index = selectedDayArray.index(of: DayServices.instance.getWeekdays()[indexPath.row].weekdays) {
-            //                selectedDayArray.remove(at: index)
-            //                storedDay.remove(at: index)
-            //            }
-            // print(selectedDayArray)
         }
     }
     
     @IBAction func done(_ sender: UIBarButtonItem) {
-        // setTimeAlarmVC.testDaysLabel.text = selectedDayArray.description
         setTimeAlarmVC.repeatDaysLabel.text = repeatText(storedDay: storedDay)
         setTimeAlarmVC.repeatDay = storedDay
         if storedDay.count == 7 {

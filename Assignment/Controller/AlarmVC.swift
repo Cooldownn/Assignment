@@ -11,15 +11,16 @@ import AVFoundation
 
 class AlarmVC: UITableViewController, AVAudioPlayerDelegate {
     
+   
     // Properties
     var alarms = [Alarm]()
     let dateFormatter = DateFormatter()
     let locale = NSLocale.current
     var indexPath: IndexPath!
-    
+    // @IBOutlet var tableview: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        tableView.accessibilityIdentifier = "VCC"
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         
@@ -72,10 +73,11 @@ class AlarmVC: UITableViewController, AVAudioPlayerDelegate {
         cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 50)
         cell.textLabel?.text = dateFormatter.string(from: alarm.time as Date)
         cell.detailTextLabel?.text = alarm.name
-     //   player.play()
+        //player.play()
         
         // Create switch
         let sw = UISwitch(frame: CGRect())
+        sw.accessibilityIdentifier = "sw"
         sw.setOn(false, animated: true)
         sw.isOn = true
         sw.tag = indexPath.row

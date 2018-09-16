@@ -65,7 +65,6 @@ class TicTacToeVC: UIViewController {
             }
             
             playerTurn = +1
-            print(playerTurn)
             if (playerTurn > 9 && isWinner(player: 1) < 1) {
                 statusLabel.text = "Draw"
                 for index in 1...9 {

@@ -7,12 +7,14 @@ provides-member:
 - ["10Assignment14SetTimeAlarmVCC", ""]
 provides-dynamic-lookup:
 - "alarmLbl"
+- "alarmMethod"
 - "cancelBtn"
 - "didReceiveMemoryWarning"
 - "prepare"
 - "repeatDaysLabel"
 - "repeatTapped"
 - "saveButton"
+- "soundName"
 - "textFieldDidBeginEditing"
 - "textFieldDidEndEditing"
 - "textFieldShouldReturn"
@@ -47,12 +49,12 @@ depends-top-level:
 - "UIDatePicker"
 - "UILabel"
 - !private "UILocalNotification"
-- !private "UILocalNotificationDefaultSoundName"
 - "UIStoryboardSegue"
 - "UITextField"
 - "UITextFieldDelegate"
 - "UIViewController"
 - !private "UNCalendarNotificationTrigger"
+- !private "UNNotificationSound"
 - "Weekdays"
 - !private "WeekdaysVC"
 - !private "floor"
@@ -66,8 +68,8 @@ depends-member:
 - !private ["So21AVAudioPlayerDelegateP", "UIBezierPath"]
 - !private ["So21AVAudioPlayerDelegateP", "UIColor"]
 - !private ["So21AVAudioPlayerDelegateP", "UILocalNotification"]
-- !private ["So21AVAudioPlayerDelegateP", "UILocalNotificationDefaultSoundName"]
 - !private ["So21AVAudioPlayerDelegateP", "UNCalendarNotificationTrigger"]
+- !private ["So21AVAudioPlayerDelegateP", "UNNotificationSound"]
 - ["So21AVAudioPlayerDelegateP", ""]
 - !private ["So21AVAudioPlayerDelegateP", "alarm"]
 - !private ["So21AVAudioPlayerDelegateP", "alarmLbl"]
@@ -83,6 +85,7 @@ depends-member:
 - !private ["So21AVAudioPlayerDelegateP", "navigationItem"]
 - !private ["So21AVAudioPlayerDelegateP", "repeatDay"]
 - !private ["So21AVAudioPlayerDelegateP", "saveButton"]
+- !private ["So21AVAudioPlayerDelegateP", "soundName"]
 - !private ["So21AVAudioPlayerDelegateP", "storyboard"]
 - ["So21AVAudioPlayerDelegateP", "textField"]
 - ["So21AVAudioPlayerDelegateP", "textFieldDidBeginEditing"]
@@ -119,8 +122,8 @@ depends-member:
 - !private ["s7CVarArgP", "UIBezierPath"]
 - !private ["s7CVarArgP", "UIColor"]
 - !private ["s7CVarArgP", "UILocalNotification"]
-- !private ["s7CVarArgP", "UILocalNotificationDefaultSoundName"]
 - !private ["s7CVarArgP", "UNCalendarNotificationTrigger"]
+- !private ["s7CVarArgP", "UNNotificationSound"]
 - ["s7CVarArgP", ""]
 - !private ["s7CVarArgP", "_getBuiltinLogicValue"]
 - !private ["s7CVarArgP", "addLine"]
@@ -197,8 +200,8 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "UIBezierPath"]
 - !private ["s28CustomDebugStringConvertibleP", "UIColor"]
 - !private ["s28CustomDebugStringConvertibleP", "UILocalNotification"]
-- !private ["s28CustomDebugStringConvertibleP", "UILocalNotificationDefaultSoundName"]
 - !private ["s28CustomDebugStringConvertibleP", "UNCalendarNotificationTrigger"]
+- !private ["s28CustomDebugStringConvertibleP", "UNNotificationSound"]
 - ["s28CustomDebugStringConvertibleP", ""]
 - !private ["s28CustomDebugStringConvertibleP", "addLine"]
 - !private ["s28CustomDebugStringConvertibleP", "alarm"]
@@ -281,8 +284,8 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "UIBezierPath"]
 - !private ["s23CustomStringConvertibleP", "UIColor"]
 - !private ["s23CustomStringConvertibleP", "UILocalNotification"]
-- !private ["s23CustomStringConvertibleP", "UILocalNotificationDefaultSoundName"]
 - !private ["s23CustomStringConvertibleP", "UNCalendarNotificationTrigger"]
+- !private ["s23CustomStringConvertibleP", "UNNotificationSound"]
 - ["s23CustomStringConvertibleP", ""]
 - !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
 - !private ["s23CustomStringConvertibleP", "addLine"]
@@ -372,8 +375,8 @@ depends-member:
 - !private ["s9EquatableP", "UIBezierPath"]
 - !private ["s9EquatableP", "UIColor"]
 - !private ["s9EquatableP", "UILocalNotification"]
-- !private ["s9EquatableP", "UILocalNotificationDefaultSoundName"]
 - !private ["s9EquatableP", "UNCalendarNotificationTrigger"]
+- !private ["s9EquatableP", "UNNotificationSound"]
 - ["s9EquatableP", ""]
 - !private ["s9EquatableP", "_getBuiltinLogicValue"]
 - !private ["s9EquatableP", "addLine"]
@@ -454,8 +457,8 @@ depends-member:
 - !private ["s8HashableP", "UIBezierPath"]
 - !private ["s8HashableP", "UIColor"]
 - !private ["s8HashableP", "UILocalNotification"]
-- !private ["s8HashableP", "UILocalNotificationDefaultSoundName"]
 - !private ["s8HashableP", "UNCalendarNotificationTrigger"]
+- !private ["s8HashableP", "UNNotificationSound"]
 - ["s8HashableP", ""]
 - !private ["s8HashableP", "_getBuiltinLogicValue"]
 - !private ["s8HashableP", "addLine"]
@@ -531,8 +534,8 @@ depends-member:
 - !private ["So8NSCodingP", "UIBezierPath"]
 - !private ["So8NSCodingP", "UIColor"]
 - !private ["So8NSCodingP", "UILocalNotification"]
-- !private ["So8NSCodingP", "UILocalNotificationDefaultSoundName"]
 - !private ["So8NSCodingP", "UNCalendarNotificationTrigger"]
+- !private ["So8NSCodingP", "UNNotificationSound"]
 - ["So8NSCodingP", ""]
 - !private ["So8NSCodingP", "addLine"]
 - !private ["So8NSCodingP", "alarm"]
@@ -611,8 +614,8 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "UIBezierPath"]
 - !private ["So26NSExtensionRequestHandlingP", "UIColor"]
 - !private ["So26NSExtensionRequestHandlingP", "UILocalNotification"]
-- !private ["So26NSExtensionRequestHandlingP", "UILocalNotificationDefaultSoundName"]
 - !private ["So26NSExtensionRequestHandlingP", "UNCalendarNotificationTrigger"]
+- !private ["So26NSExtensionRequestHandlingP", "UNNotificationSound"]
 - ["So26NSExtensionRequestHandlingP", ""]
 - !private ["So26NSExtensionRequestHandlingP", "alarm"]
 - !private ["So26NSExtensionRequestHandlingP", "alarmLbl"]
@@ -633,6 +636,7 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "repeatDay"]
 - !private ["So26NSExtensionRequestHandlingP", "saveButton"]
 - !private ["So26NSExtensionRequestHandlingP", "setTimeAlarmVC"]
+- !private ["So26NSExtensionRequestHandlingP", "soundName"]
 - !private ["So26NSExtensionRequestHandlingP", "storyboard"]
 - ["So26NSExtensionRequestHandlingP", "textField"]
 - ["So26NSExtensionRequestHandlingP", "textFieldDidBeginEditing"]
@@ -665,15 +669,16 @@ depends-member:
 - ["So8NSObjectC", "UIDatePicker"]
 - ["So8NSObjectC", "UILabel"]
 - !private ["So8NSObjectC", "UILocalNotification"]
-- !private ["So8NSObjectC", "UILocalNotificationDefaultSoundName"]
 - ["So8NSObjectC", "UIStoryboardSegue"]
 - ["So8NSObjectC", "UITextField"]
 - !private ["So8NSObjectC", "UNCalendarNotificationTrigger"]
+- !private ["So8NSObjectC", "UNNotificationSound"]
 - ["So8NSObjectC", "Weekdays"]
 - !private ["So8NSObjectC", "WeekdaysVC"]
 - !private ["So8NSObjectC", "addLine"]
 - ["So8NSObjectC", "alarm"]
 - ["So8NSObjectC", "alarmLbl"]
+- ["So8NSObjectC", "alarmMethod"]
 - !private ["So8NSObjectC", "alertBody"]
 - !private ["So8NSObjectC", "alertTitle"]
 - ["So8NSObjectC", "audioPlayerBeginInterruption"]
@@ -717,7 +722,7 @@ depends-member:
 - !private ["So8NSObjectC", "scheduledLocalNotifications"]
 - !private ["So8NSObjectC", "setTimeAlarmVC"]
 - !private ["So8NSObjectC", "shared"]
-- !private ["So8NSObjectC", "soundName"]
+- ["So8NSObjectC", "soundName"]
 - !private ["So8NSObjectC", "storyboard"]
 - !private ["So8NSObjectC", "stroke"]
 - !private ["So8NSObjectC", "text"]
@@ -742,8 +747,8 @@ depends-member:
 - !private ["So16NSObjectProtocolP", "UIBezierPath"]
 - !private ["So16NSObjectProtocolP", "UIColor"]
 - !private ["So16NSObjectProtocolP", "UILocalNotification"]
-- !private ["So16NSObjectProtocolP", "UILocalNotificationDefaultSoundName"]
 - !private ["So16NSObjectProtocolP", "UNCalendarNotificationTrigger"]
+- !private ["So16NSObjectProtocolP", "UNNotificationSound"]
 - ["So16NSObjectProtocolP", ""]
 - !private ["So16NSObjectProtocolP", "addLine"]
 - !private ["So16NSObjectProtocolP", "alarm"]
@@ -842,14 +847,15 @@ depends-member:
 - ["10Assignment14SetTimeAlarmVCC", "UIDatePicker"]
 - ["10Assignment14SetTimeAlarmVCC", "UILabel"]
 - !private ["10Assignment14SetTimeAlarmVCC", "UILocalNotification"]
-- !private ["10Assignment14SetTimeAlarmVCC", "UILocalNotificationDefaultSoundName"]
 - ["10Assignment14SetTimeAlarmVCC", "UIStoryboardSegue"]
 - ["10Assignment14SetTimeAlarmVCC", "UITextField"]
 - !private ["10Assignment14SetTimeAlarmVCC", "UNCalendarNotificationTrigger"]
+- !private ["10Assignment14SetTimeAlarmVCC", "UNNotificationSound"]
 - ["10Assignment14SetTimeAlarmVCC", "Weekdays"]
 - !private ["10Assignment14SetTimeAlarmVCC", "WeekdaysVC"]
 - ["10Assignment14SetTimeAlarmVCC", "alarm"]
 - ["10Assignment14SetTimeAlarmVCC", "alarmLbl"]
+- ["10Assignment14SetTimeAlarmVCC", "alarmMethod"]
 - ["10Assignment14SetTimeAlarmVCC", "audioPlayerBeginInterruption"]
 - ["10Assignment14SetTimeAlarmVCC", "audioPlayerDecodeErrorDidOccur"]
 - ["10Assignment14SetTimeAlarmVCC", "audioPlayerDidFinishPlaying"]
@@ -871,6 +877,7 @@ depends-member:
 - ["10Assignment14SetTimeAlarmVCC", "repeatDaysLabel"]
 - ["10Assignment14SetTimeAlarmVCC", "repeatTapped"]
 - ["10Assignment14SetTimeAlarmVCC", "saveButton"]
+- ["10Assignment14SetTimeAlarmVCC", "soundName"]
 - !private ["10Assignment14SetTimeAlarmVCC", "storyboard"]
 - ["10Assignment14SetTimeAlarmVCC", "textField"]
 - ["10Assignment14SetTimeAlarmVCC", "textFieldDidBeginEditing"]
@@ -914,8 +921,8 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "UIBezierPath"]
 - !private ["So21UIAppearanceContainerP", "UIColor"]
 - !private ["So21UIAppearanceContainerP", "UILocalNotification"]
-- !private ["So21UIAppearanceContainerP", "UILocalNotificationDefaultSoundName"]
 - !private ["So21UIAppearanceContainerP", "UNCalendarNotificationTrigger"]
+- !private ["So21UIAppearanceContainerP", "UNNotificationSound"]
 - ["So21UIAppearanceContainerP", ""]
 - !private ["So21UIAppearanceContainerP", "alarm"]
 - !private ["So21UIAppearanceContainerP", "alarmLbl"]
@@ -941,6 +948,7 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "resignFirstResponder"]
 - !private ["So21UIAppearanceContainerP", "saveButton"]
 - !private ["So21UIAppearanceContainerP", "setTimeAlarmVC"]
+- !private ["So21UIAppearanceContainerP", "soundName"]
 - !private ["So21UIAppearanceContainerP", "storyboard"]
 - !private ["So21UIAppearanceContainerP", "text"]
 - ["So21UIAppearanceContainerP", "textField"]
@@ -972,8 +980,8 @@ depends-member:
 - !private ["So18UIContentContainerP", "UIBezierPath"]
 - !private ["So18UIContentContainerP", "UIColor"]
 - !private ["So18UIContentContainerP", "UILocalNotification"]
-- !private ["So18UIContentContainerP", "UILocalNotificationDefaultSoundName"]
 - !private ["So18UIContentContainerP", "UNCalendarNotificationTrigger"]
+- !private ["So18UIContentContainerP", "UNNotificationSound"]
 - ["So18UIContentContainerP", ""]
 - !private ["So18UIContentContainerP", "alarm"]
 - !private ["So18UIContentContainerP", "alarmLbl"]
@@ -994,6 +1002,7 @@ depends-member:
 - !private ["So18UIContentContainerP", "repeatDay"]
 - !private ["So18UIContentContainerP", "saveButton"]
 - !private ["So18UIContentContainerP", "setTimeAlarmVC"]
+- !private ["So18UIContentContainerP", "soundName"]
 - !private ["So18UIContentContainerP", "storyboard"]
 - ["So18UIContentContainerP", "textField"]
 - ["So18UIContentContainerP", "textFieldDidBeginEditing"]
@@ -1037,8 +1046,8 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "UIBezierPath"]
 - !private ["So18UIFocusEnvironmentP", "UIColor"]
 - !private ["So18UIFocusEnvironmentP", "UILocalNotification"]
-- !private ["So18UIFocusEnvironmentP", "UILocalNotificationDefaultSoundName"]
 - !private ["So18UIFocusEnvironmentP", "UNCalendarNotificationTrigger"]
+- !private ["So18UIFocusEnvironmentP", "UNNotificationSound"]
 - ["So18UIFocusEnvironmentP", ""]
 - !private ["So18UIFocusEnvironmentP", "alarm"]
 - !private ["So18UIFocusEnvironmentP", "alarmLbl"]
@@ -1064,6 +1073,7 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "resignFirstResponder"]
 - !private ["So18UIFocusEnvironmentP", "saveButton"]
 - !private ["So18UIFocusEnvironmentP", "setTimeAlarmVC"]
+- !private ["So18UIFocusEnvironmentP", "soundName"]
 - !private ["So18UIFocusEnvironmentP", "storyboard"]
 - !private ["So18UIFocusEnvironmentP", "text"]
 - ["So18UIFocusEnvironmentP", "textField"]
@@ -1084,6 +1094,7 @@ depends-member:
 - !private ["So10UIKeyInputP", "delegate"]
 - !private ["So10UIKeyInputP", "resignFirstResponder"]
 - !private ["So10UIKeyInputP", "text"]
+- !private ["So7UILabelC", "text"]
 - !private ["So19UILocalNotificationC", "alertBody"]
 - !private ["So19UILocalNotificationC", "alertTitle"]
 - !private ["So19UILocalNotificationC", "fireDate"]
@@ -1102,8 +1113,8 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "UIBezierPath"]
 - !private ["So30UIPasteConfigurationSupportingP", "UIColor"]
 - !private ["So30UIPasteConfigurationSupportingP", "UILocalNotification"]
-- !private ["So30UIPasteConfigurationSupportingP", "UILocalNotificationDefaultSoundName"]
 - !private ["So30UIPasteConfigurationSupportingP", "UNCalendarNotificationTrigger"]
+- !private ["So30UIPasteConfigurationSupportingP", "UNNotificationSound"]
 - ["So30UIPasteConfigurationSupportingP", ""]
 - !private ["So30UIPasteConfigurationSupportingP", "alarm"]
 - !private ["So30UIPasteConfigurationSupportingP", "alarmLbl"]
@@ -1131,6 +1142,7 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "scheduledLocalNotifications"]
 - !private ["So30UIPasteConfigurationSupportingP", "setTimeAlarmVC"]
 - !private ["So30UIPasteConfigurationSupportingP", "shared"]
+- !private ["So30UIPasteConfigurationSupportingP", "soundName"]
 - !private ["So30UIPasteConfigurationSupportingP", "storyboard"]
 - !private ["So30UIPasteConfigurationSupportingP", "text"]
 - ["So30UIPasteConfigurationSupportingP", "textField"]
@@ -1158,14 +1170,15 @@ depends-member:
 - ["So11UIResponderC", "UIDatePicker"]
 - ["So11UIResponderC", "UILabel"]
 - !private ["So11UIResponderC", "UILocalNotification"]
-- !private ["So11UIResponderC", "UILocalNotificationDefaultSoundName"]
 - ["So11UIResponderC", "UIStoryboardSegue"]
 - ["So11UIResponderC", "UITextField"]
 - !private ["So11UIResponderC", "UNCalendarNotificationTrigger"]
+- !private ["So11UIResponderC", "UNNotificationSound"]
 - ["So11UIResponderC", "Weekdays"]
 - !private ["So11UIResponderC", "WeekdaysVC"]
 - ["So11UIResponderC", "alarm"]
 - ["So11UIResponderC", "alarmLbl"]
+- ["So11UIResponderC", "alarmMethod"]
 - ["So11UIResponderC", "audioPlayerBeginInterruption"]
 - ["So11UIResponderC", "audioPlayerDecodeErrorDidOccur"]
 - ["So11UIResponderC", "audioPlayerDidFinishPlaying"]
@@ -1196,6 +1209,7 @@ depends-member:
 - !private ["So11UIResponderC", "scheduledLocalNotifications"]
 - !private ["So11UIResponderC", "setTimeAlarmVC"]
 - !private ["So11UIResponderC", "shared"]
+- ["So11UIResponderC", "soundName"]
 - !private ["So11UIResponderC", "storyboard"]
 - !private ["So11UIResponderC", "text"]
 - ["So11UIResponderC", "textField"]
@@ -1218,8 +1232,8 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "UIBezierPath"]
 - !private ["So30UIResponderStandardEditActionsP", "UIColor"]
 - !private ["So30UIResponderStandardEditActionsP", "UILocalNotification"]
-- !private ["So30UIResponderStandardEditActionsP", "UILocalNotificationDefaultSoundName"]
 - !private ["So30UIResponderStandardEditActionsP", "UNCalendarNotificationTrigger"]
+- !private ["So30UIResponderStandardEditActionsP", "UNNotificationSound"]
 - ["So30UIResponderStandardEditActionsP", ""]
 - !private ["So30UIResponderStandardEditActionsP", "alarm"]
 - !private ["So30UIResponderStandardEditActionsP", "alarmLbl"]
@@ -1247,6 +1261,7 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "scheduledLocalNotifications"]
 - !private ["So30UIResponderStandardEditActionsP", "setTimeAlarmVC"]
 - !private ["So30UIResponderStandardEditActionsP", "shared"]
+- !private ["So30UIResponderStandardEditActionsP", "soundName"]
 - !private ["So30UIResponderStandardEditActionsP", "storyboard"]
 - !private ["So30UIResponderStandardEditActionsP", "text"]
 - ["So30UIResponderStandardEditActionsP", "textField"]
@@ -1269,8 +1284,8 @@ depends-member:
 - !private ["So16UIStateRestoringP", "UIBezierPath"]
 - !private ["So16UIStateRestoringP", "UIColor"]
 - !private ["So16UIStateRestoringP", "UILocalNotification"]
-- !private ["So16UIStateRestoringP", "UILocalNotificationDefaultSoundName"]
 - !private ["So16UIStateRestoringP", "UNCalendarNotificationTrigger"]
+- !private ["So16UIStateRestoringP", "UNNotificationSound"]
 - ["So16UIStateRestoringP", ""]
 - !private ["So16UIStateRestoringP", "alarm"]
 - !private ["So16UIStateRestoringP", "alarmLbl"]
@@ -1291,6 +1306,7 @@ depends-member:
 - !private ["So16UIStateRestoringP", "repeatDay"]
 - !private ["So16UIStateRestoringP", "saveButton"]
 - !private ["So16UIStateRestoringP", "setTimeAlarmVC"]
+- !private ["So16UIStateRestoringP", "soundName"]
 - !private ["So16UIStateRestoringP", "storyboard"]
 - ["So16UIStateRestoringP", "textField"]
 - ["So16UIStateRestoringP", "textFieldDidBeginEditing"]
@@ -1322,8 +1338,8 @@ depends-member:
 - !private ["So19UITextFieldDelegateP", "UIBezierPath"]
 - !private ["So19UITextFieldDelegateP", "UIColor"]
 - !private ["So19UITextFieldDelegateP", "UILocalNotification"]
-- !private ["So19UITextFieldDelegateP", "UILocalNotificationDefaultSoundName"]
 - !private ["So19UITextFieldDelegateP", "UNCalendarNotificationTrigger"]
+- !private ["So19UITextFieldDelegateP", "UNNotificationSound"]
 - ["So19UITextFieldDelegateP", ""]
 - !private ["So19UITextFieldDelegateP", "alarm"]
 - !private ["So19UITextFieldDelegateP", "alarmLbl"]
@@ -1339,6 +1355,7 @@ depends-member:
 - !private ["So19UITextFieldDelegateP", "navigationItem"]
 - !private ["So19UITextFieldDelegateP", "repeatDay"]
 - !private ["So19UITextFieldDelegateP", "saveButton"]
+- !private ["So19UITextFieldDelegateP", "soundName"]
 - !private ["So19UITextFieldDelegateP", "storyboard"]
 - ["So19UITextFieldDelegateP", "textField"]
 - ["So19UITextFieldDelegateP", "textFieldDidBeginEditing"]
@@ -1366,8 +1383,8 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "UIBezierPath"]
 - !private ["So18UITraitEnvironmentP", "UIColor"]
 - !private ["So18UITraitEnvironmentP", "UILocalNotification"]
-- !private ["So18UITraitEnvironmentP", "UILocalNotificationDefaultSoundName"]
 - !private ["So18UITraitEnvironmentP", "UNCalendarNotificationTrigger"]
+- !private ["So18UITraitEnvironmentP", "UNNotificationSound"]
 - ["So18UITraitEnvironmentP", ""]
 - !private ["So18UITraitEnvironmentP", "alarm"]
 - !private ["So18UITraitEnvironmentP", "alarmLbl"]
@@ -1393,6 +1410,7 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "resignFirstResponder"]
 - !private ["So18UITraitEnvironmentP", "saveButton"]
 - !private ["So18UITraitEnvironmentP", "setTimeAlarmVC"]
+- !private ["So18UITraitEnvironmentP", "soundName"]
 - !private ["So18UITraitEnvironmentP", "storyboard"]
 - !private ["So18UITraitEnvironmentP", "text"]
 - ["So18UITraitEnvironmentP", "textField"]
@@ -1426,15 +1444,16 @@ depends-member:
 - ["So16UIViewControllerC", "UIDatePicker"]
 - ["So16UIViewControllerC", "UILabel"]
 - !private ["So16UIViewControllerC", "UILocalNotification"]
-- !private ["So16UIViewControllerC", "UILocalNotificationDefaultSoundName"]
 - ["So16UIViewControllerC", "UIStoryboardSegue"]
 - ["So16UIViewControllerC", "UITextField"]
 - !private ["So16UIViewControllerC", "UNCalendarNotificationTrigger"]
+- !private ["So16UIViewControllerC", "UNNotificationSound"]
 - ["So16UIViewControllerC", "Weekdays"]
 - !private ["So16UIViewControllerC", "WeekdaysVC"]
 - ["So16UIViewControllerC", ""]
 - ["So16UIViewControllerC", "alarm"]
 - ["So16UIViewControllerC", "alarmLbl"]
+- ["So16UIViewControllerC", "alarmMethod"]
 - ["So16UIViewControllerC", "audioPlayerBeginInterruption"]
 - ["So16UIViewControllerC", "audioPlayerDecodeErrorDidOccur"]
 - ["So16UIViewControllerC", "audioPlayerDidFinishPlaying"]
@@ -1458,6 +1477,7 @@ depends-member:
 - ["So16UIViewControllerC", "repeatTapped"]
 - ["So16UIViewControllerC", "saveButton"]
 - !private ["So16UIViewControllerC", "setTimeAlarmVC"]
+- ["So16UIViewControllerC", "soundName"]
 - !private ["So16UIViewControllerC", "storyboard"]
 - ["So16UIViewControllerC", "textField"]
 - ["So16UIViewControllerC", "textFieldDidBeginEditing"]
@@ -1471,6 +1491,7 @@ depends-member:
 - ["So16UIViewControllerC", "viewDidLoad"]
 - ["So16UIViewControllerC", "weekday"]
 - !private ["So29UNCalendarNotificationTriggerC", "init"]
+- !private ["So19UNNotificationSoundC", "init"]
 - !private ["So21UNNotificationTriggerC", "init"]
 - !private ["10Assignment10WeekdaysVCC", "setTimeAlarmVC"]
 - !private ["s14_ArrayProtocolP", "append"]
@@ -1510,8 +1531,8 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UIBezierPath"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UIColor"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UILocalNotification"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "UILocalNotificationDefaultSoundName"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UNCalendarNotificationTrigger"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "UNNotificationSound"]
 - ["10Foundation27_KeyValueCodingAndObservingP", ""]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "addLine"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "alarm"]
@@ -1646,6 +1667,7 @@ depends-nominal:
 - "So18UIFocusEnvironmentP"
 - !private "So11UIFocusItemP"
 - !private "So10UIKeyInputP"
+- !private "So7UILabelC"
 - !private "So19UILocalNotificationC"
 - !private "So22UINavigationControllerC"
 - !private "So16UINavigationItemC"
@@ -1669,6 +1691,7 @@ depends-nominal:
 - !private "So6UIViewC"
 - "So16UIViewControllerC"
 - !private "So29UNCalendarNotificationTriggerC"
+- !private "So19UNNotificationSoundC"
 - !private "So21UNNotificationTriggerC"
 - !private "10Assignment10WeekdaysVCC"
 - !private "s14_ArrayProtocolP"
@@ -1718,4 +1741,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
-interface-hash: "c9cc04678f016d42072abf95678180a3"
+interface-hash: "ff874ce13771aec4838371826ef599a1"

@@ -1,0 +1,5 @@
+version: "Apple Swift version 4.1.2 (swiftlang-902.0.54 clang-902.0.39.2)"
+options: "04921a9233d262bb820171de075a12c6"
+build_time: [1537090744, 319533000]
+inputs:
+  "/Users/mac/Desktop/Assignment_IOS1/AssignmentTests/AssignmentTests.swift": [1537021058, 0]
